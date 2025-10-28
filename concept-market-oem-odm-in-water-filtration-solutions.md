@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "# From Concept to Market: The OEM/ODM Journey in Water Filtration Solutions"
 date: 2025-10-23
 slug: my-first-post
