@@ -1,44 +1,39 @@
 ---
-layout: post
-title: "我的第一篇測試文章"
+layout: home
+title: "我的個人部落格首頁"
+subtitle: "這裡會自動顯示我最新的文章"
 ---
 
-# Acerbo datus maxime
+# 👋 歡迎光臨我的網站！
 
-{{% columns %}}
-## Astris ipse furtiva
+這裡是我的知識庫和想法分享空間。請查看下方的最新文章。
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+<hr>
 
-===
+# 最新文章列表
 
-## Suis quot vota
+{% for post in site.posts %}
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-{{% /columns %}}
+  <article class="post-item">
+    
+    <h2>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title }}
+      </a>
+    </h2>
 
+    <p class="post-meta">
+      發布於：{{ post.date | date: "%Y 年 %m 月 %d 日" }}
+    </p>
 
-## Tempora nisi nunc
+    <div class="post-excerpt">
+      {{ post.excerpt | strip_html | truncate: 150 }} 
+      <p><a href="{{ post.url | relative_url }}">繼續閱讀 &rarr;</a></p>
+    </div>
+    
+  </article>
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
+  <hr>
 
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-
-## Locis suis novi cum suoque decidit eadem
-
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
-
-![MDFriday](mdfriday.png)
-
+{% endfor %}
+<p style="text-align: center;">本網站由 GitHub Pages 及 Jekyll 自動生成。</p>
