@@ -1,12 +1,7 @@
 ---
 layout: post
-title: "# From Concept to Market: The OEM/ODM Journey in Water Filtration Solutions"
+title: concept market oem odm in water filtration solutions
 date: 2025-10-23
-slug: my-first-post
-tags:
-  - 技術
-category: 知識分享
-draft: false
 ---
 # From Concept to Market: The OEM/ODM Journey in Water Filtration Solutions
 
