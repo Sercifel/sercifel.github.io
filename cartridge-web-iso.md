@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Cartridge Web Achieves ISO 14064 Certification, Advancing Carbon Management and Sustainable Manufacturing
 date: 2025-10-23
 slug: my-first-post
