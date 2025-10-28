@@ -1,13 +1,7 @@
 ---
-title: How OEM/ODM Solutions Drive Innovation in Smart Home Water Filtration
+layout: post
+title: how oem odm solutions drive innovation in smart home water filtration
 date: 2025-10-23
-slug: my-first-post
-tags:
-  - 技術
-  - Obsidian
-  - 教學
-category: 知識分享
-draft: false
 ---
 # How OEM/ODM Solutions Drive Innovation in Smart Home Water Filtration
 
