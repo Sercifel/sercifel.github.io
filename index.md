@@ -1,7 +1,6 @@
 ---
-title: Introduction
-weight: 1
-comments: true
+layout: post
+title: "我的第一篇測試文章"
 ---
 
 # Acerbo datus maxime
