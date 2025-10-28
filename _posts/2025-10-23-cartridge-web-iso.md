@@ -1,13 +1,7 @@
 ---
 layout: post
-title: Cartridge Web Achieves ISO 14064 Certification, Advancing Carbon Management and Sustainable Manufacturing
+title: cartridge web iso
 date: 2025-10-23
-slug: my-first-post
-tags:
-  - 技術
-  - 教學
-category: 知識分享
-draft: false
 ---
 # Cartridge Web Achieves ISO 14064 Certification, Advancing Carbon Management and Sustainable Manufacturing
 
