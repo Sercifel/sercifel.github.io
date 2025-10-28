@@ -1,12 +1,7 @@
 ---
-title: Recycled Nylon Sustainability
+layout: post
+title: recycled nylon
 date: 2025-10-23
-slug: my-first-post
-tags:
-  - 技術
-  - 教學
-category: 知識分享
-draft: false
 ---
 Recycled nylon has emerged as a promising alternative to virgin nylon, primarily due to its potential to mitigate environmental impacts associated with traditional nylon production. This introduction delves into the sustainability aspects of recycled nylon, examining its environmental benefits, challenges, and overall viability as a sustainable material.
 
