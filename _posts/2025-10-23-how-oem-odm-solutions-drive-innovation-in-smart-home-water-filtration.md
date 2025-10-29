@@ -1,6 +1,6 @@
 ---
 layout: post
-title: how oem odm solutions drive innovation in smart home water filtration
+title: How OEM/ODM Solutions Drive Innovation in Smart Home Water Filtration
 date: 2025-10-23
 ---
 # How OEM/ODM Solutions Drive Innovation in Smart Home Water Filtration
