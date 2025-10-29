@@ -1,16 +1,16 @@
 ---
 layout: home
-title: "我的個人部落格首頁"
-subtitle: "這裡會自動顯示我最新的文章"
+title: "Industry Blog"
+subtitle: "Latest News Show Here"
 ---
 
-# 👋 歡迎光臨我的網站！
+# 👋 Welcome！
 
 這裡是我的知識庫和想法分享空間。請查看下方的最新文章。
 
 <hr>
 
-# 最新文章列表
+# Latest News List
 
 {% for post in site.posts %}
 
@@ -23,12 +23,12 @@ subtitle: "這裡會自動顯示我最新的文章"
     </h2>
 
     <p class="post-meta">
-      發布於：{{ post.date | date: "%Y 年 %m 月 %d 日" }}
+      Post：{{ post.date | date: "%Y 年 %m 月 %d 日" }}
     </p>
 
     <div class="post-excerpt">
       {{ post.excerpt | strip_html | truncate: 150 }} 
-      <p><a href="{{ post.url | relative_url }}">繼續閱讀 &rarr;</a></p>
+      <p><a href="{{ post.url | relative_url }}">Read More &rarr;</a></p>
     </div>
     
   </article>
