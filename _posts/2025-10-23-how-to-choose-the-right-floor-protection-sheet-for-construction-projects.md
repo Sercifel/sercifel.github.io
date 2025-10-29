@@ -1,6 +1,6 @@
 ---
 layout: post
-title: how to choose the right floor protection sheet for construction projects
+title: How to Choose the Right Floor Protection Sheet for Construction Projects?
 date: 2025-10-23
 ---
 # How to Choose the Right Floor Protection Sheet for Construction Projects?
