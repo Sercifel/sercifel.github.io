@@ -1,0 +1,167 @@
+:root {
+  --color-background: #f6f3ee;
+  --color-surface: #ffffff;
+  --color-surface-alt: #efe8dd;
+  --color-border: #d8d0c5;
+  --color-text: #1f1c18;
+  --color-muted: #5b544c;
+  --font-body: "Source Serif 4", "Iowan Old Style", "Georgia", serif;
+  --font-heading: "Space Grotesk", "Avenir Next", "Helvetica Neue", sans-serif;
+  --line-height-body: 1.7;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+}
+
+.link-primary {
+  color: #2563eb;
+}
+
+.link-primary:hover {
+  color: #1d4ed8;
+}
+
+body[data-modal-open="true"] {
+  overflow: hidden;
+}
+
+.nav-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.6) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.nav-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.6);
+  border-radius: 999px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+h1,
+h2,
+h3 {
+  scroll-margin-top: 6rem;
+}
+
+.prose {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.prose > * + * {
+  margin-top: 1rem;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading);
+  color: var(--color-text);
+}
+
+.prose h2 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.prose h3 {
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.prose p {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.prose li + li {
+  margin-top: 0.35rem;
+}
+
+.prose a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+.prose table {
+  margin: 1.5rem 0;
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+  background: var(--color-surface-alt);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.prose pre {
+  background: var(--color-surface-alt);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+th,
+td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--color-surface-alt);
+}

@@ -1,0 +1,49 @@
+<header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6" aria-label="Primary">
+    <a class="flex min-w-0 items-center gap-3" href="/" aria-label="Back to home">
+      <div class="h-9 w-9 shrink-0 rounded-full border border-slate-300"></div>
+      <div class="min-w-0">
+        <p class="hidden text-[10px] uppercase tracking-[0.2em] text-slate-500 sm:block">Personal Research</p>
+        <p class="text-base font-semibold leading-tight sm:text-lg">Research Reports</p>
+      </div>
+    </a>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="nav-scroll hidden items-center gap-2 overflow-x-auto whitespace-nowrap pb-1 md:flex">
+        {{navItems}}
+      </div>
+      <button
+        class="inline-flex h-11 cursor-pointer items-center gap-2 rounded-full border border-slate-300 px-2 text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 sm:px-4"
+        data-search-open
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="search-modal"
+        aria-label="Open search"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="20" y1="20" x2="16.5" y2="16.5"></line>
+        </svg>
+        <span class="hidden sm:inline">Search</span>
+      </button>
+      <button
+        class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-300 text-slate-700 transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 md:hidden"
+        type="button"
+        data-nav-toggle
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div class="border-t border-slate-200 bg-white/95 md:hidden" data-nav-menu id="primary-navigation" hidden>
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-4 py-3 sm:px-6">
+      {{navItems}}
+    </div>
+  </div>
+</header>
