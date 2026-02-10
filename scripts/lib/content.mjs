@@ -25,6 +25,41 @@ const walkMarkdown = async (dir) => {
   return files;
 };
 
+const humanizeSegment = (value) => {
+  const text = String(value ?? "").trim();
+  if (!text) {
+    return "";
+  }
+  const looksSlug = /^[a-z0-9]+(?:[-_][a-z0-9]+)*$/.test(text);
+  if (!looksSlug) {
+    return text;
+  }
+  return text
+    .split(/[-_]+/)
+    .filter(Boolean)
+    .map((part) => {
+      const lower = part.toLowerCase();
+      return lower ? lower[0].toUpperCase() + lower.slice(1) : "";
+    })
+    .join(" ");
+};
+
+const normalizeTags = (value) => {
+  if (!value) {
+    return [];
+  }
+  if (Array.isArray(value)) {
+    return value.map((tag) => String(tag).trim()).filter(Boolean);
+  }
+  if (typeof value === "string") {
+    return value
+      .split(/[,/]/)
+      .map((tag) => tag.trim())
+      .filter(Boolean);
+  }
+  return [String(value).trim()].filter(Boolean);
+};
+
 const normalizeContent = (filePath, rootDir, data, content) => {
   const relativePath = path.relative(rootDir, filePath);
   const pathSegments = relativePath.split(path.sep);
@@ -33,7 +68,7 @@ const normalizeContent = (filePath, rootDir, data, content) => {
   const category = rawCategory.trim() ? rawCategory : "uncategorized";
   const subcategory = rawSubcategory.trim() ? rawSubcategory : "general";
   const filename = path.basename(filePath, ".md");
-  const title = data.title ?? filename;
+  const title = data.title ?? humanizeSegment(filename);
   const slugSource = data.slug ?? title;
   const slugText = typeof slugSource === "string" ? slugSource.trim() : String(slugSource ?? "").trim();
   let slug = slugify(slugText);
@@ -60,6 +95,7 @@ const normalizeContent = (filePath, rootDir, data, content) => {
     title,
     date: normalizeDate(data.date),
     description: data.description ?? data.summary ?? "",
+    tags: normalizeTags(data.tags ?? data.tag),
     content,
   };
 };

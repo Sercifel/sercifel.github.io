@@ -1,10 +1,15 @@
 <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6" aria-label="Primary">
     <a class="flex min-w-0 items-center gap-3" href="/" aria-label="Back to home">
-      <div class="h-9 w-9 shrink-0 rounded-full border border-slate-300"></div>
+      <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-300 text-emerald-600">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 17l5-10 6 6 5-6"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+      </div>
       <div class="min-w-0">
-        <p class="hidden text-[10px] uppercase tracking-[0.2em] text-slate-500 sm:block">Personal Research</p>
-        <p class="text-base font-semibold leading-tight sm:text-lg">Research Reports</p>
+        <p class="hidden text-[10px] uppercase tracking-[0.2em] text-slate-500 sm:block">Automation Atlas</p>
+        <p class="text-base font-semibold leading-tight sm:text-lg">Automation Atlas</p>
       </div>
     </a>
     <div class="flex items-center gap-2 sm:gap-3">
@@ -24,6 +29,27 @@
           <line x1="20" y1="20" x2="16.5" y2="16.5"></line>
         </svg>
         <span class="hidden sm:inline">Search</span>
+      </button>
+      <button
+        class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 text-slate-700 transition-colors duration-200 hover:border-blue-600 hover:text-blue-600"
+        data-theme-toggle
+        type="button"
+        aria-label="Toggle dark mode"
+      >
+        <svg data-theme-icon="light" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="M4.93 4.93l1.41 1.41"></path>
+          <path d="M17.66 17.66l1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="M6.34 17.66l-1.41 1.41"></path>
+          <path d="M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg data-theme-icon="dark" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+        </svg>
       </button>
       <button
         class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-300 text-slate-700 transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 md:hidden"

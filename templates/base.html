@@ -8,7 +8,17 @@
     <meta property="og:title" content="{{title}}" />
     <meta property="og:description" content="{{description}}" />
     <meta property="og:url" content="{{canonical}}" />
+    <meta name="color-scheme" content="light dark" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" />
+    <script>
+      (() => {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body class="bg-[var(--color-background)] text-[var(--color-text)]">
@@ -18,12 +28,15 @@
     >
       Skip to main content
     </a>
+    <div class="reading-progress" aria-hidden="true">
+      <span data-reading-progress></span>
+    </div>
     <div id="main-content">
       {{body}}
     </div>
     <div
       id="search-modal"
-      class="fixed inset-0 z-50 hidden overscroll-contain"
+      class="fixed inset-0 z-50 hidden overscroll-contain bg-slate-950/40 backdrop-blur-xl"
       data-search-modal
       aria-hidden="true"
       role="dialog"
@@ -31,13 +44,13 @@
       aria-labelledby="search-modal-title"
     >
       <button
-        class="absolute inset-0 bg-slate-950/40"
+        class="absolute inset-0 bg-transparent"
         type="button"
         data-search-overlay
         aria-label="Close search"
       ></button>
-      <div class="relative mx-auto flex min-h-full max-w-2xl items-center justify-center px-6">
-        <div class="flex max-h-[calc(100vh-6rem)] w-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-xl">
+      <div class="relative mx-auto flex min-h-full max-w-3xl items-center justify-center px-6">
+        <div class="search-panel flex max-h-[calc(100vh-6rem)] w-full flex-col rounded-2xl border p-6 shadow-xl">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Search</p>

@@ -56,12 +56,36 @@ export const renderListItem = (item) => {
   const safeTitle = escapeHtml(item.title);
   const safeDate = escapeHtml(formatDate(item.date));
   const safeDescription = escapeHtml(item.description);
+  const content = typeof item.content === "string" ? item.content : "";
+  const words = content
+    .replace(/[`*_>#\-\[\]()]|\n/g, " ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+  const readingMinutes = Math.max(1, Math.round(words / 200));
+  const readingLabel = `Estimated reading time: ${readingMinutes} min${readingMinutes === 1 ? "" : "s"}`;
+  const tags = Array.isArray(item.tags) ? item.tags : [];
+  const tagClassFor = (tag) => {
+    const normalized = String(tag).toLowerCase();
+    if (normalized === "automation") {
+      return "tag tag-automation";
+    }
+    if (normalized === "water treatment") {
+      return "tag tag-water";
+    }
+    return "tag";
+  };
+  const tagsHtml = tags.length
+    ? `<div class="mt-3 flex flex-wrap gap-2">${tags
+        .map((tag) => `<span class="${tagClassFor(tag)}">${escapeHtml(tag)}</span>`)
+        .join("")}</div>`
+    : "";
 
   return `
     <article class="py-4 border-b border-slate-200">
       <h3 class="text-xl font-semibold"><a class="link-primary hover:underline" href="${item.path}">${safeTitle}</a></h3>
-      <p class="text-sm text-slate-500">${safeDate}</p>
+      <p class="text-sm text-slate-500">${safeDate}<span class="mx-2 text-slate-300">|</span><span class="text-slate-500">${readingLabel}</span></p>
       <p class="mt-2 text-slate-700 line-clamp-2">${safeDescription}</p>
+      ${tagsHtml}
     </article>
   `;
 };

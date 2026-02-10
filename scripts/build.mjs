@@ -158,20 +158,122 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     homeContent = `<div class="space-y-10">${sections}</div>`;
   }
 
+  const categoryGroups = groupBy(enriched, "category");
+  const archiveGroups = enriched.reduce((acc, item) => {
+    if (!item.date) {
+      return acc;
+    }
+    const parsed = new Date(item.date);
+    if (Number.isNaN(parsed.getTime())) {
+      return acc;
+    }
+    const key = `${parsed.getFullYear()}-${String(parsed.getMonth() + 1).padStart(2, "0")}`;
+    acc[key] = acc[key] || [];
+    acc[key].push(item);
+    return acc;
+  }, {});
+  const timelineItems = Object.entries(archiveGroups)
+    .sort(([a], [b]) => b.localeCompare(a))
+    .map(([key, list]) => {
+      const [year, month] = key.split("-");
+      const label = new Intl.DateTimeFormat("en-US", {
+        year: "numeric",
+        month: "short",
+      }).format(new Date(Number(year), Number(month) - 1, 1));
+      return `<li class="flex items-center justify-between text-sm text-slate-600"><a class="link-primary" href="/archive/${key}/">${escapeHtml(
+        label
+      )}</a><span class="text-xs text-slate-500">${list.length}</span></li>`;
+    })
+    .join("");
+  const timelineHtml = timelineItems
+    ? `<ul class="space-y-2">${timelineItems}</ul>`
+    : "<p class=\"text-sm text-slate-500\">No archives yet.</p>";
+  const sidebarSections = categories
+    .map((category) => {
+      const scoped = categoryGroups[category.key] || [];
+      if (!scoped.length) {
+        return "";
+      }
+      const categorySegment = safeSegment(category.key);
+      const categoryLabel = escapeHtml(category.label ?? category.key);
+      const subgroups = groupBy(scoped, "subcategory");
+      const subLinks = Object.entries(subgroups)
+        .sort(([a], [b]) => humanizeSegment(a).localeCompare(humanizeSegment(b)))
+        .map(([name, list]) => {
+          const segment = safeSegment(name);
+          const nameLabel = humanizeSegment(name);
+          const safeName = escapeHtml(nameLabel);
+          return `<li class="flex items-center justify-between gap-3"><a class="link-primary" href="/${categorySegment}/${segment}/">${safeName}</a><span class="text-xs text-slate-500">${list.length}</span></li>`;
+        })
+        .join("");
+
+      return `
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <a class="text-sm font-semibold text-slate-900 hover:text-blue-600" href="/${categorySegment}/">${categoryLabel}</a>
+            <span class="text-xs text-slate-500">${scoped.length}</span>
+          </div>
+          <ul class="space-y-2 text-sm text-slate-600">${subLinks}</ul>
+        </div>
+      `;
+    })
+    .filter(Boolean)
+    .join("");
+
+  const sidebar = `
+    <aside class="lg:sticky lg:top-24 h-fit">
+      <div class="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Categories</h2>
+        <div class="mt-4 space-y-5">
+          ${sidebarSections || "<p class=\"text-sm text-slate-500\">No categories yet.</p>"}
+        </div>
+        <div class="mt-6 border-t border-slate-200 pt-4">
+          <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Timeline Archive</h3>
+          <div class="mt-3">${timelineHtml}</div>
+        </div>
+      </div>
+    </aside>
+  `;
+
   const homeBody = await renderTemplate("home.html", {
     navbar: await renderNavbar({ categories }),
     homeContent,
+    sidebar,
   });
 
   const homeHtml = await renderPage({
-    title: "Research Reports",
-    description: "Latest research reports and site profiles",
+    title: "Automation Atlas",
+    description: "Mapping reliable operations for always-on teams",
     body: homeBody,
     canonical: "/",
     assets: assetMap,
   });
 
   await fs.writeFile(path.join(outDir, "index.html"), homeHtml);
+
+  const archiveEntries = Object.entries(archiveGroups).sort(([a], [b]) => b.localeCompare(a));
+  for (const [key, list] of archiveEntries) {
+    const [year, month] = key.split("-");
+    const label = new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "long",
+    }).format(new Date(Number(year), Number(month) - 1, 1));
+    const archiveBody = await renderTemplate("list.html", {
+      navbar: await renderNavbar({ categories }),
+      title: `${label} Archive`,
+      items: list.map(renderListItem).join(""),
+    });
+    const archiveHtml = await renderPage({
+      title: `${label} | Automation Atlas`,
+      description: `Articles from ${label}`,
+      body: archiveBody,
+      canonical: `/archive/${key}/`,
+      assets: assetMap,
+    });
+    const archiveDir = path.join(outDir, normalizeOutputPath(`/archive/${key}/`));
+    await ensureDir(archiveDir);
+    await fs.writeFile(path.join(archiveDir, "index.html"), archiveHtml);
+  }
 
   for (const category of categories) {
     const scoped = enriched.filter((item) => item.category === category.key);
@@ -197,8 +299,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     });
 
     const hubHtml = await renderPage({
-      title: `${categoryLabel} | Research Reports`,
-      description: `Latest ${categoryLabel} research items`,
+      title: `${categoryLabel} | Automation Atlas`,
+      description: `Latest ${categoryLabel} automation notes and analysis`,
       body: hubBody,
       canonical: `/${categorySegment}/`,
       assets: assetMap,
@@ -280,7 +382,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     const relatedHtml = relatedItems.length
       ? `
           <section class="mt-12 border-t border-slate-200 pt-6">
-            <h2 class="text-lg font-semibold">Related links</h2>
+            <h2 class="text-lg font-semibold">You might also be interested in...</h2>
             <ul class="mt-4 flex flex-wrap gap-3 text-sm">
               ${relatedItems
                 .map(
@@ -306,7 +408,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     });
 
     const pageHtml = await renderPage({
-      title: `${item.title} | Research Reports`,
+      title: `${item.title} | Automation Atlas`,
       description: item.description,
       body,
       canonical: item.path,
