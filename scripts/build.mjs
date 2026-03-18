@@ -130,33 +130,6 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
 
   const isDateBased =
     topLevelDirs.length > 0 && topLevelDirs.every((dir) => isDateSegment(dir));
-  let homeContent = `<div class="space-y-4">${latest
-    .map(renderListItem)
-    .join("")}</div>`;
-
-  if (!isDateBased && topLevelDirs.length > 0) {
-    const sections = topLevelDirs
-      .map((dir) => {
-        const label = humanizeSegment(dir);
-        const safeLabel = escapeHtml(label);
-        const categorySegment = safeSegment(dir);
-        const list = enriched
-          .filter((item) => item.category === dir)
-          .slice(0, 20)
-          .map(renderListItem)
-          .join("");
-
-        return `
-          <section class="space-y-4">
-            <h2 class="text-2xl font-semibold">Lastest posts of ${safeLabel}</h2>
-            <div class="space-y-4">${list}</div>
-          </section>
-        `;
-      })
-      .join("");
-
-    homeContent = `<div class="space-y-10">${sections}</div>`;
-  }
 
   const categoryGroups = groupBy(enriched, "category");
   const archiveGroups = enriched.reduce((acc, item) => {
@@ -172,7 +145,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     acc[key].push(item);
     return acc;
   }, {});
-  const timelineItems = Object.entries(archiveGroups)
+  const timelineEntries = Object.entries(archiveGroups)
     .sort(([a], [b]) => b.localeCompare(a))
     .map(([key, list]) => {
       const [year, month] = key.split("-");
@@ -180,14 +153,239 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
         year: "numeric",
         month: "short",
       }).format(new Date(Number(year), Number(month) - 1, 1));
-      return `<li class="flex items-center justify-between text-sm text-slate-600"><a class="link-primary" href="/archive/${key}/">${escapeHtml(
-        label
-      )}</a><span class="text-xs text-slate-500">${list.length}</span></li>`;
+      return {
+        key,
+        label: escapeHtml(label),
+        count: list.length,
+      };
     })
-    .join("");
-  const timelineHtml = timelineItems
-    ? `<ul class="space-y-2">${timelineItems}</ul>`
-    : "<p class=\"text-sm text-slate-500\">No archives yet.</p>";
+    .filter((entry) => entry.count > 0);
+  const renderTimelineList = (entries, listClass) => {
+    if (!entries.length) {
+      return "<p class=\"text-sm text-slate-500\">No archives yet.</p>";
+    }
+    const items = entries
+      .map(
+        (entry) =>
+          `<li class=\"flex items-center justify-between text-sm text-slate-600\"><a class=\"link-primary\" href=\"/archive/${entry.key}/\">${entry.label}</a><span class=\"text-xs text-slate-500\">${entry.count}</span></li>`
+      )
+      .join("");
+    return `<ul class=\"${listClass}\">${items}</ul>`;
+  };
+  const timelineHtml = renderTimelineList(timelineEntries, "space-y-2");
+  const timelineCompactHtml = renderTimelineList(timelineEntries.slice(0, 4), "space-y-3");
+
+  const featuredGradients = [
+    "from-slate-900/80 via-slate-800/70 to-slate-700/60",
+    "from-emerald-900/80 via-slate-900/70 to-slate-700/60",
+    "from-sky-900/80 via-slate-900/70 to-slate-700/60",
+  ];
+  const categoryGradients = [
+    "from-amber-100 via-white to-slate-50",
+    "from-emerald-100 via-white to-slate-50",
+    "from-sky-100 via-white to-slate-50",
+    "from-violet-100 via-white to-slate-50",
+    "from-rose-100 via-white to-slate-50",
+    "from-lime-100 via-white to-slate-50",
+    "from-cyan-100 via-white to-slate-50",
+    "from-orange-100 via-white to-slate-50",
+  ];
+  const renderFeaturedCard = (item, index, variant = "large") => {
+    if (!item) {
+      return "";
+    }
+    const safeTitle = escapeHtml(item.title);
+    const safeDescription = escapeHtml(item.description || "");
+    const safeDate = escapeHtml(formatDate(item.date));
+    const gradient = featuredGradients[index % featuredGradients.length];
+    const sizeClass =
+      variant === "large" ? "min-h-[280px] sm:min-h-[360px]" : "min-h-[160px]";
+    const titleClass =
+      variant === "large"
+        ? "text-2xl font-semibold leading-tight sm:text-3xl"
+        : "text-lg font-semibold leading-snug";
+    const descriptionClass =
+      variant === "large"
+        ? "mt-3 text-sm text-slate-200 line-clamp-2"
+        : "mt-2 text-xs text-slate-200 line-clamp-2";
+    return `
+      <article class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 text-white shadow-sm">
+        <div class="absolute inset-0 bg-gradient-to-br ${gradient}"></div>
+        <div class="absolute inset-0 bg-slate-950/40"></div>
+        <div class="relative ${sizeClass} p-6">
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-200">${safeDate}</p>
+          <h3 class="mt-3 ${titleClass}">${safeTitle}</h3>
+          <p class="${descriptionClass}">${safeDescription}</p>
+        </div>
+        <a
+          class="absolute inset-0 z-10 rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          href="${item.path}"
+          aria-label="${safeTitle}"
+        ></a>
+      </article>
+    `;
+  };
+  const renderCompactItem = (item) => {
+    const safeTitle = escapeHtml(item.title);
+    const safeDate = escapeHtml(formatDate(item.date));
+    const safeDescription = escapeHtml(item.description || "");
+    return `
+      <li class="flex gap-4 border-b border-slate-200 pb-4 last:border-b-0 last:pb-0">
+        <div class="h-16 w-20 shrink-0 rounded-xl bg-gradient-to-br from-slate-200 via-white to-slate-50"></div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-500">${safeDate}</p>
+          <h4 class="mt-1 text-sm font-semibold text-slate-900">
+            <a class="hover:text-blue-600" href="${item.path}">${safeTitle}</a>
+          </h4>
+          <p class="mt-1 text-xs text-slate-600 line-clamp-2">${safeDescription}</p>
+        </div>
+      </li>
+    `;
+  };
+  const renderBulletLink = (item) => {
+    const safeTitle = escapeHtml(item.title);
+    const safeDate = escapeHtml(formatDate(item.date));
+    return `
+      <li class="flex items-center justify-between gap-3 border-b border-slate-200 pb-3 last:border-b-0 last:pb-0">
+        <a class="text-sm font-semibold text-slate-800 hover:text-blue-600" href="${item.path}">${safeTitle}</a>
+        <span class="text-xs uppercase tracking-[0.2em] text-slate-400">${safeDate}</span>
+      </li>
+    `;
+  };
+
+  const featured = latest.slice(0, 3);
+  const featuredSection = featured.length
+    ? `
+        <section class="space-y-6">
+          <div class="flex items-end justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Featured news</p>
+              <h2 class="mt-2 text-2xl font-semibold">Signals from the floor</h2>
+            </div>
+            <a class="text-sm font-semibold text-blue-600 hover:text-blue-700" href="#latest">Browse all</a>
+          </div>
+          <div class="grid gap-6 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)]">
+            ${renderFeaturedCard(featured[0], 0, "large")}
+            <div class="grid gap-6">
+              ${renderFeaturedCard(featured[1], 1, "small")}
+              ${renderFeaturedCard(featured[2], 2, "small")}
+            </div>
+          </div>
+        </section>
+      `
+    : "";
+
+  const categoryCards = !isDateBased
+    ? categories
+        .slice(0, 8)
+        .map((category, index) => {
+          const segment = safeSegment(category.key);
+          const safeLabel = escapeHtml(category.label ?? category.key);
+          const count = (categoryGroups[category.key] || []).length;
+          const gradient = categoryGradients[index % categoryGradients.length];
+          return `
+            <a class="group rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-md" href="/${segment}/">
+              <div class="h-20 rounded-xl bg-gradient-to-br ${gradient}"></div>
+              <div class="mt-4 flex items-center justify-between">
+                <h3 class="text-sm font-semibold text-slate-900">${safeLabel}</h3>
+                <span class="text-xs text-slate-500">${count} posts</span>
+              </div>
+              <p class="mt-2 text-xs text-slate-500">Category overview and latest analysis.</p>
+            </a>
+          `;
+        })
+        .join("")
+    : "";
+  const categorySection = categoryCards
+    ? `
+        <section class="space-y-6">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Explore by categories</p>
+            <h2 class="mt-2 text-2xl font-semibold">Navigate reports and site notes</h2>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">${categoryCards}</div>
+        </section>
+      `
+    : "";
+
+  const spotlightCategory = categories.find(
+    (category) => (categoryGroups[category.key] || []).length > 0
+  );
+  const spotlightItems = spotlightCategory
+    ? (categoryGroups[spotlightCategory.key] || []).slice(0, 3)
+    : [];
+  const spotlightLabel = spotlightCategory
+    ? escapeHtml(spotlightCategory.label ?? spotlightCategory.key)
+    : "";
+  const spotlightSegment = spotlightCategory ? safeSegment(spotlightCategory.key) : "";
+  const spotlightSection =
+    spotlightItems.length || timelineEntries.length
+      ? `
+          <section class="grid gap-6 ${spotlightItems.length ? "lg:grid-cols-[minmax(0,1fr)_260px]" : "lg:grid-cols-1"}">
+            ${
+              spotlightItems.length
+                ? `
+                    <div class="rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+                      <div class="flex items-start justify-between">
+                        <div>
+                          <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Latest in ${spotlightLabel}</p>
+                          <h2 class="mt-2 text-xl font-semibold">New field notes</h2>
+                        </div>
+                        <a class="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 hover:text-blue-700" href="/${spotlightSegment}/">View all</a>
+                      </div>
+                      <ul class="mt-5 space-y-4">${spotlightItems.map(renderCompactItem).join("")}</ul>
+                    </div>
+                  `
+                : ""
+            }
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Archive highlights</p>
+              <h3 class="mt-2 text-lg font-semibold">Recent months</h3>
+              <div class="mt-4">${timelineCompactHtml}</div>
+            </div>
+          </section>
+        `
+      : "";
+
+  const latestSection = `
+    <section id="latest" class="space-y-6">
+      <div>
+        <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Latest updates</p>
+        <h2 class="mt-2 text-2xl font-semibold">Recent articles</h2>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+        <div class="space-y-4">${latest.map(renderListItem).join("")}</div>
+      </div>
+    </section>
+  `;
+
+  const updatesSection =
+    latest.length >= 8
+      ? `
+          <section class="grid gap-6 lg:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Industry updates</p>
+              <h3 class="mt-2 text-lg font-semibold">Operational shifts</h3>
+              <ul class="mt-4 space-y-3">${latest.slice(3, 7).map(renderBulletLink).join("")}</ul>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Trending articles</p>
+              <h3 class="mt-2 text-lg font-semibold">Most read this week</h3>
+              <ul class="mt-4 space-y-3">${latest.slice(7, 11).map(renderBulletLink).join("")}</ul>
+            </div>
+          </section>
+        `
+      : "";
+
+  let homeContent = `
+    <div class="space-y-12">
+      ${featuredSection}
+      ${categorySection}
+      ${spotlightSection}
+      ${latestSection}
+      ${updatesSection}
+    </div>
+  `;
   const sidebarSections = categories
     .map((category) => {
       const scoped = categoryGroups[category.key] || [];
