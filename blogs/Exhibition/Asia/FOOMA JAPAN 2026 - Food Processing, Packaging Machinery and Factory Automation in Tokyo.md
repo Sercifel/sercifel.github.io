@@ -1,7 +1,8 @@
 ---
 title: "FOOMA JAPAN 2026: Food Processing, Packaging Machinery and Factory Automation in Tokyo"
+meta_description: "FOOMA JAPAN 2026 will take place from June 2 to 5, 2026 at Tokyo Big Sight, using West Hall 1 to 4 and East Hall 1 to 3, 7 and 8."
+date: 2026-06-02
 description: FOOMA JAPAN 2026 runs June 2 to 5 at Tokyo Big Sight, bringing food processing, packaging, automation and hygiene technology buyers to Japan’s leading machinery expo.
-date: 2026-03-18
 ---
 ---
 # FOOMA JAPAN 2026: Food Processing, Packaging Machinery and Factory Automation in Tokyo

@@ -1,7 +1,8 @@
 ---
 title: "Motek 2026: Stuttgart’s Automation Week Hub with Bondexpo and Multi-Show Access"
+meta_description: "Motek 2026 will take place 6 to 8 October 2026 at Messe Stuttgart and is positioned as the 43rd edition of the trade fair for production and assembly automation."
+date: 2026-10-06
 description: Motek 2026 runs 6–8 October 2026 at Messe Stuttgart, pairing production and assembly automation with Bondexpo and a one-ticket, multi-show format that targets integrators, OEMs, and factory operators.
-date: 2026-03-18T14:51:29Z
 ---
 # Motek 2026: Stuttgart’s Automation Week Hub with Bondexpo and Multi-Show Access
 ## Event Overview

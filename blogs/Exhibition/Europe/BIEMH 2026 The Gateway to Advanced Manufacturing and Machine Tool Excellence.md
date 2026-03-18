@@ -1,3 +1,8 @@
+---
+title: "BIEMH 2026: The Gateway to Advanced Manufacturing and Machine Tool Excellence"
+meta_description: "BIEMH 2026 is scheduled for June 2026 at the Bilbao Exhibition Centre, showcasing advanced manufacturing, metalworking, and digitalization."
+date: 2026-06-01
+---
 # BIEMH 2026: The Gateway to Advanced Manufacturing and Machine Tool Excellence
 
 The **[BIEMH (International Machine Tool Biennial)](https://biemh.bilbaoexhibitioncentre.com/en/)** is one of the most significant industrial events in Europe and the undisputed leader in the Spanish market. Scheduled for **June 2026** at the **Bilbao Exhibition Centre (BEC)**, the 33rd edition of BIEMH will showcase the pinnacle of advanced manufacturing, metalworking machinery, and industrial digitalization.

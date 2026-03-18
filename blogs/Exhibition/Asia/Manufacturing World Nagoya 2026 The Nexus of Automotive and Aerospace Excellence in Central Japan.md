@@ -1,3 +1,8 @@
+---
+title: "Manufacturing World Nagoya 2026: The Nexus of Automotive and Aerospace Excellence in Central Japan"
+meta_description: "Manufacturing World Nagoya 2026 runs April 8–10, 2026 at Port Messe Nagoya, covering nine specialized shows across production."
+date: 2026-04-08
+---
 # Manufacturing World Nagoya 2026: The Nexus of Automotive and Aerospace Excellence in Central Japan
 
 **[Manufacturing World Nagoya 2026](https://www.manufacturing-world.jp/hub/en-gb.html)**, central Japan’s largest and most comprehensive manufacturing trade show, is scheduled to take place from **April 8–10, 2026**, at **Port Messe Nagoya**. Organized by RX Japan, the event is a critical hub for the Chubu region—a territory synonymous with the highest concentration of automotive, aerospace, and heavy industry manufacturing in Japan.

@@ -1,5 +1,5 @@
 ---
-title: Elevating Precision: Chevalier's FRG-S Series CNC Rotary Surface Grinders
+title: "Elevating Precision: Chevalier's FRG-S Series CNC Rotary Surface Grinders"
 description: Read about the FRG-S series of CNC rotary surface grinders from Chevalier. These machines feature SMART iControl technology, a heavy-duty design, and automation integration. They are used in the aerospace, automotive, and precision manufacturing industries. Learn about the features and real-world applications of the FRG-1000S.
 date: 2026-03-10T14:37:08Z
 ---

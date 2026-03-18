@@ -1,3 +1,8 @@
+---
+title: "METPACK 2026: The Global Apex of Metal Packaging and Can Making Innovation"
+meta_description: "METPACK, the world’s leading trade fair for metal packaging, is scheduled for May 5–8, 2026 at Messe Essen in Germany."
+date: 2026-05-05
+---
 # METPACK 2026: The Global Apex of Metal Packaging and Can Making Innovation
 
 **[METPACK](https://www.metpack.de/market-leader/)**, the world’s leading trade fair for metal packaging, is a triennial event that serves as the primary global meeting point for the international can making industry. Scheduled for **May 5–8, 2026**, at **Messe Essen** in Germany, the exhibition provides a comprehensive overview of the latest machinery and technologies involved in the production, refinement, and recycling of metal containers.

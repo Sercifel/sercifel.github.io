@@ -1,3 +1,8 @@
+---
+title: "TIMTOS: A Practical Machine Tool Exhibition for OEM Buyers and Custom Manufacturing Solutions"
+meta_description: "Many procurement managers attend EMO or IMTS, but when projects move to sourcing, budget and customization constraints push them to TIMTOS."
+date: 2026-01-01
+---
 # TIMTOS: A Practical Machine Tool Exhibition for OEM Buyers and Custom Manufacturing Solutions
 
 ## Why Global Buyers Look Beyond Flagship Exhibitions

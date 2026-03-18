@@ -60,6 +60,21 @@ const normalizeTags = (value) => {
   return [String(value).trim()].filter(Boolean);
 };
 
+const extractFirstImage = (content) => {
+  if (!content) {
+    return "";
+  }
+  const markdownMatch = content.match(/!\[[^\]]*\]\(([^)]+)\)/);
+  if (markdownMatch && markdownMatch[1]) {
+    return markdownMatch[1].split(/\s+/)[0].replace(/^<|>$/g, "");
+  }
+  const htmlMatch = content.match(/<img[^>]+src=["']([^"']+)["']/i);
+  if (htmlMatch && htmlMatch[1]) {
+    return htmlMatch[1];
+  }
+  return "";
+};
+
 const normalizeContent = (filePath, rootDir, data, content) => {
   const relativePath = path.relative(rootDir, filePath);
   const pathSegments = relativePath.split(path.sep);
@@ -88,6 +103,8 @@ const normalizeContent = (filePath, rootDir, data, content) => {
     return "";
   };
 
+  const image = data.image ?? data.thumbnail ?? extractFirstImage(content);
+
   return {
     category,
     subcategory,
@@ -96,6 +113,7 @@ const normalizeContent = (filePath, rootDir, data, content) => {
     date: normalizeDate(data.date),
     description: data.description ?? data.summary ?? "",
     tags: normalizeTags(data.tags ?? data.tag),
+    image,
     content,
   };
 };

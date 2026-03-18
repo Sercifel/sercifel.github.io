@@ -1,7 +1,8 @@
 ---
 title: "Dubai WoodShow 2026: Dubai’s Regional Marketplace for Timber, Panels, and Woodworking Machinery"
+meta_description: "Dubai WoodShow 2026 arrives at a time when the regional wood business is being shaped by faster sourcing cycles, wider supplier comparison, and stronger demand for products."
+date: 2026-06-22
 description: Dubai WoodShow 2026 returns to Dubai World Trade Centre on 22 to 24 June 2026, bringing together timber suppliers, panel producers, decorative material brands, and woodworking machinery companies in a regional trade marketplace.
-date: 2026-03-18
 ---
 ---
 # Dubai WoodShow 2026: A Regional Marketplace Where Timber Supply, Surface Materials and Woodworking Technology Converge

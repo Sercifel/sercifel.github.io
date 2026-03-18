@@ -1,7 +1,8 @@
 ---
 title: "interpack 2026: Dusseldorf Hosts the Global Processing and Packaging Marketplace"
+meta_description: "interpack 2026 takes place 07–13 May 2026 at the fairground in Dusseldorf, Germany, as a global meeting point for processing and packaging."
+date: 2026-05-07
 description: interpack 2026 runs 07-13 May 2026 at the fairground in Dusseldorf, bringing the processing and packaging value chain together with focus areas like smart manufacturing, innovative materials, and future skills, plus a Taiwan exhibitor spotlight.
-date: 2026-03-18T13:55:10Z
 ---
 # interpack 2026: Dusseldorf Hosts the Global Processing and Packaging Marketplace
 

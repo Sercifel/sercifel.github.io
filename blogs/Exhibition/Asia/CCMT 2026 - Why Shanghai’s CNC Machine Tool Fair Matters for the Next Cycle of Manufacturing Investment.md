@@ -1,7 +1,8 @@
 ---
 title: "CCMT 2026 in Shanghai: CNC Machine Tools, Smart Manufacturing, and China Market Signals"
+meta_description: "CCMT 2026 will return to the Shanghai New International Expo Centre from April 21 to 25, 2026, occupying 200,000 square meters across halls W1-W5, N1-N5, and E1-E7."
+date: 2026-04-21
 description: CCMT 2026 runs April 21 to 25 in Shanghai at SNIEC, bringing together CNC machine tools, automation, tooling, and metrology for China’s manufacturing market.
-date: 2026-03-18
 ---
 ---
 # CCMT 2026: Why Shanghai’s CNC Machine Tool Fair Matters for the Next Cycle of Manufacturing Investment

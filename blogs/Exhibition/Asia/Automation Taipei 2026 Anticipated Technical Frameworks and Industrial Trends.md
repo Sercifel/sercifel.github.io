@@ -1,7 +1,8 @@
 ---
 title: "Automation Taipei 2026: Anticipated Technical Frameworks and Industrial Trends"
+meta_description: "The Taipei International Industrial Automation Exhibition remains a primary platform for technical exchange within the Asian manufacturing sector."
+date: 2026-08-19
 description: A technical preview of the 2026 Taipei International Industrial Automation Exhibition, focusing on core infrastructure and the evolution of robotic applications.
-date: 2026-03-16
 ---
 # Automation Taipei 2026: Anticipated Technical Frameworks and Industrial Trends
 

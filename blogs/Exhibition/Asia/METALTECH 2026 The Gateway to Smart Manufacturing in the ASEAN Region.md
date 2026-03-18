@@ -1,3 +1,8 @@
+---
+title: "METALTECH 2026: The Gateway to Smart Manufacturing in the ASEAN Region"
+meta_description: "METALTECH 2026, Malaysia’s premier metalworking and machine tool exhibition, takes place at MITEC in Kuala Lumpur alongside AUTOMEX."
+date: 2026-05-01
+---
 # METALTECH 2026: The Gateway to Smart Manufacturing in the ASEAN Region
 
 **[METALTECH 2026](https://www.metaltech.com.my/)**, Malaysia’s premier international exhibition for metalworking, machine tools, and manufacturing technology, is scheduled to take place at the **Malaysia International Trade and Exhibition Centre (MITEC)** in Kuala Lumpur. As the largest event of its kind in the region, METALTECH, held alongside **AUTOMEX** (the International Automation Technology Exhibition), serves as a critical platform for the rapid industrialization of Southeast Asia.

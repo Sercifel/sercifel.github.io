@@ -1,3 +1,8 @@
+---
+title: "The 9th Taiwan International Machine Tool Show (TMTS 2026): Focus on AI and Sustainable Manufacturing"
+meta_description: "TMTS 2026 is scheduled for March 25–28, 2026 at Taichung International Exhibition Center, focusing on AI-powered sustainable manufacturing."
+date: 2026-03-25
+---
 # **The 9th Taiwan International Machine Tool Show (TMTS 2026): Focus on AI and Sustainable Manufacturing**
 
 [![TMTS 2026](https://www.tmts.tw/storage/images/2ab0157c26753cd3d6a576307e636628.png)](https://www.tmts.tw/en)

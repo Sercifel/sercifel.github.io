@@ -1,7 +1,8 @@
 ---
 title: "Advanced Materials Show 2026: Material Intelligence and Industrial Scaling"
+meta_description: "The Advanced Materials Show, scheduled for July 8–9, 2026 at the NEC in Birmingham, connects research and industrial-scale adoption."
+date: 2026-07-08
 description: A preview of The Advanced Materials Show 2026, focusing on the integration of high-performance materials into scalable manufacturing and the shift toward digital material tracking.
-date: 2026-03-16
 ---
 # Advanced Materials Show 2026: Material Intelligence and Industrial Scaling
 

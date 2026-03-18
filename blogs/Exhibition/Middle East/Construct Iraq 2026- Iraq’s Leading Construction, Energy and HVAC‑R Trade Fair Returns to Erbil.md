@@ -1,7 +1,8 @@
 ---
 title: "Construct Iraq 2026: Iraq’s Leading Construction, Energy and HVAC‑R Trade Fair Returns to Erbil"
+meta_description: "Construct Iraq 2026 will be held September 22–25, 2026 at the Erbil International Fairground in Iraq, covering construction, energy, and HVAC‑R."
+date: 2026-09-22
 description: Construct Iraq 2026, the 8th International Trade Fair for Construction, Energy (Electric Power & Solar) and HVAC‑R Industries, will be held September 22–25, 2026 at the Erbil International Fairground in Iraq.
-date: 2026-03-11T11:31:18Z
 ---
 
 # Construct Iraq 2026: Iraq’s Leading Construction, Energy and HVAC‑R Trade Fair Returns to Erbil

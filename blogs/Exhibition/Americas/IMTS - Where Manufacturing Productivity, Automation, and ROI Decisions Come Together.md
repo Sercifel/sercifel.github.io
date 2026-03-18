@@ -1,3 +1,8 @@
+---
+title: "IMTS: Where Manufacturing Productivity, Automation, and ROI Decisions Come Together"
+meta_description: "Across global manufacturing industries, decision-makers face a common dilemma as demand rises while labor remains limited and lead times tighten."
+date: 2026-01-01
+---
 # IMTS: Where Manufacturing Productivity, Automation, and ROI Decisions Come Together
 
 ## Why Manufacturing Leaders Are Rethinking How They Evaluate New Equipment

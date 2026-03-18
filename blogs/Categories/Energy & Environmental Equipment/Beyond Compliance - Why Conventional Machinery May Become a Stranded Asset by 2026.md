@@ -1,7 +1,7 @@
----  
-title: Beyond Compliance: Why Conventional Machinery May Become a Stranded Asset by 2026
-description: A practical look at why conventional industrial machinery is becoming harder to justify, as carbon reporting, energy efficiency, and supply chain requirements reshape equipment decisions.
-date: 2026-03-06  
+---
+title: "Beyond Compliance: Why Conventional Machinery May Become a Stranded Asset by 2026"
+description: "A practical look at why conventional industrial machinery is becoming harder to justify, as carbon reporting, energy efficiency, and supply chain requirements reshape equipment decisions."
+date: 2026-03-06
 ---
 # Beyond Compliance: Why Conventional Machinery May Become a Stranded Asset by 2026
 ![](https://i.meee.com.tw/uELwXut.jpg)

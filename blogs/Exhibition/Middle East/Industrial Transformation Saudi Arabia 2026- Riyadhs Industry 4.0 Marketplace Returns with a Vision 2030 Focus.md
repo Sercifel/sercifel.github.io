@@ -1,8 +1,8 @@
 ---
-title: Industrial Transformation Saudi Arabia 2026: Riyadhs Industry 4.0 Marketplace Returns with a Vision 2030 Focus
-description: Industrial Transformation Saudi Arabia 2026 returns to Riyadh on Nov 30–Dec 2 at RICEC, bringing together automation, digitalization, 5G, energy, intralogistics, and additive manufacturing for Vision 2030-aligned industrial transformation. 
-date: 2026-03-18T12:30:22Z
-
+title: "Industrial Transformation Saudi Arabia 2026: Riyadhs Industry 4.0 Marketplace Returns with a Vision 2030 Focus"
+meta_description: "Industrial Transformation Saudi Arabia 2026 will take place Nov 30–Dec 2, 2026 at the Riyadh International Convention and Exhibition Center in Riyadh."
+date: 2026-11-30
+description: Industrial Transformation Saudi Arabia 2026 returns to Riyadh on Nov 30–Dec 2 at RICEC, bringing together automation, digitalization, 5G, energy, intralogistics, and additive manufacturing for Vision 2030-aligned industrial transformation.
 ---
 
 # Industrial Transformation Saudi Arabia 2026: Riyadhs Industry 4.0 Marketplace Returns with a Vision 2030 Focus
