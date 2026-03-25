@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" role="img" aria-label="Machinery Insight placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#dbe4ef" />
+      <stop offset="45%" stop-color="#eef3f8" />
+      <stop offset="100%" stop-color="#dbe4ef" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#0f4c81" />
+      <stop offset="100%" stop-color="#2a9fd6" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)" />
+  <rect x="80" y="120" width="520" height="240" rx="16" fill="#ffffff" opacity="0.75" />
+  <rect x="120" y="170" width="220" height="16" rx="8" fill="#c5d2e2" />
+  <rect x="120" y="200" width="360" height="14" rx="7" fill="#c5d2e2" />
+  <rect x="120" y="228" width="300" height="12" rx="6" fill="#c5d2e2" />
+  <rect x="120" y="280" width="180" height="10" rx="5" fill="#c5d2e2" />
+  <path d="M560 140l80 80-80 80-80-80 80-80z" fill="url(#accent)" opacity="0.85" />
+  <path d="M560 170l50 50-50 50-50-50 50-50z" fill="#ffffff" opacity="0.85" />
+  <rect x="0" y="0" width="800" height="480" fill="none" stroke="#c9d5e3" stroke-width="8" />
+</svg>

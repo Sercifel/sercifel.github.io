@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>From AOI Bottlenecks to AI-Driven Inspection | Machinery Insight</title>
+    <meta name="description" content="How AI helps AOI equipment makers cut false calls, speed NPI, and improve traceability in semiconductor manufacturing." />
+    <meta property="og:title" content="From AOI Bottlenecks to AI-Driven Inspection | Machinery Insight" />
+    <meta property="og:description" content="How AI helps AOI equipment makers cut false calls, speed NPI, and improve traceability in semiconductor manufacturing." />
+    <meta property="og:url" content="/categories/semiconductor-electronics-equipment/why-ai-gives-aoi-equipment-a-new-role/" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/assets/favicon.ed4e230ec4b3.jpg" type="image/jpeg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" />
+    <script>
+      (() => {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
+        var dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P2ZB77SQ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="/assets/site.719285243304.css" />
+  </head>
+  <body class="bg-[var(--color-background)] text-[var(--color-text)]">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P2ZB77SQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:text-slate-900 focus:shadow"
+      href="#main-content"
+    >
+      Skip to main content
+    </a>
+    <div class="reading-progress" aria-hidden="true">
+      <span data-reading-progress></span>
+    </div>
+    <div id="main-content">
+      <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6" aria-label="Primary">
+    <a class="flex items-center" href="/" aria-label="Back to home">
+      <img
+        class="h-9 w-auto"
+        src="/assets/mi-logo-removebg-preview.b2f0858a01ec.png"
+        alt="Machinery Insight"
+        loading="eager"
+      />
+    </a>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="nav-scroll hidden items-center gap-6 whitespace-nowrap pb-1 md:flex">
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/firm-news/">Firm News</a>
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/exhibition/">Exhibitions</a>
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/categories/">Categories</a>
+      </div>
+      <button
+        class="inline-flex h-11 cursor-pointer items-center gap-2 rounded-full border border-slate-300 px-2 text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 sm:px-4"
+        data-search-open
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="search-modal"
+        aria-label="Open search"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="20" y1="20" x2="16.5" y2="16.5"></line>
+        </svg>
+        <span class="hidden sm:inline">Search</span>
+      </button>
+      <button
+        class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-300 text-slate-700 transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 md:hidden"
+        type="button"
+        data-nav-toggle
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div class="border-t border-slate-200 bg-white/95 md:hidden" data-nav-menu id="primary-navigation" hidden>
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-4 py-4 sm:px-6">
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/firm-news/">Firm News</a>
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/exhibition/">Exhibitions</a>
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/categories/">Categories</a>
+    </div>
+  </div>
+</header>
+
+
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 text-xs sm:text-sm text-slate-500" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 break-words leading-5"><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/">Home</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/categories/">Categories</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><span class="text-slate-700" aria-current="page">From AOI Bottlenecks to AI-Driven Inspection</span></li></ol>
+    </nav>
+  
+<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+  <div class="grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)_220px]">
+    <div class="hidden lg:block">
+    <aside class="lg:sticky lg:top-24 h-fit">
+      <div class="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Categories</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li><a class="link-primary" href="/categories/machine-tools/">Machine Tools</a></li><li><a class="link-primary" href="/categories/plastics-machinery/">Plastics Machinery</a></li><li><a class="link-primary" href="/categories/packaging-machinery/">Packaging Machinery</a></li><li><a class="link-primary" href="/categories/food-beverage-processing-machinery/">Food &amp; Beverage Processing Machinery</a></li><li><a class="link-primary" href="/categories/material-handling-equipment/">Material Handling Equipment</a></li><li><a class="link-primary" href="/categories/energy-environmental-equipment/">Energy &amp; Environmental Equipment</a></li><li><a class="link-primary" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a></li><li><a class="link-primary" href="/categories/industrial-automation-systems/">Industrial Automation Systems</a></li><li><a class="link-primary" href="/categories/general-industrial-equipment/">General Industrial Equipment</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+    <article>
+      <div class="lg:hidden mb-6 rounded border border-slate-200 p-4">
+        <button
+          type="button"
+          class="flex w-full items-center justify-between text-sm font-semibold"
+          data-toc-toggle
+          aria-expanded="false"
+        >
+          <span>On this page</span>
+          <span class="text-slate-500">Toggle</span>
+        </button>
+        <div class="mt-3" data-toc-panel hidden aria-hidden="true">
+          <ul class="space-y-2 text-sm text-slate-600">
+          <li>
+            <a data-toc-link="why-ai-gives-aoi-equipment-a-new-role" class="hover:text-blue-600" href="#why-ai-gives-aoi-equipment-a-new-role">Why AI Gives AOI Equipment a New Role</a>
+          </li>
+          <li>
+            <a data-toc-link="why-traditional-aoi-is-reaching-its-limit" class="hover:text-blue-600" href="#why-traditional-aoi-is-reaching-its-limit">Why traditional AOI is reaching its limit</a>
+          </li>
+          <li>
+            <a data-toc-link="what-changes-when-aoi-manufacturers-add-ai" class="hover:text-blue-600" href="#what-changes-when-aoi-manufacturers-add-ai">What changes when AOI manufacturers add AI</a>
+          </li>
+          <li>
+            <a data-toc-link="where-ai-creates-the-most-value" class="hover:text-blue-600" href="#where-ai-creates-the-most-value">Where AI creates the most value</a>
+          </li>
+          <li>
+            <a data-toc-link="what-b2b-buyers-should-evaluate-before-buying" class="hover:text-blue-600" href="#what-b2b-buyers-should-evaluate-before-buying">What B2B buyers should evaluate before buying</a>
+          </li>
+          <li>
+            <a data-toc-link="a-practical-adoption-roadmap" class="hover:text-blue-600" href="#a-practical-adoption-roadmap">A practical adoption roadmap</a>
+          </li>
+          <li>
+            <a data-toc-link="conclusion" class="hover:text-blue-600" href="#conclusion">Conclusion</a>
+          </li>
+          <li>
+            <a data-toc-link="references" class="hover:text-blue-600" href="#references">References</a>
+          </li></ul>
+        </div>
+      </div>
+      <h1 class="text-3xl font-semibold">From AOI Bottlenecks to AI-Driven Inspection</h1>
+      <p class="text-sm text-slate-500">Mar 17, 2026</p>
+      <p class="mt-3 text-slate-700">How AI helps AOI equipment makers cut false calls, speed NPI, and improve traceability in semiconductor manufacturing.</p>
+      <div class="prose prose-slate mt-8 max-w-none"><h2 id="why-ai-gives-aoi-equipment-a-new-role">Why AI Gives AOI Equipment a New Role</h2>
+<p><img src="https://i.meee.com.tw/IkKkiQC.jpg" alt=""></p>
+<p>Automated optical inspection has long been essential in semiconductor manufacturing support equipment, but the old model is under pressure. Traditional AOI is still effective for stable products and well-defined defect libraries. The problem is that semiconductor packaging, interconnect density, and product mix have changed faster than many inspection architectures have. AI-era devices are driving more advanced packaging, more HBM demand, tighter tolerances, and more complex process interactions. At the same time, semiconductor capacity and equipment spending have continued to expand, raising expectations for faster ramp-up and more scalable quality control.</p>
+<p>For procurement managers, the issue is not whether AI sounds advanced. The issue is whether AI helps an AOI supplier solve three old problems better than before: too many false calls, too much engineering effort, and too little process visibility. When those problems persist, the cost shows up as slow qualification, unstable yield, engineering overtime, and delayed customer acceptance.</p>
+<h2 id="why-traditional-aoi-is-reaching-its-limit">Why traditional AOI is reaching its limit</h2>
+<p>Rule-based AOI depends on predefined thresholds, handcrafted features, and recipe discipline. That structure is still valuable because it is interpretable and predictable. But it becomes harder to sustain when defect types multiply, materials vary, and acceptable process windows become narrower.</p>
+<p>This is especially visible in advanced packaging. Industry sources in 2024 and 2025 pointed to rapid growth in AI-related packaging demand, HBM integration, and more complex 2.5D and 3D package architectures. Those changes raise inspection difficulty because smaller bumps, denser structures, and new stack configurations create more subtle defects and more edge cases.</p>
+<p>For a project engineer, that means more time spent adjusting recipes, collecting golden samples, and arguing over borderline images. For a plant manager, it means more line interruptions caused by review burden or unstable thresholds. For a technical director, it means a larger gap between what the inspection tool flags and what the process team can act on.</p>
+<h2 id="what-changes-when-aoi-manufacturers-add-ai">What changes when AOI manufacturers add AI</h2>
+<p>When used correctly, AI does not replace optics, motion control, illumination design, or process knowledge. It improves how the system interprets complex visual patterns and how quickly it adapts to new variation.</p>
+<p>In practical terms, AI usually adds value in four areas.</p>
+<p>First, it improves <strong>defect classification</strong>. Instead of relying only on fixed rules, the system can learn from labeled images and separate true anomalies from process noise more effectively.</p>
+<p>Second, it reduces <strong>recipe dependence</strong>. An AI-assisted AOI platform can shorten the time needed to tune new products, especially where appearance changes do not map neatly to a simple threshold rule.</p>
+<p>Third, it supports <strong>review prioritization</strong>. Rather than flooding operators with equally weighted alerts, the system can rank events by confidence, defect type, or likely yield impact.</p>
+<p>Fourth, it enables <strong>data reuse across lines</strong>. If the supplier has built the right data architecture, models, labels, and decision rules can be transferred across similar tools or factories with less rework.</p>
+<p>That is the strategic opening for AOI equipment manufacturers. AI turns inspection from a stand-alone pass/fail station into a learning node in the quality loop. Done well, it connects image data, defect taxonomy, process excursions, and corrective action.</p>
+<h2 id="where-ai-creates-the-most-value">Where AI creates the most value</h2>
+<p>The highest-value use cases are usually not the most ambitious ones. They are the points where visual complexity is high and engineering bandwidth is limited.</p>
+<p>One major area is <strong>advanced packaging inspection</strong>. KLA and SEMI-related materials in 2024–2025 both emphasized that AI chips increasingly depend on advanced packaging, HBM, interposers, hybrid bonding, and dense integration schemes. That raises the value of inspection and metrology because a defect later in the flow can compromise a much more expensive assembly.</p>
+<p>A second area is <strong>new product introduction</strong>. If an AOI maker can reduce time-to-recipe, shorten tuning cycles, and standardize defect classification, the buyer gets a faster production ramp and lower dependence on a few senior engineers.</p>
+<p>A third area is <strong>cross-site consistency</strong>. As semiconductor manufacturing continues to invest in new capacity, buyers need equipment platforms that can be deployed repeatedly, not reinvented at each plant. SEMI’s smart manufacturing work in 2025 also points to a broader shift toward system-level automation rather than isolated point tools.</p>
+<p>Before comparing suppliers, it helps to separate attractive demos from operational value. The table below shows what buyers should actually test.</p>
+<p>AOI buyers should evaluate AI in terms of production behavior, not presentation quality.</p>
+<table>
+<thead>
+<tr>
+<th>Evaluation area</th>
+<th>Traditional pain point</th>
+<th>What AI should improve</th>
+<th>What the buyer should ask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Defect classification</td>
+<td>High false-call rate</td>
+<td>Better separation of true defects from nuisance variation</td>
+<td>What is the validated false-positive and false-negative performance on customer-like samples?</td>
+</tr>
+<tr>
+<td>New product setup</td>
+<td>Heavy recipe tuning</td>
+<td>Faster model adaptation and less manual setup</td>
+<td>How many engineering hours are typically required for NPI?</td>
+</tr>
+<tr>
+<td>Review workflow</td>
+<td>Too many borderline images</td>
+<td>Confidence scoring and review prioritization</td>
+<td>Can the system show why a call was made and how events are ranked?</td>
+</tr>
+<tr>
+<td>Traceability</td>
+<td>Images and defect data are siloed</td>
+<td>Linked image, lot, tool, and defect records</td>
+<td>How does it integrate with MES, SPC, and historian systems?</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>Black-box updates</td>
+<td>Controlled model versioning and rollback</td>
+<td>How are models validated, approved, and changed in production?</td>
+</tr>
+<tr>
+<td>Supplier support</td>
+<td>Good demo, weak deployment</td>
+<td>Repeatable line-side implementation</td>
+<td>Who owns labeling, retraining, and post-install optimization?</td>
+</tr>
+</tbody>
+</table>
+<p>The key point is simple: an AI-enabled AOI platform should reduce operational friction in measurable ways. If the vendor cannot explain validation method, change control, and integration scope, the value case is incomplete.</p>
+<h2 id="what-b2b-buyers-should-evaluate-before-buying">What B2B buyers should evaluate before buying</h2>
+<h3>Validation and governance matter as much as accuracy</h3>
+<p>NIST’s AI Risk Management Framework and later AI evaluation initiatives stress testing, validation, monitoring, and real-world performance measurement. That is directly relevant to industrial inspection. A model that performs well in a controlled demo but drifts in production is not a quality upgrade; it is a new source of risk.</p>
+<p>A serious AOI supplier should therefore provide:</p>
+<ul>
+<li>
+<p>a documented validation protocol</p>
+</li>
+<li>
+<p>version control for models and recipes</p>
+</li>
+<li>
+<p>clear acceptance criteria by defect class</p>
+</li>
+<li>
+<p>rollback procedures</p>
+</li>
+<li>
+<p>audit trails for model changes</p>
+</li>
+<li>
+<p>defined responsibilities for retraining and requalification</p>
+</li>
+</ul>
+<p>For exporters or multinational manufacturers, AI governance may also start affecting customer requirements and market access. The EU AI Act is risk-based rather than a blanket ban, but it signals a broader direction: industrial AI claims will face more scrutiny around trustworthiness, documentation, and deployment controls. Whether a specific AOI use case falls into a regulated category is <strong>To be verified</strong>, but the compliance direction is already relevant for vendor selection.</p>
+<h3>Integration determines whether insight becomes action</h3>
+<p>An AOI tool that identifies defects but does not connect to MES, SPC, maintenance, or process engineering workflows leaves value on the table. Buyers should ask whether the supplier can close the loop from image to process action.</p>
+<p>That includes traceability at the lot, panel, wafer, or package level; linkage to upstream tool conditions; and structured defect data that supports root-cause analysis. In many factories, the real gain from AI is not only better image interpretation. It is faster problem isolation.</p>
+<h2 id="a-practical-adoption-roadmap">A practical adoption roadmap</h2>
+<p>The most effective path is usually staged.</p>
+<p>Start with one bounded use case, such as a chronic false-call category or a high-review process step. Build a clean labeling method, validate on production-like data, and define what counts as success before go-live. Then expand only after the supplier proves stability under normal line variation.</p>
+<p>For OEMs and end users alike, the strongest long-term position comes from combining three elements: robust optics and mechanics, disciplined process engineering, and AI that is measurable, governed, and connected. AI does not rescue weak hardware or poor process control. But when built on a solid equipment platform, it gives AOI manufacturers a credible way out of the traditional trap of endless tuning and diminishing returns.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>When AOI equipment manufacturers combine AI with sound inspection engineering, the result is not simply “smarter software.” It is a more scalable inspection model. The practical benefits are lower review burden, shorter ramp cycles, better traceability, and a stronger bridge between defect detection and yield control.</p>
+<p>That is why AI matters in AOI now. Semiconductor manufacturing is expanding, packaging is becoming harder to inspect, and buyers need tools that do more than detect visible anomalies. They need systems that help factories make faster, more reliable decisions under growing process complexity.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p><a href="https://www.semi.org/en/news-media-press-releases/semi-press-releases/global-semiconductor-fab-capacity-projected-to-expand-6%25-in-2024-and-7%25-in-2025-semi-reports" target="_blank" rel="noopener noreferrer"><strong>SEMI — Global Semiconductor Fab Capacity Projected to Expand 6% in 2024 and 7% in 2025</strong>  <svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a>
+Relevant because it shows why inspection scalability matters: fab capacity and AI-driven leading-edge demand are still expanding.</p>
+</li>
+<li>
+<p><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer"><strong>NIST — AI Risk Management Framework / ARIA program</strong>  <svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a>
+Relevant because it provides a credible foundation for evaluating validation, monitoring, and trustworthy deployment of AI in industrial environments.</p>
+</li>
+<li>
+<p><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener noreferrer"><strong>European Commission — AI Act</strong>  <svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a>
+Relevant because it signals the direction of AI governance and documentation expectations for companies deploying AI-enabled systems.</p>
+</li>
+</ol>
+</div>
+      
+          <section class="mt-12 border-t border-slate-200 pt-6">
+            <h2 class="text-lg font-semibold">You might also be interested in...</h2>
+            <ul class="mt-4 flex flex-wrap gap-3 text-sm">
+              <li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/ate-market-analysis/">ATE Market Analysis - Divergent Testing Demands for HPC Speed vs. Automotive Reliability</a></li><li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/pcb-process-machinery-hdi-board-demand/">Fueling the AI Revolution - How PCB Process Machinery Adapts to the Global Surge in HDI Board Demand</a></li><li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/semiconductor-equipment-market-2026/">Semiconductor Equipment Market Forecast 2026 - The Role of AI in Driving $139 Billion in Global Sales</a></li>
+            </ul>
+          </section>
+        
+    </article>
+    <aside class="hidden lg:block sticky top-24 h-fit">
+      <p class="text-sm font-semibold">On this page</p>
+      <ul class="mt-2 space-y-2">
+          <li>
+            <a data-toc-link="why-ai-gives-aoi-equipment-a-new-role" class="hover:text-blue-600" href="#why-ai-gives-aoi-equipment-a-new-role">Why AI Gives AOI Equipment a New Role</a>
+          </li>
+          <li>
+            <a data-toc-link="why-traditional-aoi-is-reaching-its-limit" class="hover:text-blue-600" href="#why-traditional-aoi-is-reaching-its-limit">Why traditional AOI is reaching its limit</a>
+          </li>
+          <li>
+            <a data-toc-link="what-changes-when-aoi-manufacturers-add-ai" class="hover:text-blue-600" href="#what-changes-when-aoi-manufacturers-add-ai">What changes when AOI manufacturers add AI</a>
+          </li>
+          <li>
+            <a data-toc-link="where-ai-creates-the-most-value" class="hover:text-blue-600" href="#where-ai-creates-the-most-value">Where AI creates the most value</a>
+          </li>
+          <li>
+            <a data-toc-link="what-b2b-buyers-should-evaluate-before-buying" class="hover:text-blue-600" href="#what-b2b-buyers-should-evaluate-before-buying">What B2B buyers should evaluate before buying</a>
+          </li>
+          <li>
+            <a data-toc-link="a-practical-adoption-roadmap" class="hover:text-blue-600" href="#a-practical-adoption-roadmap">A practical adoption roadmap</a>
+          </li>
+          <li>
+            <a data-toc-link="conclusion" class="hover:text-blue-600" href="#conclusion">Conclusion</a>
+          </li>
+          <li>
+            <a data-toc-link="references" class="hover:text-blue-600" href="#references">References</a>
+          </li></ul>
+    </aside>
+  </div>
+</main>
+
+    </div>
+    <div
+      id="search-modal"
+      class="fixed inset-0 z-50 hidden overscroll-contain bg-slate-950/40 backdrop-blur-xl"
+      data-search-modal
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="search-modal-title"
+    >
+      <button
+        class="absolute inset-0 bg-transparent"
+        type="button"
+        data-search-overlay
+        aria-label="Close search"
+      ></button>
+      <div class="relative mx-auto flex min-h-full max-w-3xl items-center justify-center px-6">
+        <div class="search-panel flex max-h-[calc(100vh-6rem)] w-full flex-col rounded-2xl border p-6 shadow-xl">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Search</p>
+              <h2 class="mt-2 text-xl font-semibold" id="search-modal-title">
+                Find a Report or Vendor
+              </h2>
+            </div>
+            <button
+              class="rounded-full border border-slate-300 px-3 py-1 text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:border-blue-600 hover:text-blue-600"
+              data-search-close
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+          <input
+            class="mt-6 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm"
+            type="search"
+            name="search"
+            autocomplete="off"
+            placeholder="Search by company, category, or keyword… e.g. gearboxes"
+            data-search-input
+            aria-label="Search reports and vendors"
+          />
+          <p
+            class="mt-3 text-xs uppercase tracking-[0.2em] text-slate-400"
+            data-search-count
+            aria-live="polite"
+          ></p>
+          <ul class="mt-6 min-h-0 flex-1 space-y-4 overflow-y-auto pr-2" data-search-results></ul>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="mt-16 border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <div class="grid gap-8 lg:grid-cols-[220px_repeat(3,minmax(0,1fr))]">
+          <div>
+            <a class="inline-flex items-center" href="/" aria-label="Back to home">
+              <img
+                class="h-8 w-auto"
+                src="/assets/mi-logo-removebg-preview.b2f0858a01ec.png"
+                alt="Machinery Insight"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/firm-news/">Firm News</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/">Exhibitions</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/">Categories</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/about/">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-slate-700">Exhibitions</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/africa/">Africa</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/americas/">Americas</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/asia/">Asia</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/europe/">Europe</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/middle-east/">Middle East</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/oceania/">Oceania</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-slate-700">Categories</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/machine-tools/">Machine Tools</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/plastics-machinery/">Plastics Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/packaging-machinery/">Packaging Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/food-beverage-processing-machinery/">Food &amp; Beverage Processing Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/material-handling-equipment/">Material Handling Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/energy-environmental-equipment/">Energy &amp; Environmental Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/industrial-automation-systems/">Industrial Automation Systems</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/general-industrial-equipment/">General Industrial Equipment</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-slate-200 pt-4 text-xs text-slate-500">
+          <p>Copyright © Machinery Insight All rights reserved.</p>
+          <p>
+            Relative Platform of
+            <a class="ml-2 text-blue-700 hover:text-blue-800" href="https://www.market-prospects.com/" target="_blank" rel="noopener noreferrer">Market Prospects</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  
+    <script type="module" src="/assets/search.61597a69ffdc.js" defer></script>
+    <script src="/assets/nav.f64c39694db1.js" defer></script>
+    <script src="/assets/toc.168ce7a6341d.js" defer></script>
+    <script src="/assets/carousel.126f6ce6743d.js" defer></script>
+    <script src="/assets/load-more.216da7623fa9.js" defer></script>
+  </body>
+</html>

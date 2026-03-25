@@ -1,13 +1,5 @@
 const toggleButton = document.querySelector("[data-nav-toggle]");
 const menu = document.querySelector("[data-nav-menu]");
-const themeToggle = document.querySelector("[data-theme-toggle]");
-const themeIcons = themeToggle
-  ? {
-      light: themeToggle.querySelector("[data-theme-icon='light']"),
-      dark: themeToggle.querySelector("[data-theme-icon='dark']"),
-    }
-  : null;
-const root = document.documentElement;
 const progressBar = document.querySelector("[data-reading-progress]");
 
 if (toggleButton && menu) {
@@ -41,34 +33,6 @@ if (toggleButton && menu) {
     if (window.matchMedia("(min-width: 768px)").matches) {
       setExpanded(false);
     }
-  });
-}
-
-if (themeToggle) {
-  const setTheme = (next) => {
-    root.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-    if (themeIcons) {
-      const showLight = next === "dark";
-      if (themeIcons.light) {
-        themeIcons.light.classList.toggle("hidden", !showLight);
-      }
-      if (themeIcons.dark) {
-        themeIcons.dark.classList.toggle("hidden", showLight);
-      }
-    }
-    themeToggle.setAttribute(
-      "aria-label",
-      next === "dark" ? "Switch to light mode" : "Switch to dark mode"
-    );
-  };
-
-  const current = root.getAttribute("data-theme") || "light";
-  setTheme(current);
-
-  themeToggle.addEventListener("click", () => {
-    const active = root.getAttribute("data-theme") || "light";
-    setTheme(active === "dark" ? "light" : "dark");
   });
 }
 

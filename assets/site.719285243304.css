@@ -3,10 +3,11 @@
   --color-surface: #ffffff;
   --color-surface-alt: #eef2f6;
   --color-border: #d7dee8;
-  --color-text: #111827;
-  --color-muted: #4b5563;
-  --color-accent: #0f766e;
-  --color-accent-strong: #0e7490;
+  --color-text: #243447;
+  --color-muted: #6b7280;
+  --color-accent: #1f4b99;
+  --color-accent-strong: #163b7a;
+  --color-heading: #1b2a3a;
   --font-body: "Source Sans 3", "Inter", "Helvetica Neue", Arial, sans-serif;
   --font-heading: "Playfair Display", "Lora", "Iowan Old Style", "Georgia", serif;
   --line-height-body: 1.7;
@@ -57,8 +58,10 @@ html[data-theme="dark"] .bg-slate-950\/40 {
 
 body {
   font-family: var(--font-body);
+  font-size: 16px;
   line-height: var(--line-height-body);
   color: var(--color-text);
+  background: var(--color-background);
 }
 
 .link-primary {
@@ -88,6 +91,49 @@ body[data-modal-open="true"] {
   border-radius: 999px;
 }
 
+.carousel-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 500ms ease;
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #cbd5e1;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.carousel-dot.is-active {
+  background: #334155;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition: none;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -96,6 +142,36 @@ h5,
 h6 {
   font-family: var(--font-heading);
   letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 28px;
+  color: var(--color-heading);
+}
+
+h2 {
+  color: var(--color-heading);
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+  color: var(--color-heading);
+}
+
+h4 {
+  font-size: 16px;
+  color: var(--color-heading);
+}
+
+h5 {
+  font-size: 15px;
+  color: var(--color-heading);
+}
+
+h6 {
+  font-size: 14px;
+  color: var(--color-heading);
 }
 
 h1,
@@ -124,13 +200,25 @@ h3 {
 }
 
 .prose h2 {
-  font-size: 1.75rem;
+  font-size: 24px;
   line-height: 1.25;
 }
 
 .prose h3 {
-  font-size: 1.35rem;
+  font-size: 18px;
   line-height: 1.35;
+}
+
+.prose h4 {
+  font-size: 16px;
+}
+
+.prose h5 {
+  font-size: 15px;
+}
+
+.prose h6 {
+  font-size: 14px;
 }
 
 .prose p {

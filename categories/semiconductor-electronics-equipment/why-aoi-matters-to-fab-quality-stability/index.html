@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How AOI OEMs Stabilize Semiconductor Quality | Machinery Insight</title>
+    <meta name="description" content="Learn how AOI equipment manufacturers help semiconductor fabs improve consistency, traceability, process control, and supplier qualification." />
+    <meta property="og:title" content="How AOI OEMs Stabilize Semiconductor Quality | Machinery Insight" />
+    <meta property="og:description" content="Learn how AOI equipment manufacturers help semiconductor fabs improve consistency, traceability, process control, and supplier qualification." />
+    <meta property="og:url" content="/categories/semiconductor-electronics-equipment/why-aoi-matters-to-fab-quality-stability/" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/assets/favicon.ed4e230ec4b3.jpg" type="image/jpeg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" />
+    <script>
+      (() => {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
+        var dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P2ZB77SQ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="/assets/site.719285243304.css" />
+  </head>
+  <body class="bg-[var(--color-background)] text-[var(--color-text)]">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P2ZB77SQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:text-slate-900 focus:shadow"
+      href="#main-content"
+    >
+      Skip to main content
+    </a>
+    <div class="reading-progress" aria-hidden="true">
+      <span data-reading-progress></span>
+    </div>
+    <div id="main-content">
+      <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6" aria-label="Primary">
+    <a class="flex items-center" href="/" aria-label="Back to home">
+      <img
+        class="h-9 w-auto"
+        src="/assets/mi-logo-removebg-preview.b2f0858a01ec.png"
+        alt="Machinery Insight"
+        loading="eager"
+      />
+    </a>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <div class="nav-scroll hidden items-center gap-6 whitespace-nowrap pb-1 md:flex">
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/firm-news/">Firm News</a>
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/exhibition/">Exhibitions</a>
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/categories/">Categories</a>
+      </div>
+      <button
+        class="inline-flex h-11 cursor-pointer items-center gap-2 rounded-full border border-slate-300 px-2 text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 sm:px-4"
+        data-search-open
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="search-modal"
+        aria-label="Open search"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="20" y1="20" x2="16.5" y2="16.5"></line>
+        </svg>
+        <span class="hidden sm:inline">Search</span>
+      </button>
+      <button
+        class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-300 text-slate-700 transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 md:hidden"
+        type="button"
+        data-nav-toggle
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div class="border-t border-slate-200 bg-white/95 md:hidden" data-nav-menu id="primary-navigation" hidden>
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-4 py-4 sm:px-6">
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/firm-news/">Firm News</a>
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/exhibition/">Exhibitions</a>
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/categories/">Categories</a>
+    </div>
+  </div>
+</header>
+
+
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 text-xs sm:text-sm text-slate-500" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 break-words leading-5"><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/">Home</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/categories/">Categories</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><span class="text-slate-700" aria-current="page">How AOI OEMs Stabilize Semiconductor Quality</span></li></ol>
+    </nav>
+  
+<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+  <div class="grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)_220px]">
+    <div class="hidden lg:block">
+    <aside class="lg:sticky lg:top-24 h-fit">
+      <div class="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Categories</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li><a class="link-primary" href="/categories/machine-tools/">Machine Tools</a></li><li><a class="link-primary" href="/categories/plastics-machinery/">Plastics Machinery</a></li><li><a class="link-primary" href="/categories/packaging-machinery/">Packaging Machinery</a></li><li><a class="link-primary" href="/categories/food-beverage-processing-machinery/">Food &amp; Beverage Processing Machinery</a></li><li><a class="link-primary" href="/categories/material-handling-equipment/">Material Handling Equipment</a></li><li><a class="link-primary" href="/categories/energy-environmental-equipment/">Energy &amp; Environmental Equipment</a></li><li><a class="link-primary" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a></li><li><a class="link-primary" href="/categories/industrial-automation-systems/">Industrial Automation Systems</a></li><li><a class="link-primary" href="/categories/general-industrial-equipment/">General Industrial Equipment</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+    <article>
+      <div class="lg:hidden mb-6 rounded border border-slate-200 p-4">
+        <button
+          type="button"
+          class="flex w-full items-center justify-between text-sm font-semibold"
+          data-toc-toggle
+          aria-expanded="false"
+        >
+          <span>On this page</span>
+          <span class="text-slate-500">Toggle</span>
+        </button>
+        <div class="mt-3" data-toc-panel hidden aria-hidden="true">
+          <ul class="space-y-2 text-sm text-slate-600">
+          <li>
+            <a data-toc-link="why-aoi-matters-to-fab-quality-stability" class="hover:text-blue-600" href="#why-aoi-matters-to-fab-quality-stability">Why AOI Matters to Fab Quality Stability</a>
+          </li>
+          <li>
+            <a data-toc-link="why-consistency-is-the-real-issue-in-semiconductor-inspection" class="hover:text-blue-600" href="#why-consistency-is-the-real-issue-in-semiconductor-inspection">Why consistency is the real issue in semiconductor inspection</a>
+          </li>
+          <li>
+            <a data-toc-link="how-aoi-equipment-manufacturers-support-fab-quality" class="hover:text-blue-600" href="#how-aoi-equipment-manufacturers-support-fab-quality">How AOI equipment manufacturers support fab quality</a>
+          </li>
+          <li>
+            <a data-toc-link="the-manufacturing-controls-buyers-should-expect-from-an-aoi-oem" class="hover:text-blue-600" href="#the-manufacturing-controls-buyers-should-expect-from-an-aoi-oem">The manufacturing controls buyers should expect from an AOI OEM</a>
+          </li>
+          <li>
+            <a data-toc-link="what-changed-from-2023-to-2026" class="hover:text-blue-600" href="#what-changed-from-2023-to-2026">What changed from 2023 to 2026</a>
+          </li>
+          <li>
+            <a data-toc-link="how-to-evaluate-an-aoi-manufacturer-as-a-semiconductor-supplier" class="hover:text-blue-600" href="#how-to-evaluate-an-aoi-manufacturer-as-a-semiconductor-supplier">How to evaluate an AOI manufacturer as a semiconductor supplier</a>
+          </li>
+          <li>
+            <a data-toc-link="references" class="hover:text-blue-600" href="#references">References</a>
+          </li></ul>
+        </div>
+      </div>
+      <h1 class="text-3xl font-semibold">How AOI OEMs Stabilize Semiconductor Quality</h1>
+      <p class="text-sm text-slate-500">Mar 16, 2026</p>
+      <p class="mt-3 text-slate-700">Learn how AOI equipment manufacturers help semiconductor fabs improve consistency, traceability, process control, and supplier qualification.</p>
+      <div class="prose prose-slate mt-8 max-w-none"><h2 id="why-aoi-matters-to-fab-quality-stability">Why AOI Matters to Fab Quality Stability</h2>
+<p><img src="https://i.meee.com.tw/DGkCIBI.jpg" alt=""></p>
+<p>In semiconductor manufacturing, product consistency is not just a quality slogan. It is the ability to produce the same inspection decision, process response, and outgoing result across lots, shifts, tools, and production ramps. When that consistency breaks, the visible symptom may be a defect escape or yield dip, but the underlying problem is often broader: weak recipe control, poor traceability, slow root-cause isolation, or an AOI platform that cannot stay aligned with the fab’s process reality.</p>
+<p>That is why AOI equipment manufacturers matter far beyond image capture. A capable AOI OEM helps the fab build a repeatable inspection system: stable optics, governed recipes, calibrated measurement, classified defect data, and documented interfaces into MES, SPC, and engineering analysis. In other words, the tool supports quality only when the supplier also supports process discipline.</p>
+<h2 id="why-consistency-is-the-real-issue-in-semiconductor-inspection">Why consistency is the real issue in semiconductor inspection</h2>
+<p>For B2B buyers, “consistent quality” usually means three things.</p>
+<p>First, the same defect type should trigger the same decision every time under controlled conditions. Second, inspection results should be traceable to product, process, and tool context. Third, the system should remain stable when volume, package design, or engineering changes increase complexity.</p>
+<p>When consistency fails, the fab pays in multiple ways. False calls increase operator review load and reduce effective throughput. Missed defects create rework, field reliability exposure, or expensive downstream discovery. A weakly integrated AOI process also slows containment because engineers cannot quickly connect an image event to the lot, wafer, recipe version, maintenance state, or upstream process condition. That traceability problem is becoming more serious as advanced packaging, heterogeneous integration, and cross-supplier assembly flows become more common.</p>
+<h2 id="how-aoi-equipment-manufacturers-support-fab-quality">How AOI equipment manufacturers support fab quality</h2>
+<p>An AOI manufacturer supports quality best when it helps the fab move from inspection as a checkpoint to inspection as a control loop.</p>
+<h3>Detecting defects early and repeatably</h3>
+<p>AOI remains valuable because optical inspection is fast, inline, and suitable for early detection of many visible defect modes. But speed alone is not enough. In a fab environment, repeatability matters more than isolated benchmark performance. Stable illumination, stage accuracy, image normalization, and recipe governance are what keep one tool from drifting away from another. This is especially important when the same product runs across multiple lines or sites.</p>
+<h3>Turning inspection into process control data</h3>
+<p>The stronger AOI suppliers do not stop at pass/fail output. They structure data so it can be consumed by the fab’s wider automation stack. SEMI emphasizes that modern equipment standards support secure connectivity, reliable communication, and high-quality data acquisition, while SEMI’s EDA framework is designed to publish equipment data for throughput and quality improvement. For buyers, that means AOI should feed statistical control, excursion management, and engineering review instead of becoming another data silo.</p>
+<h3>Reducing false calls without increasing escapes</h3>
+<p>From 2023 to 2026, the industry conversation shifted from “Can AI find more defects?” to “Can classification be trusted operationally?” Practical progress has centered on defect review efficiency, automated defect classification, and better prioritization of review queues rather than replacing engineering judgment outright. This matters because the commercial value of AOI is often limited by false positives, not by the camera itself. Recent industry and technical sources also note that classification accuracy, overkill control, and adaptation to new defect types remain active challenges.</p>
+<h2 id="the-manufacturing-controls-buyers-should-expect-from-an-aoi-oem">The manufacturing controls buyers should expect from an AOI OEM</h2>
+<p>A semiconductor factory should evaluate an AOI supplier as a process partner, not just a machine vendor. The controls below are usually where stable performance is won or lost.</p>
+<p>Before choosing an OEM, buyers should compare the supplier’s controls at the process level, not only headline specifications.</p>
+<table>
+<thead>
+<tr>
+<th>Evaluation area</th>
+<th>What good looks like</th>
+<th>Risk if weak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recipe management</td>
+<td>Version control, approval workflow, rollback history, golden-sample library</td>
+<td>Inconsistent judgments across shifts or products</td>
+</tr>
+<tr>
+<td>Calibration and MSA</td>
+<td>Defined calibration intervals, GR&amp;R evidence, measurement drift checks</td>
+<td>Poor repeatability and disputed results</td>
+</tr>
+<tr>
+<td>Defect taxonomy</td>
+<td>Clear class definitions, review rules, escalation criteria</td>
+<td>High false calls or hidden escapes</td>
+</tr>
+<tr>
+<td>Data integration</td>
+<td>Interfaces to MES, SPC, and engineering analytics; exportable image and event data</td>
+<td>Slow root-cause analysis, isolated data</td>
+</tr>
+<tr>
+<td>Traceability</td>
+<td>Linkage to lot, wafer, die, recipe, operator, and tool state</td>
+<td>Weak containment and audit difficulty</td>
+</tr>
+<tr>
+<td>Validation and acceptance</td>
+<td>FAT/SAT criteria tied to defect performance and production use cases</td>
+<td>Good demo, poor production reality</td>
+</tr>
+<tr>
+<td>Service support</td>
+<td>Spare-parts plan, response SLA, remote diagnostics, training</td>
+<td>Extended downtime and slow recovery</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Maintenance manuals, change logs, qualification records, software release notes</td>
+<td>Audit risk and poor lifecycle control</td>
+</tr>
+</tbody>
+</table>
+<p>The table shows a useful procurement pattern: most consistency failures come from governance gaps around the tool, not only from optical limitations inside the tool. That is why documentation, validation, and data architecture belong in the RFQ alongside resolution, throughput, and defect-library claims.</p>
+<h3>Recipe governance and golden-sample management</h3>
+<p>Buyers should ask how the supplier creates, approves, modifies, and retires recipes. A stable AOI deployment normally uses controlled golden samples, image libraries for known defect classes, and locked baselines for production recipes. Engineering changes should be logged, attributable, and reversible. Without this discipline, the fab cannot tell whether a yield shift comes from the process or from inspection drift.</p>
+<h3>Calibration, GR&amp;R, and validation discipline</h3>
+<p>A credible AOI manufacturer should be able to explain how it verifies tool-to-tool matching, stage repeatability, image stability, and detection repeatability over time. Metrological traceability is relevant here because it links measurement results to documented references through an unbroken chain of calibration. In practical buying terms, that means acceptance data should be reproducible, not anecdotal.</p>
+<h3>Traceability, documentation, and audit readiness</h3>
+<p>Documentation is not an administrative afterthought. SEMI E149 specifically addresses supplier-provided documentation for acquisition and use of manufacturing equipment, while SEMI E10, E79, and E116 define ways to think about reliability, productivity, and performance tracking. Buyers do not need every standard in the purchase order, but they do need supplier behavior that aligns with those disciplines: documented states, defined metrics, and usable records for maintenance and production support.</p>
+<h2 id="what-changed-from-2023-to-2026">What changed from 2023 to 2026</h2>
+<p>Three trends changed what buyers should expect from AOI suppliers.</p>
+<h3>Advanced packaging raised inspection complexity</h3>
+<p>As 2.5D, 3D integration, hybrid bonding, and chiplet-related flows expanded, inspection had to deal with smaller features, new defect modes, and more difficult handoffs across process steps and suppliers. Industry coverage in 2024 and 2025 repeatedly points to advanced packaging as a driver of new inspection and metrology requirements.</p>
+<h3>Traceability and data exchange became more important</h3>
+<p>Recent work from NIST and industry media shows growing emphasis on data provenance, traceability, and shared metrology frameworks. This reinforces a practical buying lesson: AOI value increases when event data can be trusted, correlated, and reused for root-cause analysis across the manufacturing chain.</p>
+<h3>AI-assisted defect classification moved from pilot to practical use</h3>
+<p>AI-assisted review is now a real evaluation point, but buyers should stay disciplined. The right question is not whether the supplier uses AI. The right question is whether the supplier can document model governance, exception handling, retraining policy, and performance on new or rare defect classes. Claims about fully autonomous classification should be treated as <strong>To be verified</strong> unless supported by production data under the buyer’s own use case.</p>
+<h2 id="how-to-evaluate-an-aoi-manufacturer-as-a-semiconductor-supplier">How to evaluate an AOI manufacturer as a semiconductor supplier</h2>
+<p>For procurement and engineering teams, a practical evaluation framework includes four tests.</p>
+<p><strong>Technical fit:</strong> Can the tool detect the relevant defect classes at the right production stage, with a stable recipe architecture and realistic throughput?</p>
+<p><strong>Operational fit:</strong> Can the OEM support FAT, SAT, ramp, PM, spare parts, and recovery without excessive dependence on expert intervention?</p>
+<p><strong>Data fit:</strong> Can inspection outputs flow into the fab’s control architecture with usable identifiers, timestamps, images, and event history?</p>
+<p><strong>Commercial fit:</strong> Are uptime targets, service levels, software changes, and acceptance criteria written clearly enough to protect the fab after installation?</p>
+<p>The most reliable AOI OEM is usually not the supplier with the broadest brochure. It is the one that can explain, document, and support how inspection decisions remain stable as the fab changes.</p>
+<h2 id="references"><strong>References</strong></h2>
+<ul>
+<li>
+<p><strong>SEMI, “<a href="https://www.semi.org/en/products-services/standards/using-semi-standards" target="_blank" rel="noopener noreferrer">About SEMI Standards / Using SEMI Standards.<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a>”</strong><br>
+Relevant because it explains why equipment connectivity, reliable communication, and high-quality data acquisition matter in modern semiconductor manufacturing.</p>
+</li>
+<li>
+<p><strong>SEMI, “<a href="https://www.semi.org/en/next-gen-semi-eda-standards" target="_blank" rel="noopener noreferrer">Next-Gen SEMI EDA Standards.<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a>”</strong><br>
+Useful for understanding why equipment data publication matters for throughput and quality improvement, which is central to AOI integration.</p>
+</li>
+<li>
+<p><strong>SemiEngineering, “<a href="https://semiengineering.com/advanced-packaging-traceability-and-root-cause-analysis/" target="_blank" rel="noopener noreferrer">Advanced Packaging Traceability And Root Cause Analysis<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a>” (2025).</strong><br>
+Relevant because it shows why traceability across wafers, dies, assemblies, and suppliers is now essential to sustaining yield and reliability.</p>
+</li>
+<li>
+<p><strong>SemiEngineering, “<a href="https://semiengineering.com/how-advanced-packaging-is-reshaping-inspection/" target="_blank" rel="noopener noreferrer">How Advanced Packaging Is Reshaping Inspection<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a>” (2025).</strong><br>
+Useful for the recent trend that advanced packaging makes early and consistent defect detection more difficult and more important.</p>
+</li>
+<li>
+<p><strong>NIST CHIPS, “<a href="https://nvlpubs.nist.gov/nistpubs/CHIPS/NIST.CHIPS.1100-1.pdf" target="_blank" rel="noopener noreferrer">Response to Public Comments: Building a Metrology Exchange to Innovate in Semiconductors (METIS)<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a>” (2024).</strong><br>
+Relevant because it highlights data provenance, traceability, and the role of shared metrology information in semiconductor manufacturing improvement.</p>
+</li>
+</ul>
+</div>
+      
+          <section class="mt-12 border-t border-slate-200 pt-6">
+            <h2 class="text-lg font-semibold">You might also be interested in...</h2>
+            <ul class="mt-4 flex flex-wrap gap-3 text-sm">
+              <li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/ate-market-analysis/">ATE Market Analysis - Divergent Testing Demands for HPC Speed vs. Automotive Reliability</a></li><li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/pcb-process-machinery-hdi-board-demand/">Fueling the AI Revolution - How PCB Process Machinery Adapts to the Global Surge in HDI Board Demand</a></li><li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/semiconductor-equipment-market-2026/">Semiconductor Equipment Market Forecast 2026 - The Role of AI in Driving $139 Billion in Global Sales</a></li>
+            </ul>
+          </section>
+        
+    </article>
+    <aside class="hidden lg:block sticky top-24 h-fit">
+      <p class="text-sm font-semibold">On this page</p>
+      <ul class="mt-2 space-y-2">
+          <li>
+            <a data-toc-link="why-aoi-matters-to-fab-quality-stability" class="hover:text-blue-600" href="#why-aoi-matters-to-fab-quality-stability">Why AOI Matters to Fab Quality Stability</a>
+          </li>
+          <li>
+            <a data-toc-link="why-consistency-is-the-real-issue-in-semiconductor-inspection" class="hover:text-blue-600" href="#why-consistency-is-the-real-issue-in-semiconductor-inspection">Why consistency is the real issue in semiconductor inspection</a>
+          </li>
+          <li>
+            <a data-toc-link="how-aoi-equipment-manufacturers-support-fab-quality" class="hover:text-blue-600" href="#how-aoi-equipment-manufacturers-support-fab-quality">How AOI equipment manufacturers support fab quality</a>
+          </li>
+          <li>
+            <a data-toc-link="the-manufacturing-controls-buyers-should-expect-from-an-aoi-oem" class="hover:text-blue-600" href="#the-manufacturing-controls-buyers-should-expect-from-an-aoi-oem">The manufacturing controls buyers should expect from an AOI OEM</a>
+          </li>
+          <li>
+            <a data-toc-link="what-changed-from-2023-to-2026" class="hover:text-blue-600" href="#what-changed-from-2023-to-2026">What changed from 2023 to 2026</a>
+          </li>
+          <li>
+            <a data-toc-link="how-to-evaluate-an-aoi-manufacturer-as-a-semiconductor-supplier" class="hover:text-blue-600" href="#how-to-evaluate-an-aoi-manufacturer-as-a-semiconductor-supplier">How to evaluate an AOI manufacturer as a semiconductor supplier</a>
+          </li>
+          <li>
+            <a data-toc-link="references" class="hover:text-blue-600" href="#references">References</a>
+          </li></ul>
+    </aside>
+  </div>
+</main>
+
+    </div>
+    <div
+      id="search-modal"
+      class="fixed inset-0 z-50 hidden overscroll-contain bg-slate-950/40 backdrop-blur-xl"
+      data-search-modal
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="search-modal-title"
+    >
+      <button
+        class="absolute inset-0 bg-transparent"
+        type="button"
+        data-search-overlay
+        aria-label="Close search"
+      ></button>
+      <div class="relative mx-auto flex min-h-full max-w-3xl items-center justify-center px-6">
+        <div class="search-panel flex max-h-[calc(100vh-6rem)] w-full flex-col rounded-2xl border p-6 shadow-xl">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Search</p>
+              <h2 class="mt-2 text-xl font-semibold" id="search-modal-title">
+                Find a Report or Vendor
+              </h2>
+            </div>
+            <button
+              class="rounded-full border border-slate-300 px-3 py-1 text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:border-blue-600 hover:text-blue-600"
+              data-search-close
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+          <input
+            class="mt-6 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm"
+            type="search"
+            name="search"
+            autocomplete="off"
+            placeholder="Search by company, category, or keyword… e.g. gearboxes"
+            data-search-input
+            aria-label="Search reports and vendors"
+          />
+          <p
+            class="mt-3 text-xs uppercase tracking-[0.2em] text-slate-400"
+            data-search-count
+            aria-live="polite"
+          ></p>
+          <ul class="mt-6 min-h-0 flex-1 space-y-4 overflow-y-auto pr-2" data-search-results></ul>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="mt-16 border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <div class="grid gap-8 lg:grid-cols-[220px_repeat(3,minmax(0,1fr))]">
+          <div>
+            <a class="inline-flex items-center" href="/" aria-label="Back to home">
+              <img
+                class="h-8 w-auto"
+                src="/assets/mi-logo-removebg-preview.b2f0858a01ec.png"
+                alt="Machinery Insight"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/firm-news/">Firm News</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/">Exhibitions</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/">Categories</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/about/">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-slate-700">Exhibitions</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/africa/">Africa</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/americas/">Americas</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/asia/">Asia</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/europe/">Europe</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/middle-east/">Middle East</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/oceania/">Oceania</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-slate-700">Categories</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/machine-tools/">Machine Tools</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/plastics-machinery/">Plastics Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/packaging-machinery/">Packaging Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/food-beverage-processing-machinery/">Food &amp; Beverage Processing Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/material-handling-equipment/">Material Handling Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/energy-environmental-equipment/">Energy &amp; Environmental Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/industrial-automation-systems/">Industrial Automation Systems</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/general-industrial-equipment/">General Industrial Equipment</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-slate-200 pt-4 text-xs text-slate-500">
+          <p>Copyright © Machinery Insight All rights reserved.</p>
+          <p>
+            Relative Platform of
+            <a class="ml-2 text-blue-700 hover:text-blue-800" href="https://www.market-prospects.com/" target="_blank" rel="noopener noreferrer">Market Prospects</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  
+    <script type="module" src="/assets/search.61597a69ffdc.js" defer></script>
+    <script src="/assets/nav.f64c39694db1.js" defer></script>
+    <script src="/assets/toc.168ce7a6341d.js" defer></script>
+    <script src="/assets/carousel.126f6ce6743d.js" defer></script>
+    <script src="/assets/load-more.216da7623fa9.js" defer></script>
+  </body>
+</html>
