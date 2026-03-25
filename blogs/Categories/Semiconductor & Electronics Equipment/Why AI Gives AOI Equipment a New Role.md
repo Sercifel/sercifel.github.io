@@ -3,8 +3,8 @@ title: From AOI Bottlenecks to AI-Driven Inspection
 description: How AI helps AOI equipment makers cut false calls, speed NPI, and improve traceability in semiconductor manufacturing.
 date: 2026-03-17
 ---
----
 # Why AI Gives AOI Equipment a New Role
+
 ![](https://i.meee.com.tw/IkKkiQC.jpg)
 
 Automated optical inspection has long been essential in semiconductor manufacturing support equipment, but the old model is under pressure. Traditional AOI is still effective for stable products and well-defined defect libraries. The problem is that semiconductor packaging, interconnect density, and product mix have changed faster than many inspection architectures have. AI-era devices are driving more advanced packaging, more HBM demand, tighter tolerances, and more complex process interactions. At the same time, semiconductor capacity and equipment spending have continued to expand, raising expectations for faster ramp-up and more scalable quality control.

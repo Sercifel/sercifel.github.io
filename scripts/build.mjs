@@ -18,6 +18,14 @@ import {
 
 const ensureDir = (dir) => fs.mkdir(dir, { recursive: true });
 const normalizeOutputPath = (value) => value.replace(/^\/+/, "");
+const brandSuffix = " | Machinery Insight";
+const withBrandTitle = (title) => {
+  const text = String(title ?? "").trim();
+  if (!text) {
+    return `Home${brandSuffix}`;
+  }
+  return text.endsWith(brandSuffix) ? text : `${text}${brandSuffix}`;
+};
 const safeSegment = (value) => {
   const slug = slugify(value ?? "");
   const fallback = slug || "section";
@@ -61,6 +69,55 @@ const listChildDirs = async (dir) => {
 };
 const hashContent = (buffer) =>
   createHash("sha256").update(buffer).digest("hex").slice(0, 12);
+const extractExcerpt = (markdown, maxLength = 160) => {
+  const source = String(markdown ?? "");
+  if (!source.trim()) {
+    return "";
+  }
+  const cleaned = source
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/`[^`]*`/g, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/[#>*_~`-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!cleaned) {
+    return "";
+  }
+  if (cleaned.length <= maxLength) {
+    return cleaned;
+  }
+  const limit = Math.max(0, maxLength - 3);
+  return `${cleaned.slice(0, limit).trimEnd()}...`;
+};
+const stripLeadingTitleHeading = (markdown, title) => {
+  const source = String(markdown ?? "");
+  const heading = String(title ?? "").trim();
+  if (!source.trim() || !heading) {
+    return source;
+  }
+  const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(
+    `^\\s*#\\s+${escaped}\\s*(?:\\r?\\n|$)`
+  );
+  if (!pattern.test(source)) {
+    return source;
+  }
+  return source.replace(pattern, "").replace(/^\s+/, "");
+};
+const categoryImageMap = new Map([
+  ["machine-tools", "/assets/machine-tools.jpeg"],
+  ["plastic-machinery", "/assets/plastic-machinery.jpeg"],
+  ["plastics-machinery", "/assets/plastic-machinery.jpeg"],
+  ["packaging-machinery", "/assets/packaging-machinery.jpeg"],
+  ["food-beverage-processing-machinery", "/assets/food-beverage-processing-machinery.jpeg"],
+  ["material-handling-equipment", "/assets/material-handling-equipment.jpeg"],
+  ["energy-environmental-equipment", "/assets/energy-environmental-equipment.jpeg"],
+  ["semiconductor-electronics-equipment", "/assets/semiconductor-electronics-equipment.jpeg"],
+  ["industrial-automation-systems", "/assets/industrial-automation-systems.jpeg"],
+  ["general-industrial-equipment", "/assets/general-industrial-equipment.jpeg"],
+]);
 const buildAssets = async (outDir) => {
   const assetsDir = path.join(outDir, "assets");
   const files = [
@@ -68,8 +125,21 @@ const buildAssets = async (outDir) => {
     "search.js",
     "nav.js",
     "toc.js",
+    "carousel.js",
+    "load-more.js",
     "mi-logo.jpg",
+    "mi-logo-removebg-preview.png",
+    "favicon.jpg",
     "default-thumb.svg",
+    "machine-tools.jpeg",
+    "plastic-machinery.jpeg",
+    "packaging-machinery.jpeg",
+    "food-beverage-processing-machinery.jpeg",
+    "material-handling-equipment.jpeg",
+    "energy-environmental-equipment.jpeg",
+    "semiconductor-electronics-equipment.jpeg",
+    "industrial-automation-systems.jpeg",
+    "general-industrial-equipment.jpeg",
   ];
   await fs.rm(assetsDir, { recursive: true, force: true });
   await ensureDir(assetsDir);
@@ -99,6 +169,31 @@ const groupBy = (items, key) =>
 const renderNavbar = async ({ active, categories } = {}) => {
   const activeSegment = safeSegment(active ?? "");
   return renderTemplate("navbar.html", { activeSegment });
+};
+const renderBreadcrumbs = ({ items = [], widthClass = "max-w-7xl" } = {}) => {
+  const cleaned = items.filter((item) => item && item.label);
+  if (!cleaned.length) {
+    return "";
+  }
+  const list = cleaned
+    .map((item, index) => {
+      const safeLabel = escapeHtml(item.label);
+      const safeHref = item.href ? escapeHtml(item.href) : "";
+      const isLast = index === cleaned.length - 1;
+      const content = !isLast && safeHref
+        ? `<a class="hover:text-blue-600" href="${safeHref}">${safeLabel}</a>`
+        : `<span class="text-slate-700"${isLast ? " aria-current=\"page\"" : ""}>${safeLabel}</span>`;
+      const separator = !isLast
+        ? `<span class="text-slate-400" aria-hidden="true">/</span>`
+        : "";
+      return `<li class="flex items-center gap-2">${content}${separator}</li>`;
+    })
+    .join("");
+  return `
+    <nav class="mx-auto ${widthClass} px-4 sm:px-6 lg:px-8 pt-6 text-xs sm:text-sm text-slate-500" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 break-words leading-5">${list}</ol>
+    </nav>
+  `;
 };
 
 export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}) {
@@ -138,6 +233,140 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     label: humanizeSegment(name),
     segment: safeSegment(name),
   }));
+  const categoryOrder = [
+    "Machine Tools",
+    "Plastics Machinery",
+    "Packaging Machinery",
+    "Food & Beverage Processing Machinery",
+    "Material Handling Equipment",
+    "Energy & Environmental Equipment",
+    "Semiconductor & Electronics Equipment",
+    "Industrial Automation Systems",
+    "General Industrial Equipment",
+  ];
+  const categoryIntroMap = new Map([
+    [
+      slugify("Machine Tools"),
+      "Machine tools cover turning, milling, grinding, EDM, and multi-process systems that shape metal parts. This category summarizes selection criteria, accuracy, and throughput to support production upgrades.",
+    ],
+    [
+      slugify("Plastics Machinery"),
+      "Plastics machinery includes injection molding, extrusion, blow molding, forming, and recycling equipment. This category highlights materials, efficiency, and process stability for comparing capacity and part quality.",
+    ],
+    [
+      slugify("Packaging Machinery"),
+      "Packaging machinery covers filling, sealing, labeling, cartoning, and palletizing equipment that links upstream and downstream processes. This category focuses on pack formats, speed, and yield for automation planning.",
+    ],
+    [
+      slugify("Food & Beverage Processing Machinery"),
+      "Food and beverage processing equipment includes washing, mixing, sterilization, filling, and packaging systems. This category summarizes hygiene requirements and throughput to balance quality and cost.",
+    ],
+    [
+      slugify("Material Handling Equipment"),
+      "Material handling equipment includes conveyors, forklifts, AGV/AMR fleets, and warehouse automation. This category covers flow design and efficiency metrics for internal logistics planning.",
+    ],
+    [
+      slugify("Energy & Environmental Equipment"),
+      "Energy and environmental equipment spans efficiency systems, air and water treatment, recycling, and carbon management. This category emphasizes compliance and performance metrics for sustainable operations.",
+    ],
+    [
+      slugify("Semiconductor & Electronics Equipment"),
+      "Semiconductor and electronics equipment includes wafer and packaging processes, SMT, inspection, and cleanroom systems. This category outlines process nodes and equipment trends for comparing technical capabilities.",
+    ],
+    [
+      slugify("Industrial Automation Systems"),
+      "Industrial automation systems cover PLCs, robotics, vision inspection, SCADA, and IIoT integration. This category summarizes architecture and adoption priorities to improve stability and throughput.",
+    ],
+    [
+      slugify("General Industrial Equipment"),
+      "General industrial equipment spans cross-industry processing, assembly, and maintenance systems. This category consolidates use cases and selection factors for quick evaluation.",
+    ],
+  ]);
+  const buildCategoryIntro = (label) => {
+    const introKey = slugify(label ?? "");
+    const introText =
+      categoryIntroMap.get(introKey) ??
+      `This category focuses on ${label} equipment, processes, and application contexts. It summarizes selection criteria, key technologies, and market direction to clarify the core value of this segment.`;
+    return `<p class="mt-3 max-w-3xl text-sm text-slate-600">${escapeHtml(introText)}</p>`;
+  };
+  const orderedCategoryFolders = [
+    ...categoryOrder
+      .map((label) => {
+        const segment = safeSegment(label);
+        return categoryFolders.find((entry) => entry.segment === segment);
+      })
+      .filter(Boolean),
+    ...categoryFolders.filter(
+      (entry) => !categoryOrder.some((label) => entry.segment === safeSegment(label))
+    ),
+  ];
+  const footerCategoryLinks = orderedCategoryFolders
+    .slice(0, 9)
+    .map((entry) => {
+      const safeLabel = escapeHtml(entry.label ?? entry.key);
+      return `<li><a class="transition-colors duration-200 hover:text-blue-600" href="/${categoryBaseSegment}/${entry.segment}/">${safeLabel}</a></li>`;
+    })
+    .join("");
+  const exhibitionCategory = categories.find(
+    (entry) => slugify(entry.key ?? "") === "exhibition"
+  );
+  const exhibitionSubgroups = exhibitionCategory
+    ? groupBy(enriched.filter((item) => item.category === exhibitionCategory.key), "subcategory")
+    : {};
+  const footerExhibitionLinks = Object.keys(exhibitionSubgroups)
+    .sort((a, b) => humanizeSegment(a).localeCompare(humanizeSegment(b)))
+    .map((name) => {
+      const segment = safeSegment(name);
+      const safeName = escapeHtml(humanizeSegment(name));
+      const categorySegment = safeSegment(exhibitionCategory?.key);
+      return `<li><a class="transition-colors duration-200 hover:text-blue-600" href="/${categorySegment}/${segment}/">${safeName}</a></li>`;
+    })
+    .join("");
+  const footerHtml = `
+    <footer class="mt-16 border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <div class="grid gap-8 lg:grid-cols-[220px_repeat(3,minmax(0,1fr))]">
+          <div>
+            <a class="inline-flex items-center" href="/" aria-label="Back to home">
+              <img
+                class="h-8 w-auto"
+                src="/assets/mi-logo-removebg-preview.png"
+                alt="Machinery Insight"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/firm-news/">Firm News</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/">Exhibitions</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/">Categories</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/about/">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-slate-700">Exhibitions</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              ${footerExhibitionLinks || "<li class=\"text-slate-400\">No exhibitions yet.</li>"}
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-slate-700">Categories</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              ${footerCategoryLinks || "<li class=\"text-slate-400\">No categories yet.</li>"}
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-slate-200 pt-4 text-xs text-slate-500">
+          <p>Copyright © Machinery Insight All rights reserved.</p>
+          <p>
+            Relative Platform of
+            <a class="ml-2 text-blue-700 hover:text-blue-800" href="https://www.market-prospects.com/" target="_blank" rel="noopener noreferrer">Market Prospects</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  `;
 
   const isDateBased =
     topLevelDirs.length > 0 && topLevelDirs.every((dir) => isDateSegment(dir));
@@ -213,24 +442,39 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     const imageUrl = escapeHtml(item.image || "/assets/default-thumb.svg");
     const titleClass =
       variant === "large"
-        ? "text-2xl font-semibold leading-tight sm:text-3xl"
-        : "text-lg font-semibold leading-snug";
+        ? "text-2xl font-semibold leading-tight sm:text-3xl text-white"
+        : "text-lg font-semibold leading-snug text-white";
     const descriptionClass =
-      variant === "large" ? "mt-2 text-sm text-slate-100" : "mt-1 text-xs text-slate-100";
-    const heightClass = variant === "large" ? "aspect-[16/9]" : "aspect-[4/3]";
+      variant === "large" ? "mt-2 text-sm text-white/90" : "mt-1 text-xs text-white/90";
+    const heightClass = variant === "large" ? "aspect-[4/3]" : "aspect-[4/3]";
     return `
-      <article class="relative overflow-hidden rounded border border-slate-200 bg-slate-200">
+      <article class="group relative overflow-hidden rounded border border-slate-200 bg-slate-100">
         <div
           class="${heightClass} bg-cover bg-center"
           style="background-image: url('${imageUrl}')"
         ></div>
-        <div class="absolute inset-0 bg-slate-900/55"></div>
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent"></div>
         <div class="absolute inset-x-0 bottom-0 p-4 text-white">
           <h3 class="${titleClass}">${safeTitle}</h3>
           ${safeDescription ? `<p class=\"${descriptionClass}\">${safeDescription}</p>` : ""}
         </div>
         <a class="absolute inset-0" href="${item.path}" aria-label="${safeTitle}"></a>
       </article>
+    `;
+  };
+  const renderFeaturedSlide = (items = []) => {
+    const [primary, secondary, tertiary] = items;
+    if (!primary) {
+      return "";
+    }
+    return `
+      <div class="grid gap-4 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+        ${renderFeaturedCard(primary, "large")}
+        <div class="grid gap-4">
+          ${renderFeaturedCard(secondary, "small")}
+          ${renderFeaturedCard(tertiary, "small")}
+        </div>
+      </div>
     `;
   };
   const shortenLabel = (value, max = 18) => {
@@ -243,16 +487,18 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   const renderCategoryTile = (category) => {
     const segment = safeSegment(category.segment ?? category.key);
     const label = category.label ?? category.key;
-    const safeLabel = escapeHtml(shortenLabel(label));
+    const safeLabel = escapeHtml(label);
     const href = `/${categoryBaseSegment}/${segment}/`;
-    const imageUrl = escapeHtml("/assets/default-thumb.svg");
+    const imageUrl = escapeHtml(categoryImageMap.get(segment) || "/assets/default-thumb.svg");
     return `
       <a class="relative overflow-hidden rounded border border-slate-200 bg-slate-200" href="${href}">
         <div
           class="h-24 bg-cover bg-center"
           style="background-image: url('${imageUrl}')"
         ></div>
-        <div class="absolute inset-x-0 bottom-0 bg-slate-900/60 px-3 py-2 text-sm font-semibold text-white truncate whitespace-nowrap">${safeLabel}</div>
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/70 via-slate-900/35 to-transparent px-3 py-2 text-sm font-semibold text-white whitespace-nowrap">
+          ${safeLabel}
+        </div>
       </a>
     `;
   };
@@ -275,6 +521,62 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
         </div>
       </article>
     `;
+  };
+  const renderLatestListWithPagination = (items, perPage = 12) => {
+    const totalPages = Math.max(1, Math.ceil(items.length / perPage));
+    const listHtml = items
+      .map((item, index) => {
+        const page = Math.floor(index / perPage) + 1;
+        const hiddenClass = page === 1 ? "" : " hidden";
+        return `<div class="latest-item${hiddenClass}" data-page-item data-page="${page}">${renderListItem(
+          item
+        )}</div>`;
+      })
+      .join("");
+    const paginationHtml =
+      totalPages > 1
+        ? `
+          <nav class="mt-8 flex flex-wrap justify-center gap-2" aria-label="Pagination" data-pagination>
+            ${Array.from({ length: totalPages }, (_, index) => {
+              const page = index + 1;
+              const activeClass = page === 1
+                ? "bg-blue-600 text-white border-blue-600"
+                : "border-slate-300 text-slate-600 hover:border-blue-600 hover:text-blue-600";
+              const ariaCurrent = page === 1 ? " aria-current=\"page\"" : "";
+              return `<button class=\"inline-flex h-9 w-9 items-center justify-center rounded-full border text-sm font-semibold transition-colors duration-200 ${activeClass}\" type=\"button\" data-page-button data-page=\"${page}\"${ariaCurrent}>${page}</button>`;
+            }).join("")}
+          </nav>
+        `
+        : "";
+    return { listHtml, paginationHtml };
+  };
+  const renderCardGridWithPagination = (items, perPage = 12) => {
+    const totalPages = Math.max(1, Math.ceil(items.length / perPage));
+    const listHtml = items
+      .map((item, index) => {
+        const page = Math.floor(index / perPage) + 1;
+        const hiddenClass = page === 1 ? "" : " hidden";
+        return `<div class="${hiddenClass}" data-page-item data-page="${page}">${renderCardItem(
+          item
+        )}</div>`;
+      })
+      .join("");
+    const paginationHtml =
+      totalPages > 1
+        ? `
+          <nav class="mt-8 flex flex-wrap justify-center gap-2" aria-label="Pagination" data-pagination>
+            ${Array.from({ length: totalPages }, (_, index) => {
+              const page = index + 1;
+              const activeClass = page === 1
+                ? "bg-blue-600 text-white border-blue-600"
+                : "border-slate-300 text-slate-600 hover:border-blue-600 hover:text-blue-600";
+              const ariaCurrent = page === 1 ? " aria-current=\"page\"" : "";
+              return `<button class=\"inline-flex h-9 w-9 items-center justify-center rounded-full border text-sm font-semibold transition-colors duration-200 ${activeClass}\" type=\"button\" data-page-button data-page=\"${page}\"${ariaCurrent}>${page}</button>`;
+            }).join("")}
+          </nav>
+        `
+        : "";
+    return { listHtml, paginationHtml };
   };
   const monthIndexFor = (label) => {
     if (!label) {
@@ -354,8 +656,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   const renderExhibitionItem = (item) => {
     const safeTitle = escapeHtml(item.title);
     const parsed =
-      parseExhibitionDate(item.content) ||
-      parseExhibitionDateFromValue(item.date);
+      parseExhibitionDateFromValue(item.date) ||
+      parseExhibitionDate(item.content);
     const safeDate = escapeHtml(parsed?.label || formatDate(item.date) || "TBD");
     const day = parsed?.day || formatDay(item.date) || "--";
     const month = parsed?.month || formatMonth(item.date).toUpperCase() || "";
@@ -372,23 +674,33 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       </li>
     `;
   };
-  const featured = latest.slice(0, 3);
-  const featuredSection = featured.length
+  const featuredFirmNews = enriched.filter(
+    (item) => slugify(item.category ?? "") === "firm-news"
+  );
+  const featured = (featuredFirmNews.length ? featuredFirmNews : latest).slice(0, 6);
+  const featuredSlides = [featured.slice(0, 3), featured.slice(3, 6)]
+    .map(renderFeaturedSlide)
+    .filter(Boolean);
+  const featuredSection = featuredSlides.length
     ? `
-        <section class="space-y-4 border-b border-slate-200 pb-8">
+        <section class="space-y-4 border-b border-slate-200 pb-8" data-featured-carousel>
           <h2 class="text-xl font-semibold">Featured News</h2>
-          <div class="grid gap-4 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
-            ${renderFeaturedCard(featured[0], "large")}
-            <div class="grid gap-4">
-              ${renderFeaturedCard(featured[1], "small")}
-              ${renderFeaturedCard(featured[2], "small")}
+          <div class="carousel-viewport" data-carousel-viewport>
+            <div class="carousel-track" data-carousel-track>
+              ${featuredSlides
+                .map(
+                  (slide, index) => `
+                    <div class="carousel-slide" data-carousel-slide="${index}" aria-hidden="${index === 0 ? "false" : "true"}">
+                      ${slide}
+                    </div>
+                  `
+                )
+                .join("")}
             </div>
           </div>
-          <div class="flex items-center justify-center gap-2">
-            <span class="h-2 w-2 rounded-full bg-slate-700"></span>
-            <span class="h-2 w-2 rounded-full bg-slate-300"></span>
-            <span class="h-2 w-2 rounded-full bg-slate-300"></span>
-            <span class="h-2 w-2 rounded-full bg-slate-300"></span>
+          <div class="carousel-dots" data-carousel-dots>
+            <button class="carousel-dot is-active" type="button" data-carousel-dot="0" aria-label="Slide 1"></button>
+            <button class="carousel-dot" type="button" data-carousel-dot="1" aria-label="Slide 2"></button>
           </div>
         </section>
       `
@@ -399,7 +711,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
         <section class="space-y-4 border-b border-slate-200 pb-8">
           <h2 class="text-xl font-semibold">Explore by Categories</h2>
           <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            ${categoryFolders.slice(0, 9).map(renderCategoryTile).join("")}
+            ${orderedCategoryFolders.slice(0, 9).map(renderCategoryTile).join("")}
           </div>
         </section>
       `
@@ -419,9 +731,12 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     .map((item) => ({
       item,
       parsed:
-        parseExhibitionDate(item.content) ||
-        parseExhibitionDateFromValue(item.date),
+        parseExhibitionDateFromValue(item.date) ||
+        parseExhibitionDate(item.content),
     }))
+    .filter(
+      ({ parsed }) => parsed?.date && parsed.date.getMonth() + 1 >= 4
+    )
     .sort((a, b) => {
       const aDate = a.parsed?.date ? a.parsed.date.getTime() : Infinity;
       const bDate = b.parsed?.date ? b.parsed.date.getTime() : Infinity;
@@ -429,15 +744,39 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     })
     .map((entry) => entry.item)
     .slice(0, 3);
+  const latestCategoryKey = latestCategory?.key;
+  const latestCategoryHref = latestCategoryKey
+    ? `/${safeSegment(latestCategoryKey)}/`
+    : "/";
   const latestSection = `
     <section class="grid gap-6 border-b border-slate-200 pb-8 lg:grid-cols-[minmax(0,1fr)_320px]">
       <div>
         <h2 class="text-lg font-semibold">Latest in ${latestCategoryLabel}</h2>
-        <div class="mt-4 space-y-4">${latestCategoryItems.map(renderLatestRow).join("")}</div>
+        <div class="mt-4 space-y-4 rounded-2xl border border-slate-200 bg-white p-4">
+          ${latestCategoryItems.map(renderLatestRow).join("")}
+        </div>
+        <div class="mt-5 flex justify-center">
+          <a
+            class="inline-flex items-center justify-center rounded-full border border-blue-700 px-5 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 hover:border-blue-800 hover:text-blue-800"
+            href="${latestCategoryHref}"
+          >
+            Read More
+          </a>
+        </div>
       </div>
       <div>
         <h3 class="text-lg font-semibold">Upcoming Exhibitions</h3>
-        <ul class="mt-4 space-y-4">${exhibitionItems.map(renderExhibitionItem).join("")}</ul>
+        <ul class="mt-4 space-y-4 rounded-2xl border border-slate-200 bg-white p-4">
+          ${exhibitionItems.map(renderExhibitionItem).join("")}
+        </ul>
+        <div class="mt-5 flex justify-center">
+          <a
+            class="inline-flex items-center justify-center rounded-full border border-blue-700 px-5 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 hover:border-blue-800 hover:text-blue-800"
+            href="/exhibition/"
+          >
+            Read More
+          </a>
+        </div>
       </div>
     </section>
   `;
@@ -481,7 +820,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     .filter(Boolean)
     .join("");
 
-  const sidebar = `
+  const homeSidebar = `
     <aside class="lg:sticky lg:top-24 h-fit">
       <div class="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm">
         <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Categories</h2>
@@ -496,17 +835,79 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     </aside>
   `;
 
+  const categoriesSidebarLinks = orderedCategoryFolders
+    .slice(0, 9)
+    .map((entry) => {
+      const safeLabel = escapeHtml(entry.label ?? entry.key);
+      return `<li><a class="link-primary" href="/${categoryBaseSegment}/${entry.segment}/">${safeLabel}</a></li>`;
+    })
+    .join("");
+  const categoriesSidebar = `
+    <aside class="lg:sticky lg:top-24 h-fit">
+      <div class="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Categories</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          ${categoriesSidebarLinks || "<li class=\"text-sm text-slate-500\">No categories yet.</li>"}
+        </ul>
+      </div>
+    </aside>
+  `;
+
+  const exhibitionSegment = safeSegment(exhibitionCategory?.key ?? "exhibition");
+  const exhibitionRegions = Object.keys(exhibitionSubgroups)
+    .sort((a, b) => humanizeSegment(a).localeCompare(humanizeSegment(b)))
+    .slice(0, 6);
+  const exhibitionSidebarLinks = exhibitionRegions
+    .map((name) => {
+      const safeLabel = escapeHtml(humanizeSegment(name));
+      const segment = safeSegment(name);
+      return `<li><a class="link-primary" href="/${exhibitionSegment}/${segment}/">${safeLabel}</a></li>`;
+    })
+    .join("");
+  const exhibitionSidebar = `
+    <aside class="lg:sticky lg:top-24 h-fit">
+      <div class="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Exhibition</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          ${exhibitionSidebarLinks || "<li class=\"text-sm text-slate-500\">No exhibition regions yet.</li>"}
+        </ul>
+      </div>
+    </aside>
+  `;
+
+  const sidebarForCategory = (categoryKey) => {
+    const normalized = slugify(categoryKey ?? "");
+    if (normalized === "categories") {
+      return categoriesSidebar;
+    }
+    if (normalized === "exhibition") {
+      return exhibitionSidebar;
+    }
+    return "";
+  };
+
+  const buildSidebarColumn = (sidebarHtml) =>
+    sidebarHtml ? `<div class="hidden lg:block">${sidebarHtml}</div>` : "";
+  const buildGridClass = (sidebarHtml) =>
+    sidebarHtml ? "grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)]" : "";
+  const buildArticleGridClass = (sidebarHtml) =>
+    sidebarHtml
+      ? "grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)_220px]"
+      : "grid gap-8 lg:grid-cols-[minmax(0,1fr)_220px]";
+
   const homeBody = await renderTemplate("home.html", {
     navbar: await renderNavbar({ categories }),
     homeContent,
-    sidebar,
+    sidebar: homeSidebar,
   });
 
   const homeHtml = await renderPage({
-    title: "Automation Atlas",
-    description: "Mapping reliable operations for always-on teams",
+    title: withBrandTitle("Industrial Machinery Insights, News & Exhibitions"),
+    description:
+      "Machinery Insight delivers industrial equipment news, category guides, and exhibition calendars for manufacturing and automation teams.",
     body: homeBody,
     canonical: "/",
+    footer: footerHtml,
     assets: assetMap,
   });
 
@@ -514,13 +915,21 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
 
   const aboutBody = await renderTemplate("about.html", {
     navbar: await renderNavbar({ categories }),
+    breadcrumbs: renderBreadcrumbs({
+      items: [
+        { label: "Home", href: "/" },
+        { label: "About" },
+      ],
+      widthClass: "max-w-3xl",
+    }),
   });
   const aboutHtml = await renderPage({
-    title: "About | Automation Atlas",
+    title: withBrandTitle("About Machinery Insight"),
     description:
-      "Machinery Insight curates industrial equipment intelligence for manufacturing leaders.",
+      "Learn how Machinery Insight curates machinery categories, market updates, and exhibition coverage for industrial decision-makers.",
     body: aboutBody,
     canonical: "/about/",
+    footer: footerHtml,
     assets: assetMap,
   });
   const aboutDir = path.join(outDir, normalizeOutputPath("/about/"));
@@ -536,14 +945,21 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     }).format(new Date(Number(year), Number(month) - 1, 1));
     const archiveBody = await renderTemplate("list.html", {
       navbar: await renderNavbar({ categories }),
+      breadcrumbs: renderBreadcrumbs({
+        items: [
+          { label: "Home", href: "/" },
+          { label: `${label} Archive` },
+        ],
+      }),
       title: `${label} Archive`,
       items: list.map(renderCardItem).join(""),
     });
     const archiveHtml = await renderPage({
-      title: `${label} | Automation Atlas`,
+      title: withBrandTitle(`${label} Archive`),
       description: `Articles from ${label}`,
       body: archiveBody,
       canonical: `/archive/${key}/`,
+      footer: footerHtml,
       assets: assetMap,
     });
     const archiveDir = path.join(outDir, normalizeOutputPath(`/archive/${key}/`));
@@ -568,6 +984,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     const categorySegment = safeSegment(category.key);
 
     const normalizedCategory = slugify(category.key ?? "");
+    const isCategoriesHub = normalizedCategory === "categories";
     const firmNewsIntro =
       normalizedCategory === "firm-news"
         ? `<p class="mt-4 max-w-2xl text-sm text-slate-600">Firm News covers executive moves, partnership announcements, technology milestones, and strategic updates from leading industrial manufacturers. Use this feed to track how suppliers are positioning for the next cycle.</p>`
@@ -576,19 +993,59 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       normalizedCategory === "firm-news"
         ? ""
         : `<section class=\"mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3\">${subCards}</section>`;
-    const hubBody = await renderTemplate("hub.html", {
-      navbar: await renderNavbar({ active: category.key, categories }),
-      title: safeCategoryLabel,
-      intro: firmNewsIntro,
-      subCardsSection,
-      latestList: scoped.slice(0, 20).map(renderCardItem).join(""),
-    });
+    const categoryCards = orderedCategoryFolders.slice(0, 9).map(renderCategoryTile).join("");
+    const sidebarLinks = orderedCategoryFolders
+      .slice(0, 9)
+      .map((entry) => {
+        const safeLabel = escapeHtml(entry.label ?? entry.key);
+        return `<li><a class=\"link-primary hover:underline\" href=\"/${categoryBaseSegment}/${entry.segment}/\">${safeLabel}</a></li>`;
+      })
+      .join("");
+    const latestCategoryPayload = renderLatestListWithPagination(scoped, 12);
+    const categorySidebar = sidebarForCategory(category.key);
+    const hubBody = isCategoriesHub
+      ? await renderTemplate("categories.html", {
+          navbar: await renderNavbar({ active: category.key, categories }),
+          breadcrumbs: renderBreadcrumbs({
+            items: [
+              { label: "Home", href: "/" },
+              { label: "Categories" },
+            ],
+          }),
+          title: "Explore by Categories",
+          sidebarLinks,
+          categoryCards,
+          latestCategoryList: latestCategoryPayload.listHtml,
+          latestPagination: latestCategoryPayload.paginationHtml,
+        })
+      : await renderTemplate("hub.html", {
+          navbar: await renderNavbar({ active: category.key, categories }),
+          gridClass: buildGridClass(categorySidebar),
+          sidebarColumn: buildSidebarColumn(categorySidebar),
+          breadcrumbs: renderBreadcrumbs({
+            items: [
+              { label: "Home", href: "/" },
+              { label: categoryLabel },
+            ],
+          }),
+          title: safeCategoryLabel,
+          intro: firmNewsIntro,
+          subCardsSection,
+          latestList: scoped.slice(0, 20).map(renderCardItem).join(""),
+        });
 
     const hubHtml = await renderPage({
-      title: `${categoryLabel} | Automation Atlas`,
-      description: `Latest ${categoryLabel} automation notes and analysis`,
+      title: withBrandTitle(
+        isCategoriesHub
+          ? "Industrial Machinery Categories & Topics"
+          : `${categoryLabel} Insights & Updates`
+      ),
+      description: isCategoriesHub
+        ? "Browse nine industrial machinery categories, key subtopics, and the latest posts across manufacturing equipment."
+        : `Latest ${categoryLabel} news, equipment insights, and market notes curated by Machinery Insight.`,
       body: hubBody,
       canonical: `/${categorySegment}/`,
+      footer: footerHtml,
       assets: assetMap,
     });
 
@@ -600,17 +1057,42 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       const segment = safeSegment(name);
       const nameLabel = humanizeSegment(name);
       const safeName = escapeHtml(nameLabel);
+      const listIntro =
+        normalizedCategory === "categories" ? buildCategoryIntro(nameLabel) : "";
+      const listPayload = normalizedCategory === "categories"
+        ? renderCardGridWithPagination(list, 12)
+        : { listHtml: list.map(renderCardItem).join(""), paginationHtml: "" };
       const listBody = await renderTemplate("list.html", {
         navbar: await renderNavbar({ active: category.key, categories }),
+        gridClass: buildGridClass(categorySidebar),
+        sidebarColumn: buildSidebarColumn(categorySidebar),
+        breadcrumbs: renderBreadcrumbs({
+          items: [
+            { label: "Home", href: "/" },
+            { label: categoryLabel, href: `/${categorySegment}/` },
+            { label: nameLabel },
+          ],
+        }),
         title: safeName,
-        items: list.map(renderCardItem).join(""),
+        intro: listIntro,
+        items: listPayload.listHtml,
+        pagination: listPayload.paginationHtml,
       });
 
+      const listTitle =
+        normalizedCategory === "categories"
+          ? `${nameLabel} Machinery Insights`
+          : `${nameLabel} ${categoryLabel} Articles`;
+      const listDescription =
+        normalizedCategory === "categories"
+          ? `Explore ${nameLabel} coverage with equipment insights, trends, and practical guidance.`
+          : `Browse ${nameLabel} coverage in ${categoryLabel}, including equipment insights, trends, and updates.`;
       const listHtml = await renderPage({
-        title: `${nameLabel} | ${categoryLabel}`,
-        description: `Latest ${nameLabel} items`,
+        title: withBrandTitle(listTitle),
+        description: listDescription,
         body: listBody,
         canonical: `/${categorySegment}/${segment}/`,
+        footer: footerHtml,
         assets: assetMap,
       });
 
@@ -624,7 +1106,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   }
 
   for (const item of enriched) {
-    const { html, toc } = renderMarkdown(item.content);
+    const normalizedContent = stripLeadingTitleHeading(item.content, item.title);
+    const { html, toc } = renderMarkdown(normalizedContent);
     const tocHtml = toc
       .map(
         (section) => `
@@ -632,23 +1115,14 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
             <a data-toc-link="${section.id}" class="hover:text-blue-600" href="#${section.id}">${escapeHtml(
               section.text
             )}</a>
-            <ul class="ml-4 text-sm text-slate-600">
-              ${section.children
-                .map(
-                  (child) =>
-                    `<li><a data-toc-link="${child.id}" href="#${child.id}">${escapeHtml(
-                      child.text
-                    )}</a></li>`
-                )
-                .join("")}
-            </ul>
           </li>`
       )
       .join("");
 
     const safeTitle = escapeHtml(item.title);
     const safeDate = escapeHtml(formatDate(item.date));
-    const safeDescription = escapeHtml(item.description);
+    const descriptionText = item.description?.trim() || extractExcerpt(normalizedContent);
+    const safeDescription = escapeHtml(descriptionText);
 
     const relatedCandidates = enriched.filter((entry) => entry.path !== item.path);
     const relatedPrimary = relatedCandidates.filter(
@@ -683,8 +1157,36 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
         `
       : "";
 
+    const itemSidebar = sidebarForCategory(item.category);
     const body = await renderTemplate("article.html", {
       navbar: await renderNavbar({ active: item.category, categories }),
+      gridClass: buildArticleGridClass(itemSidebar),
+      sidebarColumn: buildSidebarColumn(itemSidebar),
+      breadcrumbs: renderBreadcrumbs({
+        items:
+          slugify(item.category ?? "") === "firm-news"
+            ? [
+                { label: "Home", href: "/" },
+                {
+                  label: humanizeSegment(item.category),
+                  href: `/${safeSegment(item.category)}/`,
+                },
+                { label: item.title },
+              ]
+            : [
+                { label: "Home", href: "/" },
+                {
+                  label: humanizeSegment(item.category),
+                  href: `/${safeSegment(item.category)}/`,
+                },
+                {
+                  label: humanizeSegment(item.subcategory),
+                  href: `/${safeSegment(item.category)}/${safeSegment(item.subcategory)}/`,
+                },
+                { label: item.title },
+              ],
+        widthClass: "max-w-7xl",
+      }),
       title: safeTitle,
       date: safeDate,
       description: safeDescription,
@@ -694,10 +1196,11 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     });
 
     const pageHtml = await renderPage({
-      title: `${item.title} | Automation Atlas`,
-      description: item.description,
+      title: withBrandTitle(item.title),
+      description: descriptionText,
       body,
       canonical: item.path,
+      footer: footerHtml,
       assets: assetMap,
     });
 

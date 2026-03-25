@@ -146,6 +146,7 @@ export async function renderPage({
   description,
   body,
   canonical,
+  footer,
   assets,
 } = {}) {
   return wrapWithBase({
@@ -153,6 +154,7 @@ export async function renderPage({
     description: description ?? "",
     body: body ?? "",
     canonical: canonical ?? "",
+    footer: footer ?? "",
     assets,
   });
 }
@@ -171,6 +173,7 @@ export async function wrapWithBase({
   description,
   body,
   canonical,
+  footer,
   assets,
 } = {}) {
   const base = await readTemplate("base.html");
@@ -178,12 +181,14 @@ export async function wrapWithBase({
   const safeDescription = escapeHtml(description ?? "");
   const safeBody = body ?? "";
   const safeCanonical = escapeHtml(canonical ?? "");
+  const safeFooter = footer ?? "";
 
   const shell = base
     .replace(/{{title}}/g, safeTitle)
     .replace(/{{description}}/g, safeDescription)
     .replace(/{{canonical}}/g, safeCanonical)
-    .replace(/{{body}}/g, safeBody);
+    .replace(/{{body}}/g, safeBody)
+    .replace(/{{footer}}/g, safeFooter);
 
   return applyAssetMap(shell, assets);
 }

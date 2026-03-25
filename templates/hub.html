@@ -1,10 +1,16 @@
 {{navbar}}
+{{breadcrumbs}}
 <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-  <h1 class="text-3xl font-semibold">{{title}}</h1>
-  {{intro}}
-  {{subCardsSection}}
-  <section class="mt-10">
-    <h2 class="text-xl font-semibold">Latest</h2>
-    <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{{latestList}}</div>
-  </section>
+  <div class="{{gridClass}}">
+    {{sidebarColumn}}
+    <div>
+      <h1 class="text-3xl font-semibold">{{title}}</h1>
+      {{intro}}
+      {{subCardsSection}}
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold">Latest</h2>
+        <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{{latestList}}</div>
+      </section>
+    </div>
+  </div>
 </main>

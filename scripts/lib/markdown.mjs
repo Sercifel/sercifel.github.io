@@ -10,7 +10,7 @@ const slugify = (value) => {
     .replace(/^-+|-+$/g, "");
 };
 
-const extractToc = (state, toc, slugCounts) => {
+const extractToc = (state, toc, slugCounts, normalizeHeading) => {
   let headingIndex = 0;
   let currentSection = null;
   for (let i = 0; i < state.tokens.length; i += 1) {
@@ -20,14 +20,15 @@ const extractToc = (state, toc, slugCounts) => {
     }
 
     const level = Number(token.tag.slice(1));
-    if (level !== 2 && level !== 3) {
+    if (level !== 2) {
       continue;
     }
 
     headingIndex += 1;
 
     const inline = state.tokens[i + 1];
-    const text = inline?.type === "inline" ? inline.content : "";
+    const rawText = inline?.type === "inline" ? inline.content : "";
+    const text = normalizeHeading ? normalizeHeading(rawText) : rawText;
     const baseSlug = slugify(text) || `section-${headingIndex}`;
     const slugCount = slugCounts.get(baseSlug) ?? 0;
     const id = slugCount === 0 ? baseSlug : `${baseSlug}-${slugCount + 1}`;
@@ -36,19 +37,8 @@ const extractToc = (state, toc, slugCounts) => {
 
     token.attrSet("id", id);
 
-    if (level === 2) {
-      currentSection = { level, id, text, children: [] };
-      toc.push(currentSection);
-      continue;
-    }
-
-    const child = { level, id, text };
-    if (currentSection) {
-      currentSection.children.push(child);
-      continue;
-    }
-
-    toc.push({ ...child, children: [] });
+    currentSection = { level, id, text, children: [] };
+    toc.push(currentSection);
   }
 };
 
@@ -77,10 +67,29 @@ const markExternalLinks = (tokens) => {
   }
 };
 
+const normalizeHeadingLevels = (tokens) => {
+  for (const token of tokens) {
+    if (token.type === "heading_open" || token.type === "heading_close") {
+      if (token.tag === "h1") {
+        token.tag = "h2";
+      }
+    }
+    if (token.children) {
+      normalizeHeadingLevels(token.children);
+    }
+  }
+};
+
 const renderMarkdown = (markdown) => {
   const toc = [];
   const md = markdownIt({ html: true, linkify: true });
   const slugCounts = new Map();
+  const normalizeHeadingText = (text) => {
+    const rendered = md.renderInline(String(text ?? ""));
+    const stripped = rendered.replace(/<[^>]*>/g, "");
+    const unescaped = md.utils.unescapeAll(stripped);
+    return unescaped.trim();
+  };
   const externalLinkIcon =
     '<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg>';
   const defaultLinkOpen =
@@ -90,8 +99,11 @@ const renderMarkdown = (markdown) => {
     md.renderer.rules.link_close ||
     ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
 
+  md.core.ruler.push("normalize-headings", (state) => {
+    normalizeHeadingLevels(state.tokens);
+  });
   md.core.ruler.push("extract-toc", (state) => {
-    extractToc(state, toc, slugCounts);
+    extractToc(state, toc, slugCounts, normalizeHeadingText);
   });
   md.core.ruler.push("mark-external-links", (state) => {
     markExternalLinks(state.tokens);

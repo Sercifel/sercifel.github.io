@@ -9,6 +9,7 @@
     <meta property="og:description" content="{{description}}" />
     <meta property="og:url" content="{{canonical}}" />
     <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/assets/favicon.jpg" type="image/jpeg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" />
     <script>
@@ -19,9 +20,36 @@
         document.documentElement.setAttribute("data-theme", theme);
       })();
     </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
+        var dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P2ZB77SQ");
+    </script>
+    <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body class="bg-[var(--color-background)] text-[var(--color-text)]">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P2ZB77SQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <a
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:text-slate-900 focus:shadow"
       href="#main-content"
@@ -84,8 +112,11 @@
         </div>
       </div>
     </div>
+    {{footer}}
     <script type="module" src="/assets/search.js" defer></script>
     <script src="/assets/nav.js" defer></script>
     <script src="/assets/toc.js" defer></script>
+    <script src="/assets/carousel.js" defer></script>
+    <script src="/assets/load-more.js" defer></script>
   </body>
 </html>
