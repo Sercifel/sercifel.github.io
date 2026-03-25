@@ -19,6 +19,14 @@ import {
 const ensureDir = (dir) => fs.mkdir(dir, { recursive: true });
 const normalizeOutputPath = (value) => value.replace(/^\/+/, "");
 const brandSuffix = " | Machinery Insight";
+const siteBaseUrl = "https://www.machinesource-global.com";
+const normalizeBaseUrl = (value) => String(value ?? "").replace(/\/+$/, "");
+const toAbsoluteUrl = (pathname) => {
+  const base = normalizeBaseUrl(siteBaseUrl);
+  const pathValue = String(pathname ?? "");
+  const normalizedPath = pathValue.startsWith("/") ? pathValue : `/${pathValue}`;
+  return `${base}${normalizedPath}`;
+};
 const withBrandTitle = (title) => {
   const text = String(title ?? "").trim();
   if (!text) {
@@ -90,6 +98,16 @@ const extractExcerpt = (markdown, maxLength = 160) => {
   }
   const limit = Math.max(0, maxLength - 3);
   return `${cleaned.slice(0, limit).trimEnd()}...`;
+};
+const formatLastmod = (value) => {
+  if (!value) {
+    return null;
+  }
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) {
+    return null;
+  }
+  return parsed.toISOString().split("T")[0];
 };
 const stripLeadingTitleHeading = (markdown, title) => {
   const source = String(markdown ?? "");
@@ -895,6 +913,19 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       ? "grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)_220px]"
       : "grid gap-8 lg:grid-cols-[minmax(0,1fr)_220px]";
 
+  const sitemapEntries = new Map();
+  const addSitemapEntry = (pathname, lastmod) => {
+    const loc = toAbsoluteUrl(pathname);
+    if (!loc) {
+      return;
+    }
+    const formattedLastmod = formatLastmod(lastmod);
+    const existing = sitemapEntries.get(loc);
+    if (!existing || (formattedLastmod && existing < formattedLastmod)) {
+      sitemapEntries.set(loc, formattedLastmod || existing || "");
+    }
+  };
+
   const homeBody = await renderTemplate("home.html", {
     navbar: await renderNavbar({ categories }),
     homeContent,
@@ -912,6 +943,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   });
 
   await fs.writeFile(path.join(outDir, "index.html"), homeHtml);
+  addSitemapEntry("/", new Date());
 
   const aboutBody = await renderTemplate("about.html", {
     navbar: await renderNavbar({ categories }),
@@ -935,6 +967,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   const aboutDir = path.join(outDir, normalizeOutputPath("/about/"));
   await ensureDir(aboutDir);
   await fs.writeFile(path.join(aboutDir, "index.html"), aboutHtml);
+  addSitemapEntry("/about/", new Date());
 
   const archiveEntries = Object.entries(archiveGroups).sort(([a], [b]) => b.localeCompare(a));
   for (const [key, list] of archiveEntries) {
@@ -965,6 +998,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     const archiveDir = path.join(outDir, normalizeOutputPath(`/archive/${key}/`));
     await ensureDir(archiveDir);
     await fs.writeFile(path.join(archiveDir, "index.html"), archiveHtml);
+    addSitemapEntry(`/archive/${key}/`);
   }
 
   for (const category of categories) {
@@ -1052,6 +1086,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     const hubDir = path.join(outDir, normalizeOutputPath(`/${categorySegment}/`));
     await ensureDir(hubDir);
     await fs.writeFile(path.join(hubDir, "index.html"), hubHtml);
+    addSitemapEntry(`/${categorySegment}/`);
 
     for (const [name, list] of Object.entries(subgroups)) {
       const segment = safeSegment(name);
@@ -1102,6 +1137,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       );
       await ensureDir(listDir);
       await fs.writeFile(path.join(listDir, "index.html"), listHtml);
+      addSitemapEntry(`/${categorySegment}/${segment}/`);
     }
   }
 
@@ -1207,6 +1243,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     const pageDir = path.join(outDir, normalizeOutputPath(item.path));
     await ensureDir(pageDir);
     await fs.writeFile(path.join(pageDir, "index.html"), pageHtml);
+    addSitemapEntry(item.path, item.date);
   }
 
   const searchIndex = buildSearchIndex(enriched);
@@ -1214,6 +1251,18 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     path.join(outDir, "search-index.json"),
     JSON.stringify(searchIndex, null, 2)
   );
+
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    Array.from(sitemapEntries.entries())
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([loc, lastmod]) => {
+        const lastmodTag = lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : "";
+        return `  <url>\n    <loc>${loc}</loc>${lastmodTag}\n  </url>`;
+      })
+      .join("\n") +
+    "\n</urlset>\n";
+  await fs.writeFile(path.join(outDir, "sitemap.xml"), sitemapXml);
 
 }
 
