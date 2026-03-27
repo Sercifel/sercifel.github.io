@@ -20,6 +20,7 @@ const ensureDir = (dir) => fs.mkdir(dir, { recursive: true });
 const normalizeOutputPath = (value) => value.replace(/^\/+/, "");
 const brandSuffix = " | Machinery Insight";
 const siteBaseUrl = "https://www.machinesource-global.com";
+const siteHostname = new URL(siteBaseUrl).hostname;
 const normalizeBaseUrl = (value) => String(value ?? "").replace(/\/+$/, "");
 const toAbsoluteUrl = (pathname) => {
   const base = normalizeBaseUrl(siteBaseUrl);
@@ -216,6 +217,7 @@ const renderBreadcrumbs = ({ items = [], widthClass = "max-w-7xl" } = {}) => {
 
 export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}) {
   await ensureDir(outDir);
+  await fs.writeFile(path.join(outDir, "CNAME"), `${siteHostname}\n`);
   const assetMap = await buildAssets(outDir);
   const topLevelDirs = await listTopLevelDirs(contentDir);
   const categoryFolderNames = await listChildDirs(path.join(contentDir, "Categories"));
