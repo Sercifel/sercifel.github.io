@@ -80,6 +80,8 @@ body[data-modal-open="true"] {
   scrollbar-width: thin;
   scrollbar-color: rgba(148, 163, 184, 0.6) transparent;
   -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 .nav-scroll::-webkit-scrollbar {
@@ -184,6 +186,8 @@ h3 {
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--color-text);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .prose > * + * {
@@ -257,6 +261,20 @@ h3 {
 
 .prose table {
   margin: 1.5rem 0;
+}
+
+.prose img,
+.prose video,
+.prose iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .prose code {
@@ -371,6 +389,13 @@ td {
   border-bottom: 1px solid var(--color-border);
   text-align: left;
   vertical-align: top;
+}
+
+@media (max-width: 640px) {
+  th,
+  td {
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 thead th {

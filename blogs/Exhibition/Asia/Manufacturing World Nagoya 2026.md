@@ -5,6 +5,8 @@ date: 2026-04-08
 ---
 # Manufacturing World Nagoya 2026: The Nexus of Automotive and Aerospace Excellence in Central Japan
 
+![](https://www.wesexpo.com/cache/L3VwbG9hZHMvZXhoaWJpdGlvbnMvNjgwMGE0ZDhkMWYxMHwzMzV4MTQwfG5v.jpg)
+
 **[Manufacturing World Nagoya 2026](https://www.manufacturing-world.jp/hub/en-gb.html)**, central Japan’s largest and most comprehensive manufacturing trade show, is scheduled to take place from **April 8–10, 2026**, at **Port Messe Nagoya**. Organized by RX Japan, the event is a critical hub for the Chubu region—a territory synonymous with the highest concentration of automotive, aerospace, and heavy industry manufacturing in Japan.
 
 The 2026 edition continues its multi-show format, integrating nine specialized exhibitions to cover the entire lifecycle of industrial production, from initial R&D and design to factory automation and digital transformation.
@@ -68,5 +70,3 @@ Professional visitors, including engineers from design, development, and product
 - **Registration:** Trade visitors must register via the official portal for free entry (pre-registration required).
     
 - **Technical Seminars:** The event hosts concurrent high-level conferences where executives from leading Japanese manufacturers share insights on automation trends and the future of work in a declining-population society.
-
----

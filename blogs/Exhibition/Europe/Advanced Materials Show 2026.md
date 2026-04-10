@@ -5,6 +5,8 @@ date: 2026-07-08
 ---
 # Advanced Materials Show 2026: Material Intelligence and Industrial Scaling
 
+![](https://advancedmaterialsshow.com/wp-content/uploads/2026/01/Advanced-Materials_Logo_Variations_RBG_Logo_Full_Colour_Lined-SVG-for-website.svg)
+
 The Advanced Materials Show, scheduled for July 8–9, 2026, at the NEC in Birmingham, UK, serves as a focal point for the intersection of laboratory research and industrial application. As manufacturing sectors face dual pressures to improve component performance and meet tightening sustainability mandates, the event gathers stakeholders from the entire materials supply chain—spanning aerospace, automotive, energy, and electronics.
 
 ## Moving Beyond Laboratory Prototypes

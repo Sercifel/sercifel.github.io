@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exhibition/Europe/EMO MILANO 2027.md",
+                "file": "Exhibition/Oceania/Australian Manufacturing Week 2026.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EMO MILANO 2027"
+              "title": "Australian Manufacturing Week 2026"
             }
           }
         ]
@@ -185,28 +185,32 @@
   },
   "active": "a53daec19cbab8ed",
   "lastOpenFiles": [
-    "Exhibition/Europe/Advanced Materials Show 2026.md",
-    "Exhibition/Europe/Motek 2026.md",
-    "Exhibition/Europe/Metpack 2026.md",
-    "Exhibition/Europe/interpack 2026.md",
-    "Exhibition/Europe/HANNOVER MESSE 2026.md",
-    "Exhibition/Oceania/Australian Manufacturing Week 2026.md",
     "Exhibition/Middle East/Industrial Transformation Saudi Arabia 2026.md",
     "Exhibition/Middle East/Dubai WoodShow 2026.md",
     "Exhibition/Middle East/Construct Iraq 2026.md",
-    "Exhibition/Africa/7th Beauty Kenya 2026.md",
-    "Exhibition/Europe/GrindingHub 2026.md",
-    "Exhibition/Europe/EuroBLECH 2026.md",
+    "Exhibition/Europe/Advanced Materials Show 2026.md",
+    "Exhibition/Europe/AMB Stuttgart 2026.md",
+    "Exhibition/Europe/BIEMH 2026.md",
     "Exhibition/Europe/EMO MILANO 2027.md",
-    "Exhibition/Asia/Manufacturing World Nagoya 2026.md",
-    "Exhibition/Asia/Automation Taipei 2026.md",
-    "Exhibition/Asia/2026 Taipei International Bakery Show.md",
+    "Exhibition/Europe/EuroBLECH 2026.md",
+    "Exhibition/Europe/GrindingHub 2026.md",
+    "Exhibition/Europe/HANNOVER MESSE 2026.md",
+    "Exhibition/Europe/interpack 2026.md",
+    "Exhibition/Europe/Metpack 2026.md",
+    "Exhibition/Europe/Motek 2026.md",
     "Exhibition/Asia/Top Global Machine Tool Exhibitions to Visit in 2026.md",
+    "Exhibition/Asia/TMTS 2026.md",
+    "Exhibition/Asia/TIMTOS 2027.md",
     "Exhibition/Asia/SEMICON TAIWAN 2026.md",
     "Exhibition/Asia/MTA Vietnam 2026.md",
+    "Exhibition/Asia/METALTECH 2026.md",
+    "Exhibition/Asia/Manufacturing World Nagoya 2026.md",
+    "Exhibition/Asia/JIMTOF 2026.md",
     "Exhibition/Asia/INTERMACH 2026.md",
-    "Exhibition/Americas/FEIMEC Brazil 2026.md",
-    "Exhibition/Americas/EXPOMAQ 2026.md",
+    "Exhibition/Asia/FOOMA JAPAN 2026.md",
+    "Exhibition/Asia/ChinaPlas 2026.md",
+    "Exhibition/Asia/CCMT 2026.md",
+    "Exhibition/Asia/Automation Taipei 2026.md",
     "Exhibition/Asia/尚未確認的 742844.crdownload",
     "Exhibition/Asia/尚未確認的 754436.crdownload",
     "Exhibition/Asia/尚未確認的 123268.crdownload",
@@ -216,10 +220,6 @@
     "Exhibition/Oceania/尚未確認的 465671.crdownload",
     "Exhibition/Oceania",
     "Exhibition/Americas/尚未確認的 977205.crdownload",
-    "Exhibition/Americas/尚未確認的 845737.crdownload",
-    "Exhibition/Europe/BIEMH 2026.md",
-    "Exhibition/Europe/AMB Stuttgart 2026.md",
-    "Exhibition/Asia/TMTS 2026.md",
-    "Exhibition/Asia/TIMTOS 2027.md"
+    "Exhibition/Americas/尚未確認的 845737.crdownload"
   ]
 }

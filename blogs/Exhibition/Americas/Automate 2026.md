@@ -7,6 +7,8 @@ date: 2026-06-22
 
 The Automate 2026 exhibition, held from June 22–25 at McCormick Place in Chicago, arrives at a time when the manufacturing sector is shifting its focus from experimental AI and robotics to disciplined, scalable deployment. As the largest automation trade show in North America, the event serves as a bellwether for how companies are reconciling advanced technological capabilities with the operational realities of factory floors and logistics centers.
 
+![](https://ifr.org/img/events/automate_RGB_275.jpg)
+
 ## Bridging the Gap: Scalability and System Integration
 
 A recurring theme for 2026 is the transition toward modular, interoperable systems. Manufacturers are increasingly hesitant to commit to monolithic, closed-loop solutions. Instead, the focus has shifted toward "open-architecture" automation—systems that can integrate with existing legacy equipment, communicate via standardized protocols, and scale incrementally.
