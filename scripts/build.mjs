@@ -1101,6 +1101,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       })
       .join("");
     const latestCategoryPayload = renderLatestListWithPagination(scoped, 12);
+    const latestHubPayload = renderCardGridWithPagination(scoped, 12);
     const categorySidebar = sidebarForCategory(category.key);
     const hubBody = isCategoriesHub
       ? await renderTemplate("categories.html", {
@@ -1130,7 +1131,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
           title: safeCategoryLabel,
           intro: firmNewsIntro,
           subCardsSection,
-          latestList: scoped.slice(0, 20).map(renderCardItem).join(""),
+          latestList: latestHubPayload.listHtml,
+          latestPagination: latestHubPayload.paginationHtml,
         });
 
     const hubHtml = await renderPage({
