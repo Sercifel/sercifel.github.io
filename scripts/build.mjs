@@ -862,6 +862,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       }
       const categorySegment = safeSegment(category.key);
       const categoryLabel = escapeHtml(category.label ?? category.key);
+      const showAprilCount = slugify(category.key ?? "") === "categories";
       const subgroups = groupBy(scoped, "subcategory");
       const subLinks = Object.entries(subgroups)
         .sort(([a], [b]) => humanizeSegment(a).localeCompare(humanizeSegment(b)))
@@ -869,7 +870,16 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
           const segment = safeSegment(name);
           const nameLabel = humanizeSegment(name);
           const safeName = escapeHtml(nameLabel);
-          return `<li class="flex items-center justify-between gap-3"><a class="link-primary" href="/${categorySegment}/${segment}/">${safeName}</a><span class="text-xs text-slate-500">${list.length}</span></li>`;
+          const aprilCount = showAprilCount
+            ? list.filter(isAprilFrontMatter).length
+            : 0;
+          const countBadge = showAprilCount
+            ? `<span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-semibold uppercase text-blue-600">Apr ${aprilCount}</span>`
+            : "";
+          const countHtml = showAprilCount
+            ? `<span class="flex items-center gap-2 text-xs text-slate-500"><span>${list.length}</span>${countBadge}</span>`
+            : `<span class="text-xs text-slate-500">${list.length}</span>`;
+          return `<li class="flex items-center justify-between gap-3"><a class="link-primary" href="/${categorySegment}/${segment}/">${safeName}</a>${countHtml}</li>`;
         })
         .join("");
 
@@ -901,11 +911,17 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     </aside>
   `;
 
+  const categoriesSubgroups = groupBy(categoryGroups.Categories || [], "subcategory");
   const categoriesSidebarLinks = orderedCategoryFolders
     .slice(0, 9)
     .map((entry) => {
       const safeLabel = escapeHtml(entry.label ?? entry.key);
-      return `<li><a class="link-primary" href="/${categoryBaseSegment}/${entry.segment}/">${safeLabel}</a></li>`;
+      const subgroup = categoriesSubgroups[entry.key] || [];
+      const aprilCount = subgroup.filter(isAprilFrontMatter).length;
+      const aprilBadge = aprilCount
+        ? `<span class="rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-semibold uppercase text-blue-600">Apr ${aprilCount}</span>`
+        : "";
+      return `<li class="flex items-center justify-between gap-3"><a class="link-primary" href="/${categoryBaseSegment}/${entry.segment}/">${safeLabel}</a>${aprilBadge}</li>`;
     })
     .join("");
   const categoriesSidebar = `
