@@ -110,21 +110,6 @@ const formatLastmod = (value) => {
   }
   return parsed.toISOString().split("T")[0];
 };
-const stripLeadingTitleHeading = (markdown, title) => {
-  const source = String(markdown ?? "");
-  const heading = String(title ?? "").trim();
-  if (!source.trim() || !heading) {
-    return source;
-  }
-  const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const pattern = new RegExp(
-    `^\\s*#\\s+${escaped}\\s*(?:\\r?\\n|$)`
-  );
-  if (!pattern.test(source)) {
-    return source;
-  }
-  return source.replace(pattern, "").replace(/^\s+/, "");
-};
 const categoryImageMap = new Map([
   ["machine-tools", "/assets/machine-tools.jpeg"],
   ["plastic-machinery", "/assets/plastic-machinery.jpeg"],
@@ -1211,7 +1196,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   }
 
   for (const item of enriched) {
-    const normalizedContent = stripLeadingTitleHeading(item.content, item.title);
+    const normalizedContent = item.content;
     const { html, toc } = renderMarkdown(normalizedContent);
     const tocHtml = toc
       .map(
@@ -1227,6 +1212,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     const safeTitle = escapeHtml(item.title);
     const safeDate = escapeHtml(formatDate(item.date));
     const descriptionText = item.description?.trim() || extractExcerpt(normalizedContent);
+    const metaTitle = item.metaTitle?.trim() || item.title;
+    const metaDescription = item.metaDescription?.trim() || descriptionText;
     const safeDescription = escapeHtml(descriptionText);
 
     const relatedCandidates = enriched.filter((entry) => entry.path !== item.path);
@@ -1301,8 +1288,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     });
 
     const pageHtml = await renderPage({
-      title: withBrandTitle(item.title),
-      description: descriptionText,
+      title: withBrandTitle(metaTitle),
+      description: metaDescription,
       body,
       canonical: item.path,
       footer: footerHtml,

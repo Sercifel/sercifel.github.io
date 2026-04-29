@@ -25,7 +25,7 @@ test("buildSite writes index and article pages", async () => {
       "utf8"
     );
     const article = await fs.readFile(
-      path.join(outDir, "reports", "sample", "sample-post", "index.html"),
+      path.join(outDir, "reports", "sample", "sample", "index.html"),
       "utf8"
     );
 
@@ -127,14 +127,15 @@ test("buildSite escapes html and avoids empty path segments", async () => {
 
     const index = await fs.readFile(path.join(outDir, "index.html"), "utf8");
     const article = await fs.readFile(
-      path.join(outDir, "uncategorized", "general", "escape-post", "index.html"),
+      path.join(outDir, "uncategorized", "general", "escape", "index.html"),
       "utf8"
     );
 
-    assert.ok(index.includes("Title &lt;Test&gt; &amp; &quot;Quotes&quot;"));
+    assert.ok(index.includes("Escape Post"));
     assert.ok(index.includes("Summary &lt;strong&gt;value&lt;/strong&gt;"));
     assert.ok(article.includes("2024-01-15 &amp; Co"));
     assert.ok(article.includes("Title &lt;Test&gt; &amp; &quot;Quotes&quot;"));
+    assert.ok(article.includes("Escape Post"));
   } finally {
     if (outDir) {
       await fs.rm(outDir, { recursive: true, force: true });
@@ -156,7 +157,7 @@ test("buildSite sanitizes subcategory segments", async () => {
       "utf8"
     );
     const article = await fs.readFile(
-      path.join(outDir, "reports", "badsection", "sanitize-post", "index.html"),
+      path.join(outDir, "reports", "badsection", "sanitize", "index.html"),
       "utf8"
     );
 

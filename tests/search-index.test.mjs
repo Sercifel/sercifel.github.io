@@ -13,13 +13,13 @@ test("buildSearchIndex maps content into searchable entries", async () => {
   const items = await loadContent(fixtureRoot);
   const index = buildSearchIndex(items);
 
-  const entry = index.find((item) => item.path === "/reports/sample/sample-post/");
+  const entry = index.find((item) => item.path === "/reports/sample/sample/");
   assert.ok(entry);
   assert.deepEqual(entry, {
     title: "Sample Post",
     description: "Short summary.",
     category: "reports",
     subcategory: "sample",
-    path: "/reports/sample/sample-post/",
+    path: "/reports/sample/sample/",
   });
 });

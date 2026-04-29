@@ -13,15 +13,16 @@ const fixtureRoot = path.join(__dirname, "fixtures", "blogs");
 test("loadContent reads markdown metadata and path segments", async () => {
   const items = await loadContent(fixtureRoot);
 
-  const item = items.find((entry) => entry.slug === "sample-post");
+  const item = items.find((entry) => entry.slug === "sample");
   assert.ok(item);
   assert.equal(item.category, "reports");
   assert.equal(item.subcategory, "sample");
-  assert.equal(item.slug, "sample-post");
+  assert.equal(item.slug, "sample");
   assert.equal(item.title, "Sample Post");
+  assert.equal(item.metaTitle, "Sample Post");
   assert.equal(item.date, "2024-01-15");
   assert.equal(item.description, "Short summary.");
-  assert.ok(item.content.includes("# Sample Post"));
+  assert.ok(!item.content.includes("# Sample Post"));
 });
 
 test("loadContent sorts deterministically and normalizes dates", async () => {
@@ -59,14 +60,14 @@ test("loadContent sorts deterministically and normalizes dates", async () => {
 
     assert.deepEqual(
       items.map((item) => item.slug),
-      ["second", "first"],
+      ["b", "a"],
     );
 
-    const second = items.find((item) => item.slug === "second");
+    const second = items.find((item) => item.slug === "b");
     assert.ok(second);
     assert.equal(second.date, "2024-02-01T00:00:00.000Z");
 
-    const first = items.find((item) => item.slug === "first");
+    const first = items.find((item) => item.slug === "a");
     assert.ok(first);
     assert.equal(first.date, "2024-01-15");
   } finally {

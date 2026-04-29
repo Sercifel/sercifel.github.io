@@ -60,6 +60,59 @@ const normalizeTags = (value) => {
   return [String(value).trim()].filter(Boolean);
 };
 
+const stripInlineMarkdown = (value) => {
+  const input = String(value ?? "");
+  if (!input) {
+    return "";
+  }
+  return input
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/`([^`]*)`/g, "$1")
+    .replace(/[*_~]/g, "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+};
+
+const extractLeadingTitle = (markdown) => {
+  const source = String(markdown ?? "");
+  if (!source.trim()) {
+    return { title: "", content: source };
+  }
+  const lines = source.split(/\r?\n/);
+  let index = 0;
+  while (index < lines.length && !lines[index].trim()) {
+    index += 1;
+  }
+  if (index >= lines.length) {
+    return { title: "", content: source };
+  }
+
+  const line = lines[index];
+  const atxMatch = line.match(/^#\s+(.+?)\s*$/);
+  if (atxMatch) {
+    const title = stripInlineMarkdown(atxMatch[1]);
+    let start = index + 1;
+    while (start < lines.length && !lines[start].trim()) {
+      start += 1;
+    }
+    return { title, content: lines.slice(start).join("\n") };
+  }
+
+  const next = lines[index + 1];
+  if (next && /^=+\s*$/.test(next)) {
+    const title = stripInlineMarkdown(line);
+    let start = index + 2;
+    while (start < lines.length && !lines[start].trim()) {
+      start += 1;
+    }
+    return { title, content: lines.slice(start).join("\n") };
+  }
+
+  return { title: "", content: source };
+};
+
 const extractFirstImage = (content) => {
   if (!content) {
     return "";
@@ -117,8 +170,10 @@ const normalizeContent = (filePath, rootDir, data, content) => {
   const category = rawCategory.trim() ? rawCategory : "uncategorized";
   const subcategory = rawSubcategory.trim() ? rawSubcategory : "general";
   const filename = path.basename(filePath, ".md");
-  const title = data.title ?? humanizeSegment(filename);
-  const slugSource = data.slug ?? filename;
+  const { title: markdownTitle, content: strippedContent } = extractLeadingTitle(content);
+  const metaTitle = String(data.title ?? "").trim();
+  const title = markdownTitle || metaTitle || humanizeSegment(filename);
+  const slugSource = filename;
   const slugText = typeof slugSource === "string" ? slugSource.trim() : String(slugSource ?? "").trim();
   let slug = slugify(slugText);
   if (!slug) {
@@ -139,9 +194,11 @@ const normalizeContent = (filePath, rootDir, data, content) => {
 
   const today = new Date().toISOString().slice(0, 10);
 
-  const image = data.image ?? data.thumbnail ?? extractFirstImage(content);
+  const image = data.image ?? data.thumbnail ?? extractFirstImage(strippedContent);
   const description =
-    data.description ?? data.meta_description ?? data.summary ?? extractExcerpt(content);
+    data.description ?? data.meta_description ?? data.summary ?? extractExcerpt(strippedContent);
+  const metaDescription =
+    String(data.meta_description ?? data.description ?? data.summary ?? "").trim();
   const date = normalizeDate(data.date) || today;
 
   return {
@@ -149,11 +206,13 @@ const normalizeContent = (filePath, rootDir, data, content) => {
     subcategory,
     slug,
     title,
+    metaTitle,
     date,
     description,
+    metaDescription,
     tags: normalizeTags(data.tags ?? data.tag),
     image,
-    content,
+    content: strippedContent,
   };
 };
 
