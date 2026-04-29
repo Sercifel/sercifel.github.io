@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.machinesource-global.com/</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/about/</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/archive/2025-11/</loc>
@@ -51,6 +51,9 @@
     <loc>https://www.machinesource-global.com/archive/2027-03/</loc>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/archive/2027-05/</loc>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/archive/2027-10/</loc>
   </url>
   <url>
@@ -88,6 +91,10 @@
     <lastmod>2026-03-11</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/energy-environmental-equipment/what-buyers-miss-sustainable-machinery/</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/energy-environmental-equipment/what-certifications-matter-for-environmental-and-energy-machinery/</loc>
     <lastmod>2026-03-10</lastmod>
   </url>
@@ -105,6 +112,10 @@
   <url>
     <loc>https://www.machinesource-global.com/categories/food-beverage-processing-machinery/3-piece-can-manufacturing-process-equipment-2026-ai-trends/</loc>
     <lastmod>2026-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/food-beverage-processing-machinery/before-buying-canning-equipment-in-2026/</loc>
+    <lastmod>2026-04-15</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/categories/food-beverage-processing-machinery/how-robotics-surpasses-human-consistency-in-coffee/</loc>
@@ -154,8 +165,24 @@
     <lastmod>2026-01-29</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/general-industrial-equipment/2026-wire-edm-machine-industry-trends/</loc>
+    <lastmod>2026-04-22</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/general-industrial-equipment/3-station-thermoforming-machine-advantage/</loc>
+    <lastmod>2026-04-15</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/general-industrial-equipment/automation-labor-shortages-rubber-manufacturing/</loc>
     <lastmod>2026-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/general-industrial-equipment/buying-a-5-axis-tilting-rotary-table/</loc>
+    <lastmod>2026-04-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/general-industrial-equipment/centrifugal-vs-electrostatic-mist-collectors-for-cnc/</loc>
+    <lastmod>2026-04-15</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/categories/general-industrial-equipment/choose-oil-seal-test-machine/</loc>
@@ -226,6 +253,10 @@
     <lastmod>2026-02-12</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/general-industrial-equipment/retrofit-older-machine-shops-for-cleaner-air/</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/general-industrial-equipment/right-oil-seal-machine-for-oem/</loc>
     <lastmod>2025-12-20</lastmod>
   </url>
@@ -262,6 +293,10 @@
   <url>
     <loc>https://www.machinesource-global.com/categories/industrial-automation-systems/connect-automatic-coil-winding-machines-automation/</loc>
     <lastmod>2025-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/industrial-automation-systems/custom-hpu-units-support-better-clamping-hydraulic-system-design/</loc>
+    <lastmod>2026-04-09</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/categories/industrial-automation-systems/guide-scaling-coil-winding-production-lines/</loc>
@@ -357,6 +392,10 @@
     <lastmod>2026-02-25</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/machine-tools/choose-right-type-cnc-lathes-for-real-production-demands/</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/choosing-right-cylindrical-grinder/</loc>
     <lastmod>2026-03-06</lastmod>
   </url>
@@ -413,6 +452,10 @@
     <lastmod>2026-03-16</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/machine-tools/essential-guide-cnc-drilling-and-tapping/</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/fanuc-nvidia-alliance-ai-powered-robotics/</loc>
     <lastmod>2025-12-28</lastmod>
   </url>
@@ -441,6 +484,14 @@
     <lastmod>2026-02-23</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/machine-tools/grinding-machine-base-quality-shapes-precision/</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/machine-tools/guide-choose-small-hole-edm/</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/guide-to-cnc-turning-milling/</loc>
     <lastmod>2026-02-09</lastmod>
   </url>
@@ -455,6 +506,10 @@
   <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/high-accuracy-cnc-toolroom-lathe-specs/</loc>
     <lastmod>2026-03-09</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/machine-tools/high-power-fiber-laser-systems-reshaping-metal-processing/</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/horizontal-nc-rotary-tables-heavy-duty-machining/</loc>
@@ -521,6 +576,10 @@
     <lastmod>2026-02-17</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/machine-tools/sub-micron-roundness-surface-finish-in-precision-machining/</loc>
+    <lastmod>2026-04-15</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/surface-grinding-machines-transform-manufacturing/</loc>
     <lastmod>2025-11-03</lastmod>
   </url>
@@ -529,12 +588,20 @@
     <lastmod>2025-11-03</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/machine-tools/swiss-type-vs-fixed-headstock-cnc-lathes/</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/switch-to-box-way-hmcs/</loc>
     <lastmod>2025-11-25</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/technical-analysis-of-id-od-grinding/</loc>
     <lastmod>2026-03-16</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/machine-tools/tool-center-point-design-impacts-5-axis-machining-performance/</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/categories/machine-tools/vertical-vs-horizontal-machining-centers/</loc>
@@ -600,6 +667,10 @@
     <lastmod>2026-03-18</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/material-handling-equipment/why-counterbalance-forklifts-ultimate-factory-workhorse/</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/packaging-machinery/</loc>
   </url>
   <url>
@@ -662,6 +733,10 @@
     <lastmod>2026-03-03</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/plastics-machinery/choose-right-lsr-vertical-injection-molding-machine/</loc>
+    <lastmod>2026-04-23</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/categories/plastics-machinery/estimating-cycle-time-in-plastic-blow-molding/</loc>
     <lastmod>2026-03-06</lastmod>
   </url>
@@ -676,6 +751,10 @@
   <url>
     <loc>https://www.machinesource-global.com/categories/plastics-machinery/injection-molding-machine-guide-2026/</loc>
     <lastmod>2026-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/categories/plastics-machinery/produce-food-grade-rpet-sheets-from-recycled-pet-bottles/</loc>
+    <lastmod>2026-04-20</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/categories/plastics-machinery/rise-marine-degradable-pha/</loc>
@@ -729,6 +808,10 @@
     <lastmod>2026-03-15</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/categories/semiconductor-electronics-equipment/why-micron-alignment-defines-silicon-photonics/</loc>
+    <lastmod>2026-04-24</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/exhibition/</loc>
   </url>
   <url>
@@ -754,12 +837,20 @@
     <lastmod>2026-05-05</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/exhibition/americas/furniture-manufacturing-expo-2026/</loc>
+    <lastmod>2026-06-03</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/exhibition/americas/imts-2026/</loc>
     <lastmod>2026-09-14</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/exhibition/americas/metal-fabrication-in-2026/</loc>
     <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/exhibition/americas/npe-2027/</loc>
+    <lastmod>2027-05-03</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/exhibition/asia/</loc>
@@ -856,12 +947,20 @@
     <lastmod>2026-05-07</lastmod>
   </url>
   <url>
+    <loc>https://www.machinesource-global.com/exhibition/europe/itm-industry-europe-2026/</loc>
+    <lastmod>2026-05-26</lastmod>
+  </url>
+  <url>
     <loc>https://www.machinesource-global.com/exhibition/europe/metpack-2026/</loc>
     <lastmod>2026-05-05</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/exhibition/europe/motek-2026/</loc>
     <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/exhibition/europe/sps-2026/</loc>
+    <lastmod>2026-11-24</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/exhibition/middle-east/</loc>
@@ -894,6 +993,10 @@
   <url>
     <loc>https://www.machinesource-global.com/firm-news/general/aceretech-15-ton-per-hour-dual-stage-shredding-system/</loc>
     <lastmod>2026-03-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.machinesource-global.com/firm-news/general/detzo-introduces-new-stator-winding-systems/</loc>
+    <lastmod>2026-04-15</lastmod>
   </url>
   <url>
     <loc>https://www.machinesource-global.com/firm-news/general/e-bike-manufacturing-automation-case-study/</loc>

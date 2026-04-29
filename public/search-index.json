@@ -1,5 +1,61 @@
 [
   {
+    "title": "Sustainable Machinery Without Quality Risk",
+    "description": "How B2B buyers can evaluate sustainable machinery, OEM quality controls, traceability, efficiency, and lifecycle risk before purchase.",
+    "category": "Categories",
+    "subcategory": "Energy & Environmental Equipment",
+    "path": "/categories/energy-environmental-equipment/what-buyers-miss-sustainable-machinery/"
+  },
+  {
+    "title": "2026 Wire EDM Machine Trends & Buyer Guide",
+    "description": "Discover the top 2026 Wire Cutting EDM industry trends. Explore technical insights on Automatic Wire Threading (AWT), ESG energy compliance and TCO optimization to help C-suite leads maximize ROI.",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/2026-wire-edm-machine-industry-trends/"
+  },
+  {
+    "title": "How To Retrofit Older Machine Shops For Cleaner Air Without Shutting Down The Entire Facility",
+    "description": "Older machine shops often struggle with oil mist, airborne residue, and inconsistent ventilation. This guide explains how to improve air quality through practical retrofit strategies, avoid common mistakes, and build a phased upgrade plan without rebuilding the entire facility.",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/retrofit-older-machine-shops-for-cleaner-air/"
+  },
+  {
+    "title": "Buying Canning Equipment in 2026: 7 Questions for Buyers",
+    "description": "Review seven practical questions for evaluating canning equipment in 2026, including changeover time, dissolved oxygen control, software access, seam performance, CIP design, utility planning, and material compatibility.",
+    "category": "Categories",
+    "subcategory": "Food & Beverage Processing Machinery",
+    "path": "/categories/food-beverage-processing-machinery/before-buying-canning-equipment-in-2026/"
+  },
+  {
+    "title": "The 3-Station Thermoforming Machine Advantage: Why it's the Gold Standard for Mass Production",
+    "description": "Discover why the 3-station thermoforming process—integrating forming, cutting, and stacking—is the industry benchmark for 2026. Learn how synchronous operation, AI optimization, and modular tooling maximize CPM while meeting new global sustainability mandates for rPET and PLA polymers.",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/3-station-thermoforming-machine-advantage/"
+  },
+  {
+    "title": "Buying a 5 Axis Tilting Rotary Table: Key Design and Stability Factors in 202",
+    "description": "Review the key design, rigidity, thermal stability, drive technology, and supplier considerations for selecting a 5 axis tilting rotary table in 2026.",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/buying-a-5-axis-tilting-rotary-table/"
+  },
+  {
+    "title": "Centrifugal vs Electrostatic Mist Collectors for CNC: Key Differences, Applications, and Selection Factors",
+    "description": "Compare centrifugal and electrostatic mist collectors for CNC machining. Learn how coolant type, maintenance, energy use, and application needs affect system selection.",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/centrifugal-vs-electrostatic-mist-collectors-for-cnc/"
+  },
+  {
+    "title": "How Custom HPU Units Support Better Clamping Hydraulic System Design in Modern Manufacturing",
+    "description": "Explore how custom hydraulic power units improve clamping hydraulic system performance through better energy efficiency, lower heat generation, reduced noise, and more flexible integration for industrial equipment.",
+    "category": "Categories",
+    "subcategory": "Industrial Automation Systems",
+    "path": "/categories/industrial-automation-systems/custom-hpu-units-support-better-clamping-hydraulic-system-design/"
+  },
+  {
     "title": "Beyond Europe and the US: Why Southeast Asia is the Next Global Hotspot for Biodegradable Straw Machines",
     "description": "Explore why Southeast Asia is surpassing the West as the primary market for biodegradable straw production equipment. Analyze plastic bans in Vietnam, Thailand, and Malaysia, and discover how manufacturers like Jumbo Steel are leading the green transition.",
     "category": "Categories",
@@ -147,13 +203,6 @@
     "path": "/categories/general-industrial-equipment/oil-mist-collectors-transform-machining-operations/"
   },
   {
-    "title": "Humanoid Robot Supply Chain: Key Manufacturing Opportunities for OEM Suppliers",
-    "description": "Humanoid Robot Manufacturing: OEM and ODM Opportunities in the Emerging Robotics Supply Chain The rapid advancement of humanoid robots is transforming the gl...",
-    "category": "Categories",
-    "subcategory": "Industrial Automation Systems",
-    "path": "/categories/industrial-automation-systems/humanoid-robot-manufacturing/"
-  },
-  {
     "title": "The Ultimate Guide to Meltblown Non-woven Production Lines: Technology, Requirements, and Strategic Selection",
     "description": "Discover how meltblown non-woven fabric is produced, the critical requirements for high-efficiency production lines, and why STC Machinery is the preferred choice for global manufacturers.",
     "category": "Categories",
@@ -280,13 +329,6 @@
     "path": "/categories/general-industrial-equipment/automation-labor-shortages-rubber-manufacturing/"
   },
   {
-    "title": "Scaling Coil Winding: From Stand-Alone to Fully Automated Lines",
-    "description": "A 2026 guide to scaling coil production. Learn how to transition from stand-alone winders to modular semi-automation and fully integrated Detzo production lines.",
-    "category": "Categories",
-    "subcategory": "Industrial Automation Systems",
-    "path": "/categories/industrial-automation-systems/guide-scaling-coil-winding-production-lines/"
-  },
-  {
     "title": "The Ultimate CNC Swiss Lathe Buyer’s Guide for OEMs: Strategies for 2026",
     "description": "Master the complexities of Swiss lathe procurement. Compare fixed vs. hybrid guide bushings, analyze B-axis ROI, and explore how JINN FA’s JSL Series enables 'Done-in-One' precision for aerospace and medical manufacturing.",
     "category": "Categories",
@@ -348,6 +390,41 @@
     "category": "Categories",
     "subcategory": "Industrial Automation Systems",
     "path": "/categories/industrial-automation-systems/capabilities-woodworking-factories-need/"
+  },
+  {
+    "title": "When to Choose Small Hole EDM: A Comprehensive Guide for Precision Manufacturing",
+    "description": "Discover when to utilize Small Hole EDM over traditional drilling. Learn about material hardness, aspect ratios, and the advantages of the OCTECE River 35 for high-precision micro-hole machining.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/guide-choose-small-hole-edm/"
+  },
+  {
+    "title": "Preventing Tool Breakage and Maximizing Quality in CNC Drilling and Tapping: An Essential Guide",
+    "description": "Master the art of CNC drilling and tapping. Learn why taps break, how to optimize speeds and feeds, and how high-performance machines like those from Ares-Seiki can revolutionize your production quality.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/essential-guide-cnc-drilling-and-tapping/"
+  },
+  {
+    "title": "Linear Way Vs. Box Way CNC Lathes: How To Choose The Right Machine For Real Production Demands",
+    "description": "Learn how to choose between linear way and box way CNC lathes based on part type, material, rigidity, cycle time, and long-term production cost. A practical guide for improving machining stability, surface finish, and overall efficiency.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/choose-right-type-cnc-lathes-for-real-production-demands/"
+  },
+  {
+    "title": "Grinding Machine Base Quality Shapes Precision More Than Most Buyers Realize",
+    "description": "Learn how casting quality, machine structure, stress relief, and inspection standards affect grinding machine stability, surface finish, long-term accuracy, and total ownership cost.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/grinding-machine-base-quality-shapes-precision/"
+  },
+  {
+    "title": "Why High-Power Fiber Laser Systems Are Reshaping Heavy-Duty Metal Processing",
+    "description": "Learn why high-power fiber laser systems are becoming more important in heavy-duty metal processing, what economic changes are driving adoption, which industries benefit most, and how to evaluate power upgrades without falling for marketing noise.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/high-power-fiber-laser-systems-reshaping-metal-processing/"
   },
   {
     "title": "Mastering Sea Freight Costs: A Practical Guide to the 5 Key Factors Shaping Your Shipping Budget",
@@ -420,6 +497,13 @@
     "path": "/categories/machine-tools/choosing-right-cylindrical-grinder/"
   },
   {
+    "title": "Humanoid Robot Supply Chain: Key Manufacturing Opportunities for OEM Suppliers",
+    "description": "Humanoid Robot Manufacturing: OEM and ODM Opportunities in the Emerging Robotics Supply Chain The rapid advancement of humanoid robots is transforming the gl...",
+    "category": "Categories",
+    "subcategory": "Industrial Automation Systems",
+    "path": "/categories/industrial-automation-systems/humanoid-robot-manufacturing/"
+  },
+  {
     "title": "Standalone Winding Machine vs. Turnkey Winding Line: Which Delivers Better Long-Term ROI?",
     "description": "Compare standalone winding machines and turnkey winding lines in terms of total cost, labor efficiency, scalability, quality control, and maintenance. A strategic decision guide for manufacturers planning long-term automation investment.",
     "category": "Categories",
@@ -432,13 +516,6 @@
     "category": "Categories",
     "subcategory": "Machine Tools",
     "path": "/categories/machine-tools/auto-feed-vs-manual-surface-grinders/"
-  },
-  {
-    "title": "Laser Sheet Metal Cutting Trends 2026: Key Insights for Modern Manufacturing",
-    "description": "Discover the latest trends in laser sheet metal cutting for 2026, including emerging technologies, smart factory integration, and sustainable practices to stay ahead in modern manufacturing.",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/laser-sheet-metal-cutting-trends-2026/"
   },
   {
     "title": "Choosing a CNC Grinding Partner in a Volatile 2026 Supply Chain",
@@ -567,6 +644,13 @@
     "path": "/categories/machine-tools/5-axis-cnc-tech-across-aerospace-medical/"
   },
   {
+    "title": "Scaling Coil Winding: From Stand-Alone to Fully Automated Lines",
+    "description": "A 2026 guide to scaling coil production. Learn how to transition from stand-alone winders to modular semi-automation and fully integrated Detzo production lines.",
+    "category": "Categories",
+    "subcategory": "Industrial Automation Systems",
+    "path": "/categories/industrial-automation-systems/guide-scaling-coil-winding-production-lines/"
+  },
+  {
     "title": "Achieve Perfect Aluminum Wheels: Precision CNC Lathes & Scrap Reduction",
     "description": "Master 2026 aluminum wheel production. Learn how FOCUS CNC lathes use multi-axis control and real-time compensation to eliminate surface defects and cut material waste.",
     "category": "Categories",
@@ -651,13 +735,6 @@
     "path": "/categories/machine-tools/fiber-laser-vs-co-laser-cutting/"
   },
   {
-    "title": "Choosing the Right Surface Grinder: Horizontal vs. Vertical Rotary Solutions",
-    "description": "Choosing the Right Surface Grinder Horizontal vs Vertical Rotary Solutions for Precision Manufacturing Choosing the right surface grinder is critical for ach...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/choosing-right-surface-grinder/"
-  },
-  {
     "title": "CNC Grinding in 2026: A Strategic Roadmap for High-Precision Manufacturing",
     "description": "Explore 2026 CNC grinding trends: Adaptive Intelligence, EV motor noise reduction, and Medical Device precision. Learn how COMORK automated cells achieve sub-micron ±0.001\" tolerances.",
     "category": "Categories",
@@ -684,6 +761,13 @@
     "category": "Categories",
     "subcategory": "Machine Tools",
     "path": "/categories/machine-tools/hidden-cost-of-downtime/"
+  },
+  {
+    "title": "Choosing the Right Surface Grinder: Horizontal vs. Vertical Rotary Solutions",
+    "description": "Choosing the Right Surface Grinder Horizontal vs Vertical Rotary Solutions for Precision Manufacturing Choosing the right surface grinder is critical for ach...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/choosing-right-surface-grinder/"
   },
   {
     "title": "Cutting Tool Market: 2025 Recovery and Tariff Headwinds",
@@ -721,6 +805,13 @@
     "path": "/exhibition/europe/emo-milano-2027/"
   },
   {
+    "title": "NPE 2027: The Plastics Show Returns to Orlando with the \"Next Is Now\" Theme",
+    "description": "NPE 2027 runs May 3-7, 2027 at the Orange County Convention Center in Orlando, bringing the full plastics supply chain together under the official theme \"Next Is Now\" with a focus on innovation, sustainability, and business growth.",
+    "category": "Exhibition",
+    "subcategory": "Americas",
+    "path": "/exhibition/americas/npe-2027/"
+  },
+  {
     "title": "TIMTOS: A Practical Machine Tool Exhibition for OEM Buyers and Custom Manufacturing Solutions",
     "description": "Many procurement managers attend EMO or IMTS, but when projects move to sourcing, budget and customization constraints push them to TIMTOS.",
     "category": "Exhibition",
@@ -733,6 +824,13 @@
     "category": "Exhibition",
     "subcategory": "Middle East",
     "path": "/exhibition/middle-east/industrial-transformation-saudi-arabia-2026/"
+  },
+  {
+    "title": "SPS 2026 Nuremberg: Industrial Automation, AI Integration and Smart Manufacturing Trends",
+    "description": "SPS 2026 takes place 24-26 November at NürnbergMesse, bringing together 1,000+ exhibitors across industrial automation, AI, cybersecurity, and smart manufacturing. Here's what buyers and suppliers need to know ahead of the 35th edition.",
+    "category": "Exhibition",
+    "subcategory": "Europe",
+    "path": "/exhibition/europe/sps-2026/"
   },
   {
     "title": "JIMTOF 2026: Japan's Cutting-Edge Machine Tool Fair Takes Flight in Tokyo",
@@ -833,6 +931,13 @@
     "path": "/exhibition/oceania/australian-manufacturing-week-2026/"
   },
   {
+    "title": "Furniture Manufacturing Expo 2026: Charlotte Hosts the U.S. Furniture Supply‑Chain Marketplace",
+    "description": "Furniture Manufacturing Expo 2026 runs June 3–4, 2026 at the Charlotte Convention Center, connecting U.S. furniture manufacturers with suppliers of machinery, materials, software, and production services.",
+    "category": "Exhibition",
+    "subcategory": "Americas",
+    "path": "/exhibition/americas/furniture-manufacturing-expo-2026/"
+  },
+  {
     "title": "EXPOMAQ 2026: Leon Becomes Mexico’s Advanced Manufacturing Showcase in June",
     "description": "EXPOMAQ 2026 runs June 2–4, 2026 at Poliforum Leon in Guanajuato, positioning itself as a major metalworking and advanced manufacturing exhibition with machine tools, automation, additive manufacturing, and metrology on the show floor.",
     "category": "Exhibition",
@@ -845,6 +950,13 @@
     "category": "Exhibition",
     "subcategory": "Asia",
     "path": "/exhibition/asia/fooma-japan-2026/"
+  },
+  {
+    "title": "ITM Industry Europe 2026: Poznań Trade Fair for Manufacturing Technology, Automation and Industrial Sourcing",
+    "description": "ITM Industry Europe 2026 runs 26 to 29 May in Poznań, bringing together machine tools, automation, welding, logistics and industrial sourcing in one regional trade fair.",
+    "category": "Exhibition",
+    "subcategory": "Europe",
+    "path": "/exhibition/europe/itm-industry-europe-2026/"
   },
   {
     "title": "METALTECH 2026: The Gateway to Smart Manufacturing in the ASEAN Region",
@@ -896,6 +1008,20 @@
     "path": "/exhibition/europe/metpack-2026/"
   },
   {
+    "title": "Micron Alignment in Silicon Photonics Manufacturing",
+    "description": "Learn why micron-level precision mechanics improves silicon photonics yield, supplier control, packaging quality, and OEM production reliability.",
+    "category": "Categories",
+    "subcategory": "Semiconductor & Electronics Equipment",
+    "path": "/categories/semiconductor-electronics-equipment/why-micron-alignment-defines-silicon-photonics/"
+  },
+  {
+    "title": "Choosing the Right LSR Vertical Injection Molding Machine for Medical Parts: A Deep Dive into Specifications and Compliance",
+    "description": "Master the complexities of LSR vertical injection molding for medical devices. Learn how specific machine configurations solve flash, contamination, and precision challenges in ISO-certified environments.",
+    "category": "Categories",
+    "subcategory": "Plastics Machinery",
+    "path": "/categories/plastics-machinery/choose-right-lsr-vertical-injection-molding-machine/"
+  },
+  {
     "title": "CCMT 2026 in Shanghai: CNC Machine Tools, Smart Manufacturing, and China Market Signals",
     "description": "CCMT 2026 runs April 21 to 25 in Shanghai at SNIEC, bringing together CNC machine tools, automation, tooling, and metrology for China’s manufacturing market.",
     "category": "Exhibition",
@@ -910,11 +1036,53 @@
     "path": "/exhibition/asia/chinaplas-2026/"
   },
   {
+    "title": "How to Produce Food-Grade rPET Sheets from Recycled PET Bottles",
+    "description": "Learn the complete bottle-to-sheet process for producing FDA/EFSA-compliant food-grade rPET sheets — from decontamination and IV control to extrusion, melt filtration, and thickness control.",
+    "category": "Categories",
+    "subcategory": "Plastics Machinery",
+    "path": "/categories/plastics-machinery/produce-food-grade-rpet-sheets-from-recycled-pet-bottles/"
+  },
+  {
     "title": "HANNOVER MESSE 2026: Navigating the New Frontier of AI Industrial Transformation and Green Manufacturing",
     "description": "As we approach April 20–24, 2026, Hannover Exhibition Center prepares to host a pivotal edition focused on resilience and profitable sustainability.",
     "category": "Exhibition",
     "subcategory": "Europe",
     "path": "/exhibition/europe/hannover-messe-2026/"
+  },
+  {
+    "title": "The Heart of Precision: How Tool Center Point Design Impacts 5-Axis Machining Performance",
+    "description": "Discover how Tool Center Point (TCP) design and control influence accuracy, surface finish, and ROI in 5-axis universal machining centers. A comprehensive guide for engineers and purchasing managers.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/tool-center-point-design-impacts-5-axis-machining-performance/"
+  },
+  {
+    "title": "Swiss-Type vs. Fixed-Headstock CNC Lathes: The Ultimate Procurement Guide for Precision Machining",
+    "description": "Confused between Swiss-type (sliding head) and fixed-headstock lathes? Discover the key differences, cost implications, and how to choose the best CNC lathe for your precision manufacturing needs.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/swiss-type-vs-fixed-headstock-cnc-lathes/"
+  },
+  {
+    "title": "The Science of Stability: Why Counterbalance Forklifts Are the Ultimate Factory Workhorse",
+    "description": "Discover why counterbalance forklifts are the backbone of modern logistics. Learn about the physics of stability, the shift to electric power, and how to choose the right equipment for your warehouse.",
+    "category": "Categories",
+    "subcategory": "Material Handling Equipment",
+    "path": "/categories/material-handling-equipment/why-counterbalance-forklifts-ultimate-factory-workhorse/"
+  },
+  {
+    "title": "Sub Micron Roundness and Surface Finish in Precision Machining: Key Factors, Measurement, and Supplier Evaluation",
+    "description": "Learn how sub micron roundness and surface finish are evaluated in precision machining, including measurement methods, process controls, AI assisted monitoring, and supplier selection criteria.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/sub-micron-roundness-surface-finish-in-precision-machining/"
+  },
+  {
+    "title": "DETZO Introduces New Stator Winding Systems as Motor Production Demands Higher Precision and Stability",
+    "description": "DETZO has launched the DSW-FM3002 and upgraded DSW-6012 series to address growing demand for stable, precise, and scalable stator winding in advanced motor manufacturing.",
+    "category": "Firm News",
+    "subcategory": "general",
+    "path": "/firm-news/general/detzo-introduces-new-stator-winding-systems/"
   },
   {
     "title": "Manufacturing World Nagoya 2026: The Nexus of Automotive and Aerospace Excellence in Central Japan",
@@ -1076,6 +1244,13 @@
     "category": "Categories",
     "subcategory": "Plastics Machinery",
     "path": "/categories/plastics-machinery/estimating-cycle-time-in-plastic-blow-molding/"
+  },
+  {
+    "title": "Laser Sheet Metal Cutting Trends 2026: Key Insights for Modern Manufacturing",
+    "description": "Discover the latest trends in laser sheet metal cutting for 2026, including emerging technologies, smart factory integration, and sustainable practices to stay ahead in modern manufacturing.",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/laser-sheet-metal-cutting-trends-2026/"
   },
   {
     "title": "Unlocking Precision: How Linear Way CNC Lathes Transform Manufacturing Across Industries",

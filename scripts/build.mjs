@@ -658,12 +658,32 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       day: String(dayStart).padStart(2, "0"),
     };
   };
-  const parseExhibitionDateFromValue = (value) => {
+  const parseFrontMatterDate = (value) => {
     if (!value) {
       return null;
     }
     const parsed = new Date(value);
     if (Number.isNaN(parsed.getTime())) {
+      return null;
+    }
+    return parsed;
+  };
+  const latestDateForItems = (items = []) => {
+    const timestamps = items
+      .map((item) => parseFrontMatterDate(item.date)?.getTime())
+      .filter((value) => typeof value === "number");
+    if (!timestamps.length) {
+      return null;
+    }
+    return new Date(Math.max(...timestamps));
+  };
+  const isAprilFrontMatter = (item) => {
+    const parsed = parseFrontMatterDate(item.date);
+    return parsed ? parsed.getMonth() === 3 : false;
+  };
+  const parseExhibitionDateFromValue = (value) => {
+    const parsed = parseFrontMatterDate(value);
+    if (!parsed) {
       return null;
     }
     return {
@@ -694,13 +714,18 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       </li>
     `;
   };
-  const featuredFirmNews = enriched.filter(
-    (item) => slugify(item.category ?? "") === "firm-news"
-  );
-  const featured = (featuredFirmNews.length ? featuredFirmNews : latest).slice(0, 6);
-  const featuredSlides = [featured.slice(0, 3), featured.slice(3, 6)]
-    .map(renderFeaturedSlide)
-    .filter(Boolean);
+  const aprilItems = enriched.filter(isAprilFrontMatter);
+  const featured = (aprilItems.length ? aprilItems : latest).slice(0, 9);
+  const featuredSlides = Array.from(
+    { length: Math.ceil(featured.length / 3) },
+    (_, index) => renderFeaturedSlide(featured.slice(index * 3, index * 3 + 3))
+  ).filter(Boolean);
+  const featuredDots = featuredSlides
+    .map((_, index) => {
+      const activeClass = index === 0 ? " is-active" : "";
+      return `<button class="carousel-dot${activeClass}" type="button" data-carousel-dot="${index}" aria-label="Slide ${index + 1}"></button>`;
+    })
+    .join("");
   const featuredSection = featuredSlides.length
     ? `
         <section class="space-y-4 border-b border-slate-200 pb-8" data-featured-carousel>
@@ -719,8 +744,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
             </div>
           </div>
           <div class="carousel-dots" data-carousel-dots>
-            <button class="carousel-dot is-active" type="button" data-carousel-dot="0" aria-label="Slide 1"></button>
-            <button class="carousel-dot" type="button" data-carousel-dot="1" aria-label="Slide 2"></button>
+            ${featuredDots}
           </div>
         </section>
       `
@@ -737,26 +761,37 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       `
     : "";
 
-  const latestCategory = categories.find(
-    (category) => (categoryGroups[category.key] || []).length > 0
-  );
+  const latestAprilItem = aprilItems[0];
+  const latestCategoryKeyFromApril = latestAprilItem?.category;
+  const latestCategoryFromApril = latestCategoryKeyFromApril
+    ? categories.find((category) => category.key === latestCategoryKeyFromApril) || {
+        key: latestCategoryKeyFromApril,
+        label: humanizeSegment(latestCategoryKeyFromApril),
+      }
+    : null;
+  const latestCategory =
+    latestCategoryFromApril ||
+    categories.find((category) => (categoryGroups[category.key] || []).length > 0);
   const latestCategoryLabel = latestCategory
     ? escapeHtml(latestCategory.label ?? latestCategory.key)
     : "Latest";
   const latestCategoryItems = latestCategory
-    ? (categoryGroups[latestCategory.key] || []).slice(0, 3)
-    : latest.slice(0, 3);
+    ? (() => {
+        const itemsInCategory = categoryGroups[latestCategory.key] || [];
+        const aprilInCategory = itemsInCategory.filter(isAprilFrontMatter);
+        const nonAprilInCategory = itemsInCategory.filter(
+          (item) => !isAprilFrontMatter(item)
+        );
+        return [...aprilInCategory, ...nonAprilInCategory].slice(0, 3);
+      })()
+    : aprilItems.slice(0, 3);
   const exhibitionItems = enriched
     .filter((item) => String(item.category).toLowerCase() === "exhibition")
     .map((item) => ({
       item,
-      parsed:
-        parseExhibitionDateFromValue(item.date) ||
-        parseExhibitionDate(item.content),
+      parsed: parseExhibitionDateFromValue(item.date),
     }))
-    .filter(
-      ({ parsed }) => parsed?.date && parsed.date.getMonth() + 1 >= 4
-    )
+    .filter(({ parsed }) => parsed?.date && parsed.date.getMonth() >= 4)
     .sort((a, b) => {
       const aDate = a.parsed?.date ? a.parsed.date.getTime() : Infinity;
       const bDate = b.parsed?.date ? b.parsed.date.getTime() : Infinity;
@@ -808,7 +843,18 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       ${latestSection}
     </div>
   `;
-  const sidebarSections = categories
+  const categoriesByLatest = categories
+    .map((category) => ({
+      category,
+      latestDate: latestDateForItems(categoryGroups[category.key] || []),
+    }))
+    .sort((a, b) => {
+      const aTime = a.latestDate ? a.latestDate.getTime() : -Infinity;
+      const bTime = b.latestDate ? b.latestDate.getTime() : -Infinity;
+      return bTime - aTime;
+    })
+    .map(({ category }) => category);
+  const sidebarSections = categoriesByLatest
     .map((category) => {
       const scoped = categoryGroups[category.key] || [];
       if (!scoped.length) {
@@ -874,8 +920,14 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   `;
 
   const exhibitionSegment = safeSegment(exhibitionCategory?.key ?? "exhibition");
-  const exhibitionRegions = Object.keys(exhibitionSubgroups)
-    .sort((a, b) => humanizeSegment(a).localeCompare(humanizeSegment(b)))
+  const exhibitionRegions = Object.entries(exhibitionSubgroups)
+    .map(([name, list]) => ({ name, latestDate: latestDateForItems(list) }))
+    .sort((a, b) => {
+      const aTime = a.latestDate ? a.latestDate.getTime() : -Infinity;
+      const bTime = b.latestDate ? b.latestDate.getTime() : -Infinity;
+      return bTime - aTime;
+    })
+    .map((entry) => entry.name)
     .slice(0, 6);
   const exhibitionSidebarLinks = exhibitionRegions
     .map((name) => {
@@ -1006,8 +1058,19 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   for (const category of categories) {
     const scoped = enriched.filter((item) => item.category === category.key);
     const subgroups = groupBy(scoped, "subcategory");
-    const subCards = Object.entries(subgroups)
-      .map(([name, list]) => {
+    const subgroupEntries = Object.entries(subgroups)
+      .map(([name, list]) => ({
+        name,
+        list,
+        latestDate: latestDateForItems(list),
+      }))
+      .sort((a, b) => {
+        const aTime = a.latestDate ? a.latestDate.getTime() : -Infinity;
+        const bTime = b.latestDate ? b.latestDate.getTime() : -Infinity;
+        return bTime - aTime;
+      });
+    const subCards = subgroupEntries
+      .map(({ name, list }) => {
         const segment = safeSegment(name);
         const nameLabel = humanizeSegment(name);
         const safeName = escapeHtml(nameLabel);
@@ -1090,7 +1153,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     await fs.writeFile(path.join(hubDir, "index.html"), hubHtml);
     addSitemapEntry(`/${categorySegment}/`);
 
-    for (const [name, list] of Object.entries(subgroups)) {
+    for (const { name, list } of subgroupEntries) {
       const segment = safeSegment(name);
       const nameLabel = humanizeSegment(name);
       const safeName = escapeHtml(nameLabel);
