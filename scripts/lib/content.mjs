@@ -98,6 +98,16 @@ const extractExcerpt = (markdown, maxLength = 160) => {
   return `${cleaned.slice(0, limit).trimEnd()}...`;
 };
 
+const normalizeDateString = (value) => {
+  const text = String(value ?? "").trim();
+  if (!text) {
+    return "";
+  }
+  return text
+    .replace(/^([0-9]{4}-[0-9]{2}-[0-9]{2})\s+T?/, "$1T")
+    .replace(/T\s+/, "T");
+};
+
 const normalizeContent = (filePath, rootDir, data, content) => {
   const relativePath = path.relative(rootDir, filePath);
   const pathSegments = relativePath.split(path.sep);
@@ -121,7 +131,7 @@ const normalizeContent = (filePath, rootDir, data, content) => {
     }
 
     if (typeof value === "string") {
-      return value;
+      return normalizeDateString(value);
     }
 
     return "";
