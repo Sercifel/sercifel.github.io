@@ -132,7 +132,7 @@ test("buildSite escapes html and avoids empty path segments", async () => {
     );
 
     assert.ok(index.includes("Escape Post"));
-    assert.ok(index.includes("Summary &lt;strong&gt;value&lt;/strong&gt;"));
+    assert.ok(index.includes("Content."));
     assert.ok(article.includes("2024-01-15 &amp; Co"));
     assert.ok(article.includes("Title &lt;Test&gt; &amp; &quot;Quotes&quot;"));
     assert.ok(article.includes("Escape Post"));

@@ -21,7 +21,7 @@ test("loadContent reads markdown metadata and path segments", async () => {
   assert.equal(item.title, "Sample Post");
   assert.equal(item.metaTitle, "Sample Post");
   assert.equal(item.date, "2024-01-15");
-  assert.equal(item.description, "Short summary.");
+  assert.equal(item.description, "This is a sample report.");
   assert.ok(!item.content.includes("# Sample Post"));
 });
 

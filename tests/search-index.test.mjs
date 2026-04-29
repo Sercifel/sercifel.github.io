@@ -17,7 +17,7 @@ test("buildSearchIndex maps content into searchable entries", async () => {
   assert.ok(entry);
   assert.deepEqual(entry, {
     title: "Sample Post",
-    description: "Short summary.",
+    description: "This is a sample report.",
     category: "reports",
     subcategory: "sample",
     path: "/reports/sample/sample/",

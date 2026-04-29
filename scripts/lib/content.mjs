@@ -81,33 +81,44 @@ const extractLeadingTitle = (markdown) => {
     return { title: "", content: source };
   }
   const lines = source.split(/\r?\n/);
-  let index = 0;
-  while (index < lines.length && !lines[index].trim()) {
-    index += 1;
-  }
-  if (index >= lines.length) {
-    return { title: "", content: source };
-  }
+  let inFence = false;
+  let fenceMarker = "";
 
-  const line = lines[index];
-  const atxMatch = line.match(/^#\s+(.+?)\s*$/);
-  if (atxMatch) {
-    const title = stripInlineMarkdown(atxMatch[1]);
-    let start = index + 1;
-    while (start < lines.length && !lines[start].trim()) {
-      start += 1;
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    const trimmed = line.trim();
+    const fenceMatch = trimmed.match(/^(```|~~~)/);
+    if (fenceMatch) {
+      if (!inFence) {
+        inFence = true;
+        fenceMarker = fenceMatch[1];
+      } else if (trimmed.startsWith(fenceMarker)) {
+        inFence = false;
+        fenceMarker = "";
+      }
+      continue;
     }
-    return { title, content: lines.slice(start).join("\n") };
-  }
 
-  const next = lines[index + 1];
-  if (next && /^=+\s*$/.test(next)) {
-    const title = stripInlineMarkdown(line);
-    let start = index + 2;
-    while (start < lines.length && !lines[start].trim()) {
-      start += 1;
+    if (inFence) {
+      continue;
     }
-    return { title, content: lines.slice(start).join("\n") };
+
+    const atxMatch = line.match(/^#\s+(.+?)\s*$/);
+    if (atxMatch) {
+      const title = stripInlineMarkdown(atxMatch[1]);
+      const nextLines = [...lines.slice(0, index), ...lines.slice(index + 1)];
+      return { title, content: nextLines.join("\n").replace(/^\s*\n/, "") };
+    }
+
+    const next = lines[index + 1];
+    if (next && /^=+\s*$/.test(next) && trimmed) {
+      const title = stripInlineMarkdown(line);
+      const nextLines = [
+        ...lines.slice(0, index),
+        ...lines.slice(index + 2),
+      ];
+      return { title, content: nextLines.join("\n").replace(/^\s*\n/, "") };
+    }
   }
 
   return { title: "", content: source };
@@ -195,8 +206,7 @@ const normalizeContent = (filePath, rootDir, data, content) => {
   const today = new Date().toISOString().slice(0, 10);
 
   const image = data.image ?? data.thumbnail ?? extractFirstImage(strippedContent);
-  const description =
-    data.description ?? data.meta_description ?? data.summary ?? extractExcerpt(strippedContent);
+  const description = extractExcerpt(strippedContent);
   const metaDescription =
     String(data.meta_description ?? data.description ?? data.summary ?? "").trim();
   const date = normalizeDate(data.date) || today;

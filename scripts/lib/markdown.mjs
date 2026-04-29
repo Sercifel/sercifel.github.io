@@ -67,18 +67,6 @@ const markExternalLinks = (tokens) => {
   }
 };
 
-const normalizeHeadingLevels = (tokens) => {
-  for (const token of tokens) {
-    if (token.type === "heading_open" || token.type === "heading_close") {
-      if (token.tag === "h1") {
-        token.tag = "h2";
-      }
-    }
-    if (token.children) {
-      normalizeHeadingLevels(token.children);
-    }
-  }
-};
 
 const renderMarkdown = (markdown) => {
   const toc = [];
@@ -99,9 +87,6 @@ const renderMarkdown = (markdown) => {
     md.renderer.rules.link_close ||
     ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
 
-  md.core.ruler.push("normalize-headings", (state) => {
-    normalizeHeadingLevels(state.tokens);
-  });
   md.core.ruler.push("extract-toc", (state) => {
     extractToc(state, toc, slugCounts, normalizeHeadingText);
   });

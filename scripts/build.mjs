@@ -1209,12 +1209,11 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       )
       .join("");
 
-    const safeTitle = escapeHtml(item.title);
     const safeDate = escapeHtml(formatDate(item.date));
+    const safeTitle = escapeHtml(item.title);
     const descriptionText = item.description?.trim() || extractExcerpt(normalizedContent);
     const metaTitle = item.metaTitle?.trim() || item.title;
     const metaDescription = item.metaDescription?.trim() || descriptionText;
-    const safeDescription = escapeHtml(descriptionText);
 
     const relatedCandidates = enriched.filter((entry) => entry.path !== item.path);
     const relatedPrimary = relatedCandidates.filter(
@@ -1279,9 +1278,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
               ],
         widthClass: "max-w-7xl",
       }),
-      title: safeTitle,
       date: safeDate,
-      description: safeDescription,
+      title: safeTitle,
       toc: tocHtml,
       content: html,
       related: relatedHtml,
