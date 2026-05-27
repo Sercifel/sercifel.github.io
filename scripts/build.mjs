@@ -755,16 +755,11 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       `
     : "";
 
-  const latestMonthItem = currentMonthItems[0];
-  const latestCategoryKeyFromMonth = latestMonthItem?.category;
-  const latestCategoryFromMonth = latestCategoryKeyFromMonth
-    ? categories.find((category) => category.key === latestCategoryKeyFromMonth) || {
-        key: latestCategoryKeyFromMonth,
-        label: humanizeSegment(latestCategoryKeyFromMonth),
-      }
-    : null;
+  const categoriesRoot = categories.find(
+    (category) => slugify(category.key ?? "") === "categories"
+  );
   const latestCategory =
-    latestCategoryFromMonth ||
+    categoriesRoot ||
     categories.find((category) => (categoryGroups[category.key] || []).length > 0);
   const latestCategoryLabel = latestCategory
     ? escapeHtml(latestCategory.label ?? latestCategory.key)
@@ -773,12 +768,10 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     ? (() => {
         const itemsInCategory = categoryGroups[latestCategory.key] || [];
         const monthInCategory = itemsInCategory.filter(isCurrentMonthFrontMatter);
-        const nonMonthInCategory = itemsInCategory.filter(
-          (item) => !isCurrentMonthFrontMatter(item)
-        );
-        return [...monthInCategory, ...nonMonthInCategory].slice(0, 3);
+        const source = monthInCategory.length ? monthInCategory : itemsInCategory;
+        return source.slice(0, 3);
       })()
-    : currentMonthItems.slice(0, 3);
+    : [];
   const exhibitionItems = enriched
     .filter((item) => String(item.category).toLowerCase() === "exhibition")
     .map((item) => ({
@@ -1101,10 +1094,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
         return `<li><a class=\"link-primary hover:underline\" href=\"/${categoryBaseSegment}/${entry.segment}/\">${safeLabel}</a></li>`;
       })
       .join("");
-    const scopedCurrentMonth = scoped.filter(isCurrentMonthFrontMatter);
-    const scopedLatestSource = scopedCurrentMonth.length ? scopedCurrentMonth : scoped;
-    const latestCategoryPayload = renderLatestListWithPagination(scopedLatestSource, 12);
-    const latestHubPayload = renderCardGridWithPagination(scopedLatestSource, 12);
+    const latestCategoryPayload = renderLatestListWithPagination(scoped, 12);
+    const latestHubPayload = renderCardGridWithPagination(scoped, 12);
     const categorySidebar = sidebarForCategory(category.key);
     const hubBody = isCategoriesHub
       ? await renderTemplate("categories.html", {
