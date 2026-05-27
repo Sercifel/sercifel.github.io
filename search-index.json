@@ -161,11 +161,130 @@
     "path": "/exhibition/europe/itm-industry-europe-2026/"
   },
   {
+    "title": "AI-Enabled Green Machinery: The Next Global Advantage in Energy and Environmental Equipment",
+    "description": "Industrial equipment is entering a new phase. For decades, machinery buyers mainly evaluated performance through output, durability, cost and maintenance req...",
+    "category": "Categories",
+    "subcategory": "Energy & Environmental Equipment",
+    "path": "/categories/energy-environmental-equipment/ai-enabled-green-machinery/"
+  },
+  {
+    "title": "Why Flexible Automation Is Becoming the New Standard for Modern Manufacturers",
+    "description": "Manufacturing has always balanced two competing priorities: efficiency and adaptability. For much of the twentieth century, the dominant model favored effici...",
+    "category": "Categories",
+    "subcategory": "Industrial Automation Systems",
+    "path": "/categories/industrial-automation-systems/why-flexible-automation-is-becoming-the-new-standard-for-modern-manufacturers/"
+  },
+  {
+    "title": "The Future of Energy and Environmental Equipment: From Compliance Tools to Strategic Infrastructure",
+    "description": "Energy and environmental equipment has traditionally been viewed through a narrow lens: install what is required, pass inspections, file the reports, and avo...",
+    "category": "Categories",
+    "subcategory": "Energy & Environmental Equipment",
+    "path": "/categories/energy-environmental-equipment/the-future-of-energy-and-environmental-equipment/"
+  },
+  {
     "title": "METALTECH 2026: The Gateway to Smart Manufacturing in the ASEAN Region",
     "description": ", Malaysia’s premier international exhibition for metalworking, machine tools, and manufacturing technology, is scheduled to take place at the Malaysia Inter...",
     "category": "Exhibition",
     "subcategory": "Asia",
     "path": "/exhibition/asia/metaltech-2026/"
+  },
+  {
+    "title": "How to Optimize Production Line Integration Efficiency Between Automatic Bottle Rinsers and Capping Machines",
+    "description": "Automatic bottle rinsers and are two of the most operationally consequential stations in any liquid packaging line. Together they handle hygiene verification...",
+    "category": "Categories",
+    "subcategory": "Packaging Machinery",
+    "path": "/categories/packaging-machinery/how-to-optimize-production-line-integration-efficiency-between-automatic-b7ffb5/"
+  },
+  {
+    "title": "How to Reduce Dust in the Graphite Milling Process",
+    "description": "Graphite machining is widely used in industries such as EDM electrode manufacturing, semiconductor components, aerospace, and precision mold production. Howe...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/how-to-reduce-dust-in-the-graphite-milling-process/"
+  },
+  {
+    "title": "Mastering Precision: What is the Most Reliable Way to Reduce Angle Error in NC Rotary Table Calibration?",
+    "description": "Introduction: The High Cost of a Micro Degree In high precision industries like aerospace and medical device manufacturing, the difference between a perfect...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/reduce-angle-error-in-nc-rotary-table-calibration/"
+  },
+  {
+    "title": "Electric vs. Manual Pallet Stackers: A Strategic Total Cost of Ownership Analysis",
+    "description": "Introduction: Beyond the Initial Price Tag In the dynamic world of material handling, procurement decisions often hinge on the immediate cost of equipment. H...",
+    "category": "Categories",
+    "subcategory": "Material Handling Equipment",
+    "path": "/categories/material-handling-equipment/electric-vs-manual-pallet-stackers/"
+  },
+  {
+    "title": "How to Choose the Right Thermoforming Machine Manufacturer for Plastic Container Production",
+    "description": "Plastic containers are used across food service, retail packaging, medical supply chains, and consumer goods because they are lightweight, formable, and adap...",
+    "category": "Categories",
+    "subcategory": "Packaging Machinery",
+    "path": "/categories/packaging-machinery/right-thermoforming-machine-manufacturer-for-plastic-container-production/"
+  },
+  {
+    "title": "2026 Trends in Rubber and Plastic Machinery - How Automation and Energy Saving Are Reshaping Production Lines",
+    "description": "For buyers, plant owners, production managers, and technical teams, 2026 is not just another planning cycle. It is a decision year. Across the global manufac...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/2026-trends-in-rubber-and-plastic-machinery/"
+  },
+  {
+    "title": "Global Woodworking Machinery Trends - Why the Modern CNC Wood Machine Is Becoming the New Standard",
+    "description": "In woodworking, the market is changing faster than many factories expected. Labor is harder to secure, customers want more customized products, and raw mater...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/global-woodworking-machinery-trends/"
+  },
+  {
+    "title": "13 Inch Bandsaw Buying Guide for Industrial and Workshop Applications",
+    "description": "A 13 inch bandsaw is a practical machine category for workshops, light industrial operations, and manufacturers that need accurate cutting capability in a co...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/13-inch-bandsaw-buying-guide/"
+  },
+  {
+    "title": "2026 Global Metalworking Trends - Why the Shift from Manual Lathes to Semi-Automation Is Becoming a Strategic Decision",
+    "description": "When people discuss the future of metalworking, the conversation often jumps straight to full automation, lights out production, and smart factories. But for...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/2026-global-metalworking-trends/"
+  },
+  {
+    "title": "CNC Machining Center Southeast Asia Market Trends 2026: What the Regional Manufacturing Sector Is Watching",
+    "description": "The Southeast Asia CNC machining center market is entering 2026 with stronger momentum as manufacturers across the region continue to expand metalworking cap...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/cnc-machining-center-southeast-asia-market-trends-2026/"
+  },
+  {
+    "title": "Custom Motorcycle Lift Applications in Modern Workshops and Service Environments",
+    "description": "A plays a practical role in motorcycle service environments where standard equipment may not fully match the vehicles, repair procedures, or floor layouts in...",
+    "category": "Categories",
+    "subcategory": "Material Handling Equipment",
+    "path": "/categories/material-handling-equipment/custom-motorcycle-lift-applications/"
+  },
+  {
+    "title": "Why Miniaturized Electronics Need an Automatic Dipping Machine in 2026",
+    "description": "As electronics manufacturing moves deeper into the era of 5G infrastructure, AI hardware, EV systems, edge devices, and ultra compact consumer products, one...",
+    "category": "Categories",
+    "subcategory": "Semiconductor & Electronics Equipment",
+    "path": "/categories/semiconductor-electronics-equipment/why-miniaturized-electronics-need-an-automatic-dipping-machine-in-2026/"
+  },
+  {
+    "title": "Everising Smart Bandsaw Development and Industry 4.0 Trends in Modern Machinery Manufacturing",
+    "description": "As manufacturing enters a more connected stage of development, machine tools are being evaluated through a wider lens. Performance, stability, and cutting ac...",
+    "category": "Firm News",
+    "subcategory": "general",
+    "path": "/firm-news/general/everising-smart-bandsaw-development/"
+  },
+  {
+    "title": "HC FENG's Japan Exhibition Debut Signals Rising Demand for Sustainable Manufacturing",
+    "description": "As manufacturers face increasing pressure to improve efficiency, reduce waste, and maintain cleaner production environments, more attention is being paid to...",
+    "category": "Firm News",
+    "subcategory": "general",
+    "path": "/firm-news/general/hc-feng-japan-exhibition-debut-signals-rising-demand/"
   },
   {
     "title": "7th Beauty Kenya 2026: East Africa's Beauty Industry Moves from Import-Led to Innovation-Led",
@@ -175,11 +294,60 @@
     "path": "/exhibition/africa/7th-beauty-kenya-2026/"
   },
   {
+    "title": "Common Misunderstandings About Box Way CNC Lathes—and What Actually Matters",
+    "description": "In discussions about CNC lathe selection, box way machines are often reduced to a few familiar labels: rigid, heavy duty, slower, and traditional. Some of th...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/common-misunderstandings-about-box-way-cnc-lathes/"
+  },
+  {
+    "title": "Improve Flatness and Surface Finish in Rotary Grinding: Key Factors Behind More Reliable Results",
+    "description": "Flatness and surface finish are two of the clearest indicators of grinding quality in rotary grinding. When either one begins to drift, the result is often m...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/improve-flatness-and-surface-finish-in-rotary-grinding-key-factors-behind-940ae2/"
+  },
+  {
+    "title": "Why One Oil Mist Collector Does Not Fit Every CNC Machine",
+    "description": "Oil mist control problems often begin when a machining environment is treated as if every process produces the same kind of airborne contamination. In realit...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/why-one-oil-mist-collector-does-not-fit-every-cnc-machine/"
+  },
+  {
+    "title": "From Cutting to Bending: Why Process Integration Matters More in Sheet Metal Production",
+    "description": "In sheet metal production, problems often begin long before a defect is visible or a shipment is delayed. A part may be cut accurately, punched correctly, an...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/from-cutting-to-bending/"
+  },
+  {
     "title": "INTERMACH 2026: Unlocking Asia’s Machinery Innovations for Industry Professionals",
     "description": "The machinery industry is evolving faster than ever. From automation to smart manufacturing, professionals face mounting pressure to stay ahead of trends, op...",
     "category": "Exhibition",
     "subcategory": "Asia",
     "path": "/exhibition/asia/intermach-2026/"
+  },
+  {
+    "title": "Roll Grinder Market Trends - High Precision and Load Demands in Heavy Industry",
+    "description": "In the steel and paper industries, roll performance directly affects product quality, line efficiency, maintenance cost, and energy use. That is why buyers a...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/roll-grinder-market-trends/"
+  },
+  {
+    "title": "Heavy-Duty Machining Equipment in 2026: Market Trends, Machine Selection, and What Buyers Should Know",
+    "description": "Introduction: Why Heavy Duty Machining Demand Is Accelerating The global machine tools market is undergoing a significant expansion cycle. The market is wort...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/heavy-duty-machining-equipment-in-2026/"
+  },
+  {
+    "title": "How to Evaluate a Robotic Coffee Barista Supplier for Commercial Operations",
+    "description": "As become more visible in retail, hospitality, transportation hubs, and mixed use commercial spaces, buyers are paying closer attention to supplier selection...",
+    "category": "Categories",
+    "subcategory": "Food & Beverage Processing Machinery",
+    "path": "/categories/food-beverage-processing-machinery/evaluate-robotic-coffee-barista-supplier/"
   },
   {
     "title": "interpack 2026: Dusseldorf Hosts the Global Processing and Packaging Marketplace",
@@ -266,41 +434,6 @@
     "path": "/exhibition/europe/hannover-messe-2026/"
   },
   {
-    "title": "The Heart of Precision - How Tool Center Point Design Impacts 5-Axis Machining Performance",
-    "description": "In the high stakes world of aerospace, automotive tooling, and precision medical manufacturing, the difference between a high value component and a piece of...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/tool-center-point-design-impacts-5-axis-machining-performance/"
-  },
-  {
-    "title": "Swiss Type vs. Fixed Headstock CNC Lathes - The Ultimate Procurement Guide for Precision Machining",
-    "description": "In the high stakes world of precision manufacturing, the choice between a Swiss type (sliding headstock) CNC lathe and a conventional fixed headstock (turret...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/swiss-type-vs-fixed-headstock-cnc-lathes/"
-  },
-  {
-    "title": "When to Choose Small Hole EDM - The Ultimate Guide for Precision and Hardened Materials",
-    "description": "In the modern manufacturing landscape, the demand for smaller, deeper, and more precise holes is skyrocketing. Whether it is cooling holes in aerospace turbi...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/guide-choose-small-hole-edm/"
-  },
-  {
-    "title": "Preventing Tool Breakage and Maximizing Quality in CNC Drilling and Tapping - An Essential Guide",
-    "description": "In the world of precision manufacturing, few things are as frustrating—or as costly—as hearing the distinct snap of a carbide drill or a high speed steel tap...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/essential-guide-cnc-drilling-and-tapping/"
-  },
-  {
-    "title": "The Science of Stability - Why Counterbalance Forklifts Are the Ultimate Factory Workhorse",
-    "description": "In the fast paced world of industrial logistics, efficiency is king. But efficiency cannot exist without stability. If you walk into any high functioning war...",
-    "category": "Categories",
-    "subcategory": "Material Handling Equipment",
-    "path": "/categories/material-handling-equipment/why-counterbalance-forklifts-ultimate-factory-workhorse/"
-  },
-  {
     "title": "How To Retrofit Older Machine Shops For Cleaner Air Without Shutting Down The Entire Facility",
     "description": "Poor air quality in older machine shops usually comes from years of gradual change rather than one obvious failure. As equipment is added, layouts evolve, an...",
     "category": "Categories",
@@ -315,6 +448,13 @@
     "path": "/categories/machine-tools/choose-right-type-cnc-lathes-for-real-production-demands/"
   },
   {
+    "title": "Preventing Tool Breakage and Maximizing Quality in CNC Drilling and Tapping - An Essential Guide",
+    "description": "In the world of precision manufacturing, few things are as frustrating—or as costly—as hearing the distinct snap of a carbide drill or a high speed steel tap...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/essential-guide-cnc-drilling-and-tapping/"
+  },
+  {
     "title": "Grinding Machine Base Quality Shapes Precision More Than Most Buyers Realize",
     "description": "In precision grinding, many quality problems begin long before the wheel touches the workpiece. Shops often focus on spindle speed, control systems, wheel se...",
     "category": "Categories",
@@ -322,11 +462,39 @@
     "path": "/categories/machine-tools/grinding-machine-base-quality-shapes-precision/"
   },
   {
+    "title": "When to Choose Small Hole EDM - The Ultimate Guide for Precision and Hardened Materials",
+    "description": "In the modern manufacturing landscape, the demand for smaller, deeper, and more precise holes is skyrocketing. Whether it is cooling holes in aerospace turbi...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/guide-choose-small-hole-edm/"
+  },
+  {
     "title": "Why High-Power Fiber Laser Systems Are Reshaping Heavy-Duty Metal Processing",
     "description": "Heavy duty metal processing is changing under growing pressure from thicker materials, shorter lead times, and higher expectations for production stability....",
     "category": "Categories",
     "subcategory": "Machine Tools",
     "path": "/categories/machine-tools/high-power-fiber-laser-systems-reshaping-metal-processing/"
+  },
+  {
+    "title": "Swiss Type vs. Fixed Headstock CNC Lathes - The Ultimate Procurement Guide for Precision Machining",
+    "description": "In the high stakes world of precision manufacturing, the choice between a Swiss type (sliding headstock) CNC lathe and a conventional fixed headstock (turret...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/swiss-type-vs-fixed-headstock-cnc-lathes/"
+  },
+  {
+    "title": "The Heart of Precision - How Tool Center Point Design Impacts 5-Axis Machining Performance",
+    "description": "In the high stakes world of aerospace, automotive tooling, and precision medical manufacturing, the difference between a high value component and a piece of...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/tool-center-point-design-impacts-5-axis-machining-performance/"
+  },
+  {
+    "title": "The Science of Stability - Why Counterbalance Forklifts Are the Ultimate Factory Workhorse",
+    "description": "In the fast paced world of industrial logistics, efficiency is king. But efficiency cannot exist without stability. If you walk into any high functioning war...",
+    "category": "Categories",
+    "subcategory": "Material Handling Equipment",
+    "path": "/categories/material-handling-equipment/why-counterbalance-forklifts-ultimate-factory-workhorse/"
   },
   {
     "title": "Buying Canning Equipment in 2026: 7 Questions to Review Before Making a Purchase",
@@ -392,18 +560,18 @@
     "path": "/exhibition/asia/tmts-2026/"
   },
   {
-    "title": "Choosing a Conveyor Belt: When a Metal Mesh Belt Beats Plastic (2026 Industrial Guide)",
-    "description": "Executive Summary & 2026 Outlook Selecting the right conveyor medium is no longer just about moving \"Point A to Point B\"; it is about optimizing thermal effi...",
-    "category": "Categories",
-    "subcategory": "Material Handling Equipment",
-    "path": "/categories/material-handling-equipment/choosing-a-conveyor-belt/"
-  },
-  {
     "title": "Beyond Europe and the US: Why Southeast Asia is the Next Global Hotspot for Biodegradable Straw Machines",
     "description": "For the past decade, the global narrative surrounding environmental sustainability and \"plastic free\" initiatives has been dominated by the European Union an...",
     "category": "Categories",
     "subcategory": "General Industrial Equipment",
     "path": "/categories/general-industrial-equipment/next-global-hotspot-for-biodegradable-straw-machines/"
+  },
+  {
+    "title": "The 2026 Industrial Shift - How General-Purpose Automation Equipment is Moving Beyond Pilot Projects to Global Scalability",
+    "description": "The landscape of industrial automation in 2026 is characterized by a significant shift from pilot projects to scalable global solutions. This transition is d...",
+    "category": "Categories",
+    "subcategory": "Industrial Automation Systems",
+    "path": "/categories/industrial-automation-systems/2026-general-purpose-automation-equipment-moving/"
   },
   {
     "title": "The Heart of Industry 4.0 - How Brushless Geared Motors Drive Smart Factory Efficiency and Safety",
@@ -420,18 +588,18 @@
     "path": "/categories/industrial-automation-systems/mastering-sea-freight-costs/"
   },
   {
-    "title": "The 2026 Industrial Shift - How General-Purpose Automation Equipment is Moving Beyond Pilot Projects to Global Scalability",
-    "description": "The landscape of industrial automation in 2026 is characterized by a significant shift from pilot projects to scalable global solutions. This transition is d...",
-    "category": "Categories",
-    "subcategory": "Industrial Automation Systems",
-    "path": "/categories/industrial-automation-systems/2026-general-purpose-automation-equipment-moving/"
-  },
-  {
     "title": "Navigating CE Marking Requirements for Exporting Material Handling Equipment to Europe",
     "description": "The European Union (EU) market presents a significant opportunity for manufacturers of material handling equipment. However, accessing this market requires c...",
     "category": "Categories",
     "subcategory": "Material Handling Equipment",
     "path": "/categories/material-handling-equipment/ce-marking-export-material-handling-equipment/"
+  },
+  {
+    "title": "Choosing a Conveyor Belt: When a Metal Mesh Belt Beats Plastic (2026 Industrial Guide)",
+    "description": "Executive Summary & 2026 Outlook Selecting the right conveyor medium is no longer just about moving \"Point A to Point B\"; it is about optimizing thermal effi...",
+    "category": "Categories",
+    "subcategory": "Material Handling Equipment",
+    "path": "/categories/material-handling-equipment/choosing-a-conveyor-belt/"
   },
   {
     "title": "Addressing Global Labor Shortages - Why Industry 5.0 Leverages General-Purpose Automation Equipment for Human-Machine Collaboration",
@@ -546,27 +714,6 @@
     "path": "/categories/food-beverage-processing-machinery/why-piston-pump-fillers-excel-in-food-beverage/"
   },
   {
-    "title": "The Rise of Customized Furniture - What Equipment Capabilities Do Woodworking Factories Really Need?",
-    "description": "In the modern era of interior design, the \"one size fits all\" philosophy is officially obsolete. From the rise of micro apartments in urban centers to the lu...",
-    "category": "Categories",
-    "subcategory": "Industrial Automation Systems",
-    "path": "/categories/industrial-automation-systems/capabilities-woodworking-factories-need/"
-  },
-  {
-    "title": "Why All Geared Lathes are the Ultimate Workhorses for the Maintenance and Repair Industry - A Durability and Value Guide",
-    "description": "In the world of industrial maintenance, repair, and overhaul (MRO), equipment downtime is the enemy of profitability. Whether you are running a ship repair y...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/all-geared-lathes-workhorses-maintenance/"
-  },
-  {
-    "title": "Bed Type vs. Vertical Milling Machine - The Ultimate Industrial Buyer’s Guide",
-    "description": "In the high stakes world of precision manufacturing, the difference between a profitable contract and a wasted production run often boils down to a single de...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/bed-type-vs-vertical-milling-machine/"
-  },
-  {
     "title": "Industrial Water Scarcity in India: Navigating ZLD Compliance and Treatment Technologies",
     "description": "As India accelerates its path toward becoming a global manufacturing powerhouse, the industrial sector faces a critical challenge: securing a sustainable wat...",
     "category": "Categories",
@@ -602,11 +749,32 @@
     "path": "/categories/general-industrial-equipment/how-to-choose-oil-seal-trimming-machine/"
   },
   {
+    "title": "The Rise of Customized Furniture - What Equipment Capabilities Do Woodworking Factories Really Need?",
+    "description": "In the modern era of interior design, the \"one size fits all\" philosophy is officially obsolete. From the rise of micro apartments in urban centers to the lu...",
+    "category": "Categories",
+    "subcategory": "Industrial Automation Systems",
+    "path": "/categories/industrial-automation-systems/capabilities-woodworking-factories-need/"
+  },
+  {
     "title": "Beyond the Price Tag - Why High-End 5-Axis Gantry Machining Centers are a Strategic Long-Term Investment",
     "description": "In the modern manufacturing landscape, the \"sticker shock\" of high end machinery often halts procurement conversations before they truly begin. For procureme...",
     "category": "Categories",
     "subcategory": "Machine Tools",
     "path": "/categories/machine-tools/5-axis-gantry-machining-centers-investment/"
+  },
+  {
+    "title": "Why All Geared Lathes are the Ultimate Workhorses for the Maintenance and Repair Industry - A Durability and Value Guide",
+    "description": "In the world of industrial maintenance, repair, and overhaul (MRO), equipment downtime is the enemy of profitability. Whether you are running a ship repair y...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/all-geared-lathes-workhorses-maintenance/"
+  },
+  {
+    "title": "Bed Type vs. Vertical Milling Machine - The Ultimate Industrial Buyer’s Guide",
+    "description": "In the high stakes world of precision manufacturing, the difference between a profitable contract and a wasted production run often boils down to a single de...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/bed-type-vs-vertical-milling-machine/"
   },
   {
     "title": "The Evolution of CNC Horizontal Machining: Productivity and Automation Trends for 2026-2030",
@@ -693,13 +861,6 @@
     "path": "/categories/energy-environmental-equipment/the-role-of-smart-equipment-in-sustainable-factory-operations/"
   },
   {
-    "title": "Elevating Precision: Chevalier's FRG-S Series CNC Rotary Surface Grinders",
-    "description": "Chevalier's set a new standard in high precision manufacturing for industries like aerospace, automotive, energy, medical, and semiconductors. These machines...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/chevalier-frg-s-cnc-rotary-surface-grinders/"
-  },
-  {
     "title": "How to Choose the Right Environmental Protection Equipment",
     "description": "Selecting environmental protection equipment is rarely a matter of buying the “best” product on the market. In most cases, the better question is: what equip...",
     "category": "Categories",
@@ -721,6 +882,13 @@
     "path": "/categories/industrial-automation-systems/2026-clamping-systems-by-autogrip/"
   },
   {
+    "title": "Elevating Precision: Chevalier's FRG-S Series CNC Rotary Surface Grinders",
+    "description": "Chevalier's set a new standard in high precision manufacturing for industries like aerospace, automotive, energy, medical, and semiconductors. These machines...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/chevalier-frg-s-cnc-rotary-surface-grinders/"
+  },
+  {
     "title": "From Factory Floor to Frontline Showcase: How Victor Taichung’s In-Factory Revolution Sparks 2026 Growth",
     "description": "In the heart of Taichung's industrial zone, where the hum of precision machinery never quite stops, a quiet transformation was underway. As 2026 dawned with...",
     "category": "Firm News",
@@ -728,18 +896,18 @@
     "path": "/firm-news/general/victor-taichung-in-factory-revolution-sparks-2026-growth/"
   },
   {
-    "title": "Precision Engineering: A Deep Dive into High-Accuracy CNC Toolroom Lathe Specifications",
-    "description": "In the world of high precision manufacturing, the margin between a perfect component and a scrap part is often measured in microns. For machine shop owners,...",
-    "category": "Categories",
-    "subcategory": "Machine Tools",
-    "path": "/categories/machine-tools/high-accuracy-cnc-toolroom-lathe-specs/"
-  },
-  {
     "title": "High-precision Diamond Needle Files Suppliers for Aerospace Industry",
     "description": "In the aerospace industry, the margin for error is effectively zero. Whether you are manufacturing turbine blades, complex engine components, or airframe str...",
     "category": "Categories",
     "subcategory": "Machine Tools",
     "path": "/categories/machine-tools/diamond-needle-files-suppliers-for-aerospace/"
+  },
+  {
+    "title": "Precision Engineering: A Deep Dive into High-Accuracy CNC Toolroom Lathe Specifications",
+    "description": "In the world of high precision manufacturing, the margin between a perfect component and a scrap part is often measured in microns. For machine shop owners,...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/high-accuracy-cnc-toolroom-lathe-specs/"
   },
   {
     "title": "Beyond Compliance: Why Conventional Machinery May Become a Stranded Asset by 2026",
