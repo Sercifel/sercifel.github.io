@@ -1,6 +1,6 @@
 ---
 title: "How to Choose a Pallet Truck Manufacturer: The Ultimate Checklist for OEMs"
-descriotion: Navigate the 2025 MHE market with our strategic sourcing guide. From the Lithium-ion revolution to hydraulic pump quality and compliance standards, learn how to vet the right OEM/ODM partner.
+description: Navigate the 2025 MHE market with our strategic sourcing guide. From the Lithium-ion revolution to hydraulic pump quality and compliance standards, learn how to vet the right OEM/ODM partner.
 date: 2025-12-03
 ---
 # **How to Choose a Pallet Truck Manufacturer: The Ultimate Checklist for OEMs**

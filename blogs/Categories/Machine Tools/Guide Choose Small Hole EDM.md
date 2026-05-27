@@ -1,7 +1,7 @@
 ---
 title: "When to Choose Small Hole EDM: A Comprehensive Guide for Precision Manufacturing"
 description: Discover when to utilize Small Hole EDM over traditional drilling. Learn about material hardness, aspect ratios, and the advantages of the OCTECE River 35 for high-precision micro-hole machining.
-date: 2026-04-16T07:08:25Z
+date: 2026-04-16
 ---
 # When to Choose Small Hole EDM - The Ultimate Guide for Precision and Hardened Materials
 

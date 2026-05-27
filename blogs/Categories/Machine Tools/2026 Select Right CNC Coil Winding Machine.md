@@ -1,5 +1,5 @@
 ---
-title: "2026 Buyer’s Guide: Selecting the Right CNC Coil Winding Machine"
+title: "2026 Buyer Guide: Selecting the Right CNC Coil Winding Machine"
 description: Master the 2026 CNC coil winding market. Compare closed-loop servo tensioners, Industry 4.0 connectivity, and TCO to find the ideal DETZO system for EV and medical production.
 date: 2025-11-20
 ---

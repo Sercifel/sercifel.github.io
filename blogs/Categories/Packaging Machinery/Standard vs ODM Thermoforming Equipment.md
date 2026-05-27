@@ -1,6 +1,6 @@
 ---
 title: "Standard vs. ODM Thermoforming Equipment: A Cost-Benefit Analysis for Food Packaging"
-descriotion: Move beyond initial CapEx to understand the Total Cost of Ownership (TCO) in thermoforming. Compare material scrap rates, energy efficiency, and ROI between off-the-shelf models and custom ODM solutions.
+description: Move beyond initial CapEx to understand the Total Cost of Ownership (TCO) in thermoforming. Compare material scrap rates, energy efficiency, and ROI between off-the-shelf models and custom ODM solutions.
 date: 2025-11-02
 ---
 # Standard vs. ODM Thermoforming Equipment: A Cost-Benefit Analysis for Food Packaging

@@ -4,6 +4,7 @@ description: "Strategic guide for B2B procurement: How to evaluate CNC grinding 
 date: 2026-02-25
 ---
 # How to Choose a CNC Grinding Machine Partner in a More Volatile Supply Chain
+
 ![](https://www.ccm-comork.com/UserFiles/figure/visual2_pic_pic.jpg)
 
 For B2B procurement managers, project engineers, and technical directors, buying industrial machinery does not look like it did in the 2010s. The market is less predictable, and supply decisions are increasingly shaped by geopolitics, tariff changes, and nearshoring. That means the old procurement playbook, which focused heavily on price comparisons and lead-time assumptions, is no longer enough.

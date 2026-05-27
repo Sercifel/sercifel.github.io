@@ -1,6 +1,6 @@
 ---
 title: "Humanoid Robot Supply Chain: Key Manufacturing Opportunities for OEM Suppliers"
-descriotion: From industrial cable assemblies to actuators and CNC machining, explore the key manufacturing sectors involved in the humanoid robot supply chain.
+description: From industrial cable assemblies to actuators and CNC machining, explore the key manufacturing sectors involved in the humanoid robot supply chain.
 date: 2026-03-05
 ---
 # Humanoid Robot Manufacturing: OEM and ODM Opportunities in the Emerging Robotics Supply Chain

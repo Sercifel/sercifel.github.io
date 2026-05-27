@@ -1,6 +1,6 @@
 ---
 title: "The Semi-Auto Filling Machine Ceiling: How to Know When Automation Makes Financial Sense"
-descriotion: A strategic guide for plant managers deciding between semi-automatic and fully automatic filling equipment. Identify the 30-40 CPM tipping point, evaluate labor ROI, and analyze the impact of operator fatigue on fill accuracy.
+description: A strategic guide for plant managers deciding between semi-automatic and fully automatic filling equipment. Identify the 30-40 CPM tipping point, evaluate labor ROI, and analyze the impact of operator fatigue on fill accuracy.
 date: 2026-02-11
 ---
 # The Semi-Auto Filling Machine Ceiling: How to Know When Automation Makes Financial Sense

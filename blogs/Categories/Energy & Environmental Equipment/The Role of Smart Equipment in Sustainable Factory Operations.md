@@ -1,6 +1,6 @@
 ---
 title: The Role of Smart Equipment in Sustainable Factory Operations
-descriotion: Explore how smart equipment helps factories improve energy efficiency, reduce waste, support predictive maintenance, and strengthen sustainable operations through better visibility and smarter decision-making.
+description: Explore how smart equipment helps factories improve energy efficiency, reduce waste, support predictive maintenance, and strengthen sustainable operations through better visibility and smarter decision-making.
 date: 2026-03-11
 ---
 # The Role of Smart Equipment in Sustainable Factory Operations

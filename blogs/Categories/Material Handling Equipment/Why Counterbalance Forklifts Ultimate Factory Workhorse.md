@@ -1,7 +1,7 @@
 ---
 title: "The Science of Stability: Why Counterbalance Forklifts Are the Ultimate Factory Workhorse"
 description: Discover why counterbalance forklifts are the backbone of modern logistics. Learn about the physics of stability, the shift to electric power, and how to choose the right equipment for your warehouse.
-date: 2026-04-16T07:05:34Z
+date: 2026-04-16
 ---
 # The Science of Stability - Why Counterbalance Forklifts Are the Ultimate Factory Workhorse
 

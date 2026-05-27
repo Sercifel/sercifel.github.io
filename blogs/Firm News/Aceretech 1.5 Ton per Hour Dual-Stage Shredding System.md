@@ -1,6 +1,6 @@
 ---
 title: "Boosting Plastic Pallet Recycling Efficiency: Aceretech's 1.5 Ton/Hour Dual-Stage Shredding System"
-meta_description: "Aceretech’s two-stage shredding system delivers 1.5 tons per hour for plastic pallet recycling with consistent output."
+description: Aceretech’s two-stage shredding system delivers 1.5 tons per hour for plastic pallet recycling with consistent output.
 date: 2026-03-01
 ---
 # Boosting Plastic Pallet Recycling Efficiency: Aceretech's 1.5 Ton/Hour Dual-Stage Shredding System

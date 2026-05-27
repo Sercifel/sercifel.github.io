@@ -1,6 +1,6 @@
 ---
 title: Electric Pallet Truck Maintenance Checklist for Industrial Warehouses
-descriotion: Protect your logistics investment with a comprehensive maintenance guide. From daily pre-shift inspections and battery management to AI-driven predictive analytics, learn how to minimize downtime and TCO.
+description: Protect your logistics investment with a comprehensive maintenance guide. From daily pre-shift inspections and battery management to AI-driven predictive analytics, learn how to minimize downtime and TCO.
 date: 2026-02-08
 ---
 # Electric Pallet Truck Maintenance Checklist for Industrial Warehouses

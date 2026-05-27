@@ -1,6 +1,6 @@
 ---
 title: "2026 PET Bottle Shrink Wrapping Guide: Sustainability & Efficiency"
-descriotion: Navigate the high-stakes shift to rPET and thin-gauge films. This guide compares steam vs. electric shrink tunnels and explores how to balance high-speed operational throughput with 2026 environmental mandates.
+description: Navigate the high-stakes shift to rPET and thin-gauge films. This guide compares steam vs. electric shrink tunnels and explores how to balance high-speed operational throughput with 2026 environmental mandates.
 date: 2026-02-08
 ---
 # **2026 PET Bottle Shrink Wrapping Guide: Sustainability & Efficiency**

@@ -1,5 +1,5 @@
 ---
-title: "The 2026 Buyer’s Guide to Industrial Woodworking Sanders: Specs, Automation, and ROI"
+title: "The 2026 Buyer Guide to Industrial Woodworking Sanders: Specs, Automation, and ROI"
 description: A comprehensive guide to selecting industrial sanders in 2026, focusing on segmented platen technology, planer-sander hybrids, and ROI calculation for automated production.
 date: 2025-11-07
 ---

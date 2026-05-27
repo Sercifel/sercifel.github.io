@@ -1,7 +1,7 @@
 ---
 title: "The Heart of Precision: How Tool Center Point Design Impacts 5-Axis Machining Performance"
 description: Discover how Tool Center Point (TCP) design and control influence accuracy, surface finish, and ROI in 5-axis universal machining centers. A comprehensive guide for engineers and purchasing managers.
-date: 2026-04-16T07:48:42Z
+date: 2026-04-16
 ---
 # The Heart of Precision - How Tool Center Point Design Impacts 5-Axis Machining Performance
 

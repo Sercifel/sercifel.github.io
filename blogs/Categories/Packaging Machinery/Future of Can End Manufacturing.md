@@ -1,6 +1,6 @@
 ---
 title: "The Future of Can End Manufacturing: 5 Strategic Trends Defining 2025"
-descriotion: "Explore the 'Iron Triangle' of metal packaging: Extreme Speed, Micron-Level Precision (Downgauging), and Digital Integration. Learn how 6-lane systems and KVM centralized control are redefining OEE in 2025."
+description: "Explore the Iron Triangle of metal packaging: Extreme Speed, Micron-Level Precision (Downgauging), and Digital Integration. Learn how 6-lane systems and KVM centralized control are redefining OEE in 2025."
 date: 2025-11-17
 ---
 # The Future of Can End Manufacturing: 5 Strategic Trends Defining 2025

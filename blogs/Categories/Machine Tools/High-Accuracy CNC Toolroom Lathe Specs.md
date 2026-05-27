@@ -1,7 +1,7 @@
 ---
 title: "Precision Engineering: A Deep Dive into High-Accuracy CNC Toolroom Lathe Specifications (Cyclematic CT-1118CNC vs. Industry Leaders)"
 description: Explore the technical nuances of high-precision CNC toolroom lathes. This comprehensive guide compares the Cyclematic CT-1118CNC against competitors, focusing on accuracy, build quality, and ROI for machine shop owners and procurement managers.
-date: 2026-03-09T16:15:00Z
+date: 2026-03-09
 ---
 # Precision Engineering: A Deep Dive into High-Accuracy CNC Toolroom Lathe Specifications
 

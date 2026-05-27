@@ -1,6 +1,6 @@
 ---
 title: "When the Factory Floor Gets a Brain: Decoding the FANUC-NVIDIA Alliance in AI-Powered Robotics"
-descriotion: Explore how the partnership between FANUC and NVIDIA is transforming industrial automation into autonomous Physical AI. Learn about the shift from pre-programmed robots to adaptive, intelligent systems.
+description: Explore how the partnership between FANUC and NVIDIA is transforming industrial automation into autonomous Physical AI. Learn about the shift from pre-programmed robots to adaptive, intelligent systems.
 date: 2025-12-28
 ---
 # When the Factory Floor Gets a Brain: Decoding the FANUC-NVIDIA Alliance in AI-Powered Robotics

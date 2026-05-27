@@ -1,7 +1,7 @@
 ---
 title: "Mastering Sea Freight Costs: A Practical Guide to the 5 Key Factors Shaping Your Shipping Budget"
-description: "Confused by fluctuating ocean freight rates? Learn how to estimate sea freight costs by understanding the 5 key factors, hidden fees, and how to optimize your global logistics budget for better ROI."
-date: 2026-03-18T03:40:56Z 
+description: Confused by fluctuating ocean freight rates? Learn how to estimate sea freight costs by understanding the 5 key factors, hidden fees, and how to optimize your global logistics budget for better ROI.
+date: 2026-03-18
 ---
 # Mastering Sea Freight Costs - A Practical Guide to the 5 Key Factors Shaping Your Shipping Budget
 

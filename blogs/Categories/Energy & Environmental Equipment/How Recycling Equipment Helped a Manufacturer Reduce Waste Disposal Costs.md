@@ -1,6 +1,6 @@
 ---
 title: How Recycling Equipment Helps Manufacturers Reduce Waste Disposal Costs
-descriotion: Learn how recycling equipment helps manufacturers reduce waste disposal costs by improving material separation, lowering hauling frequency, saving floor space, and increasing operational efficiency.
+description: Learn how recycling equipment helps manufacturers reduce waste disposal costs by improving material separation, lowering hauling frequency, saving floor space, and increasing operational efficiency.
 date: 2026-03-11
 ---
 # How Recycling Equipment Helped a Manufacturer Reduce Waste Disposal Costs

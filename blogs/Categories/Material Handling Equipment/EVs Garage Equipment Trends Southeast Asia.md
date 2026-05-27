@@ -1,6 +1,6 @@
 ---
 title: The Impact of Electric Vehicles on Garage Equipment Trends in Southeast Asia
-descriotion: Explore how the EV surge in Thailand and Vietnam is redefining workshop standards. Learn why heavier battery packs and unique chassis structures necessitate a new generation of high-capacity, stable lifting equipment.
+description: Explore how the EV surge in Thailand and Vietnam is redefining workshop standards. Learn why heavier battery packs and unique chassis structures necessitate a new generation of high-capacity, stable lifting equipment.
 date: 2025-12-26
 ---
 # The Impact of Electric Vehicles on Garage Equipment Trends in Southeast Asia

@@ -1,7 +1,7 @@
 ---
 title: "The Rise of Customized Furniture: Why Woodworking Factories Must Upgrade to High-End CNC and Automation"
 description: Explore how the shift toward personalized furniture is reshaping the woodworking industry. Learn about the essential equipment capabilities, including 6-axis CNC and automated sanding, needed to stay competitive in the era of customization.
-date: 2026-03-16 T09:15:00Z
+date: 2026-03-16
 ---
 # The Rise of Customized Furniture - What Equipment Capabilities Do Woodworking Factories Really Need?
 

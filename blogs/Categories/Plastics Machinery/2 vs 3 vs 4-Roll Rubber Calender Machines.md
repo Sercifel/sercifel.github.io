@@ -1,6 +1,6 @@
 ---
 title: "2 vs 3 vs 4-Roll Rubber Calender Machines: Which Fits Your Needs?"
-descriotion: Compare the differences between 2-roll, 3-roll, and 4-roll rubber calender machines. Learn how roll count affects gauge control, degassing, and coating precision to choose the right setup for your production line.
+description: Compare the differences between 2-roll, 3-roll, and 4-roll rubber calender machines. Learn how roll count affects gauge control, degassing, and coating precision to choose the right setup for your production line.
 date: 2026-02-11
 ---
 # 2 vs 3 vs 4-Roll Rubber Calender Machines: Which Fits Your Needs?

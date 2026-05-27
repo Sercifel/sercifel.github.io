@@ -1,10 +1,8 @@
 ---
 title: How to Produce Food-Grade rPET Sheets from Recycled PET Bottles
-description: Learn the complete bottle-to-sheet process for producing FDA/EFSA-compliant food-grade rPET sheets — from decontamination and IV control to extrusion, melt filtration, and thickness control. 
-date: 2026-04-20T17:42:19Z
-
+description: Learn the complete bottle-to-sheet process for producing FDA/EFSA-compliant food-grade rPET sheets — from decontamination and IV control to extrusion, melt filtration, and thickness control.
+date: 2026-04-20
 ---
-
 # How to Produce Food-Grade rPET Sheets from Recycled PET Bottles
 Recycled PET (rPET) has emerged as one of the most commercially viable materials in the sustainable packaging revolution. But producing rPET that meets food-contact standards — what the industry calls **food-grade rPET** — demands far more than simply melting down old bottles. It requires tightly controlled processing, certified decontamination, and purpose-built equipment designed to handle the unique challenges of post-consumer material.
 

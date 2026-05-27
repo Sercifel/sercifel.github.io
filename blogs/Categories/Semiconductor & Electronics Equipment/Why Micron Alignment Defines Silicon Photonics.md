@@ -3,9 +3,8 @@ title: Micron Alignment in Silicon Photonics Manufacturing
 description: Learn why micron-level precision mechanics improves silicon photonics yield, supplier control, packaging quality, and OEM production reliability.
 date: 2026-04-24
 ---
----
-
 # Why Micron Alignment Defines Silicon Photonics
+
 ![](https://i.meee.com.tw/XMspaiM.jpg)
 
 Silicon photonics manufacturing depends on one practical fact: optical performance is highly sensitive to mechanical position. A photonic integrated circuit may be fabricated with semiconductor-grade precision, but the final product can still fail if fibers, lenses, laser sources, interposers, or package components are not aligned and held within the required tolerance window.

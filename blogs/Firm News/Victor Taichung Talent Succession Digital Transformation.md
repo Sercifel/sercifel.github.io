@@ -1,6 +1,6 @@
 ---
 title: "Victor Taichung: Pioneering Talent Succession and Digital Transformation in Taiwan's Machine Tool Industry"
-meta_description: "Victor Taichung evolved from a small repair shop into a smart manufacturing leader, emphasizing talent development and digital transformation."
+description: Victor Taichung evolved from a small repair shop into a smart manufacturing leader, emphasizing talent development and digital transformation.
 date: 2026-03-01
 ---
 # Victor Taichung: Pioneering Talent Succession and Digital Transformation in Taiwan's Machine Tool Industry

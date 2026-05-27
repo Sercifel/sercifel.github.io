@@ -1,6 +1,6 @@
 ---
 title: "Beyond Vertical: Why Heavy Industries Switch to Box Way HMCs"
-meta_description: Discover the 2026 ROI of Box Way Horizontal Machining Centers. Learn how JIUH-YEH’s high-rigidity HMCs solve chip management issues and vibration in heavy-duty cutting.
+description: Discover the 2026 ROI of Box Way Horizontal Machining Centers. Learn how JIUH-YEH’s high-rigidity HMCs solve chip management issues and vibration in heavy-duty cutting.
 date: 2025-11-25
 ---
 # **Beyond Vertical: Why Heavy Industries Are Switching to Box Way Horizontal Machining Centers**

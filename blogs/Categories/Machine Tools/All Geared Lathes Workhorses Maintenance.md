@@ -1,7 +1,7 @@
 ---
 title: "Why All Geared Lathes are the Ultimate Workhorses for the Maintenance and Repair Industry: A Durability and Value Guide"
 description: Explore why all-geared head lathes are the preferred choice for maintenance shops. This guide covers durability, torque stability, and ROI for industrial repair professionals.
-date: 2026-03-16 T09:15:00Z
+date: 2026-03-16
 ---
 # Why All Geared Lathes are the Ultimate Workhorses for the Maintenance and Repair Industry - A Durability and Value Guide
 

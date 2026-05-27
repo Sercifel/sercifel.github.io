@@ -1,6 +1,6 @@
 ---
-title: "Fiber vs. CO2 Laser Cutting: Choosing for Maximum Efficiency"
-meta_description: Compare Fiber and CO2 laser sheet metal cutting in 2026. Learn how Tailift technology optimizes energy efficiency, cutting speed, and precision for stainless, brass, and aluminum.
+title: "Fiber vs CO2 Laser Cutting: Choosing for Maximum Efficiency"
+description: Compare Fiber and CO2 laser sheet metal cutting in 2026. Learn how Tailift technology optimizes energy efficiency, cutting speed, and precision for stainless, brass, and aluminum.
 date: 2026-02-11
 ---
 # Fiber vs CO₂ Laser Cutting: Choosing the Right Laser Sheet Metal Cutting Machine for Maximum Efficiency

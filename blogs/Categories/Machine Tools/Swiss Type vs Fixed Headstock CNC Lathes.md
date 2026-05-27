@@ -1,7 +1,7 @@
 ---
 title: "Swiss-Type vs. Fixed-Headstock CNC Lathes: The Ultimate Procurement Guide for Precision Machining"
 description: Confused between Swiss-type (sliding head) and fixed-headstock lathes? Discover the key differences, cost implications, and how to choose the best CNC lathe for your precision manufacturing needs.
-date: 2026-04-16T07:47:18Z
+date: 2026-04-16
 ---
 # Swiss Type vs. Fixed Headstock CNC Lathes - The Ultimate Procurement Guide for Precision Machining
 

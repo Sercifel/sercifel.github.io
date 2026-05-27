@@ -1,6 +1,6 @@
 ---
 title: "Choosing the Right Surface Grinder: Horizontal vs. Vertical Rotary Solutions"
-descriotion: Compare Horizontal vs. Vertical Rotary Surface Grinders for 2026. Learn how spindle orientation affects stock removal, surface finish, and precision for DOWELL machinery.
+description: Compare Horizontal vs. Vertical Rotary Surface Grinders for 2026. Learn how spindle orientation affects stock removal, surface finish, and precision for DOWELL machinery.
 date: 2025-11-11
 ---
 # Choosing the Right Surface Grinder - Horizontal vs Vertical Rotary Solutions for Precision Manufacturing

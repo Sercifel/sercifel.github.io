@@ -1,6 +1,6 @@
 ---
 title: "Driving the Green Transition: High Efficiency with Victor Taichung’s VαⅢ-50 & VαⅢ-350"
-meta_description: Explore Victor Taichung’s VαⅢ all-electric series. Compare the precision of VαⅢ-50 and the capacity of VαⅢ-350, featuring 50% energy savings and AI-driven smart molding.
+description: Explore Victor Taichung’s VαⅢ all-electric series. Compare the precision of VαⅢ-50 and the capacity of VαⅢ-350, featuring 50% energy savings and AI-driven smart molding.
 date: 2026-02-01
 ---
 # Driving the Green Transition: High Efficiency and Precision with Victor Taichung’s VαⅢ-50 and VαⅢ-350

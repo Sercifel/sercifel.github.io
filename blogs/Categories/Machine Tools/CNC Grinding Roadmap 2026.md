@@ -1,6 +1,6 @@
 ---
 title: "CNC Grinding in 2026: A Strategic Roadmap for High-Precision Manufacturing"
-description: 'Explore 2026 CNC grinding trends: Adaptive Intelligence, EV motor noise reduction, and Medical Device precision. Learn how COMORK automated cells achieve sub-micron ±0.001" tolerances.'
+description: "Explore 2026 CNC grinding trends: Adaptive Intelligence, EV motor noise reduction, and Medical Device precision. Learn how COMORK automated cells achieve sub-micron ±0.001 tolerances."
 date: 2025-11-09
 ---
 # CNC Grinding in 2026: A Strategic Roadmap for High-Precision Manufacturing

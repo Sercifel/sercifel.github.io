@@ -1,8 +1,7 @@
 ---
 title: "E-Bike Manufacturing Automation Case Study: From Low Yield to High Efficiency"
-meta_description: "As the global e-bike market expands, manufacturers face pressure to improve efficiency and quality beyond manual assembly."
+description: As the global e-bike market expands, manufacturers face pressure to improve efficiency and quality beyond manual assembly.
 date: 2026-03-17
-description: "Explore how DETZO's automated motor winding and assembly solutions transformed e-bike production lines, boosting yield from 30% to 99%, reducing labor, and significantly increasing efficiency."
 ---
 # E-Bike Manufacturing Automation Case Study: From Low Yield to High Efficiency
 

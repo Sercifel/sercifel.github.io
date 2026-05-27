@@ -1,6 +1,6 @@
 ---
 title: "How to Choose a Motorcycle Lift Supplier: Safety, Efficiency, and Workshop Fit"
-descriotion: A comprehensive guide to selecting the ideal motorcycle lift for your service bay. Evaluate weight capacity, lift types, and ergonomic benefits to improve technician productivity and shop safety.
+description: A comprehensive guide to selecting the ideal motorcycle lift for your service bay. Evaluate weight capacity, lift types, and ergonomic benefits to improve technician productivity and shop safety.
 date: 2026-02-09
 ---
 # How to Choose a Motorcycle Lift Supplier: Safety, Efficiency, and Workshop Fit

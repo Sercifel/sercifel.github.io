@@ -1,6 +1,6 @@
 ---
 title: "How to Evaluate Car Lift Quality: A Guide for Automotive Equipment Distributors"
-descriotion: Equip your dealership with the knowledge to identify premium car lifts. This guide covers essential technical benchmarks, including hydraulic cylinder precision, mechanical safety systems, and durable powder coating.
+description: Equip your dealership with the knowledge to identify premium car lifts. This guide covers essential technical benchmarks, including hydraulic cylinder precision, mechanical safety systems, and durable powder coating.
 date: 2025-12-28
 ---
 # How to Evaluate Car Lift Quality: A Guide for Automotive Equipment Distributors

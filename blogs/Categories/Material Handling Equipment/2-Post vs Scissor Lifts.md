@@ -1,6 +1,6 @@
 ---
 title: "2-Post vs. Scissor Lifts: Which is More Profitable for Mechanics?"
-descriotion: Maximize workshop ROI by choosing the right lifting equipment. Compare the versatility of 2-post lifts with the speed and space-saving benefits of scissor lifts for high-volume service centers.
+description: Maximize workshop ROI by choosing the right lifting equipment. Compare the versatility of 2-post lifts with the speed and space-saving benefits of scissor lifts for high-volume service centers.
 date: 2025-12-23
 ---
 # 2-Post vs. Scissor Lifts: Which is More Profitable for Mechanics?

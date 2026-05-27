@@ -1,6 +1,6 @@
 ---
 title: "Breaking the Concentricity Barrier: The Shift to Integrated Grinding"
-descriotion: Explore why 2026 OEM standards are moving from two-machine setups to single-clamping composite grinding. Learn how COMORK integrates I.D. and O.D. cycles to achieve sub-micron concentricity.
+description: Explore why 2026 OEM standards are moving from two-machine setups to single-clamping composite grinding. Learn how COMORK integrates I.D. and O.D. cycles to achieve sub-micron concentricity.
 date: 2026-01-05
 ---
 # Breaking the Concentricity Barrier: How Integrated Grinding Cycles Are Redefining OEM Standards

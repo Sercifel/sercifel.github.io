@@ -1,6 +1,6 @@
 ---
 title: "CNC For Mold & Die Making: 3 Critical Features You Can't Ignore"
-descriotion: Master 2026 mold making requirements. Learn why structural rigidity, hand-scraping, and thermal stability in JIUH-YEH CNC machines are essential for H13 and P20 steel.
+description: Master 2026 mold making requirements. Learn why structural rigidity, hand-scraping, and thermal stability in JIUH-YEH CNC machines are essential for H13 and P20 steel.
 date: 2025-11-14
 ---
 # **CNC For Mold & Die Making: 3 Critical Features You Can't Ignore**

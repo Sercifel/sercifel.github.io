@@ -662,9 +662,18 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     }
     return new Date(Math.max(...timestamps));
   };
-  const isAprilFrontMatter = (item) => {
+  const now = new Date();
+  const currentMonthDate = new Date(now.getFullYear(), now.getMonth(), 1);
+  const currentMonth = currentMonthDate.getMonth();
+  const currentYear = currentMonthDate.getFullYear();
+  const nextMonthDate = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+  const nextMonth = nextMonthDate.getMonth();
+  const nextMonthYear = nextMonthDate.getFullYear();
+  const isCurrentMonthFrontMatter = (item) => {
     const parsed = parseFrontMatterDate(item.date);
-    return parsed ? parsed.getMonth() === 3 : false;
+    return parsed
+      ? parsed.getMonth() === currentMonth && parsed.getFullYear() === currentYear
+      : false;
   };
   const parseExhibitionDateFromValue = (value) => {
     const parsed = parseFrontMatterDate(value);
@@ -699,8 +708,8 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       </li>
     `;
   };
-  const aprilItems = enriched.filter(isAprilFrontMatter);
-  const featured = (aprilItems.length ? aprilItems : latest).slice(0, 9);
+  const currentMonthItems = enriched.filter(isCurrentMonthFrontMatter);
+  const featured = (currentMonthItems.length ? currentMonthItems : latest).slice(0, 9);
   const featuredSlides = Array.from(
     { length: Math.ceil(featured.length / 3) },
     (_, index) => renderFeaturedSlide(featured.slice(index * 3, index * 3 + 3))
@@ -746,16 +755,16 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
       `
     : "";
 
-  const latestAprilItem = aprilItems[0];
-  const latestCategoryKeyFromApril = latestAprilItem?.category;
-  const latestCategoryFromApril = latestCategoryKeyFromApril
-    ? categories.find((category) => category.key === latestCategoryKeyFromApril) || {
-        key: latestCategoryKeyFromApril,
-        label: humanizeSegment(latestCategoryKeyFromApril),
+  const latestMonthItem = currentMonthItems[0];
+  const latestCategoryKeyFromMonth = latestMonthItem?.category;
+  const latestCategoryFromMonth = latestCategoryKeyFromMonth
+    ? categories.find((category) => category.key === latestCategoryKeyFromMonth) || {
+        key: latestCategoryKeyFromMonth,
+        label: humanizeSegment(latestCategoryKeyFromMonth),
       }
     : null;
   const latestCategory =
-    latestCategoryFromApril ||
+    latestCategoryFromMonth ||
     categories.find((category) => (categoryGroups[category.key] || []).length > 0);
   const latestCategoryLabel = latestCategory
     ? escapeHtml(latestCategory.label ?? latestCategory.key)
@@ -763,20 +772,25 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   const latestCategoryItems = latestCategory
     ? (() => {
         const itemsInCategory = categoryGroups[latestCategory.key] || [];
-        const aprilInCategory = itemsInCategory.filter(isAprilFrontMatter);
-        const nonAprilInCategory = itemsInCategory.filter(
-          (item) => !isAprilFrontMatter(item)
+        const monthInCategory = itemsInCategory.filter(isCurrentMonthFrontMatter);
+        const nonMonthInCategory = itemsInCategory.filter(
+          (item) => !isCurrentMonthFrontMatter(item)
         );
-        return [...aprilInCategory, ...nonAprilInCategory].slice(0, 3);
+        return [...monthInCategory, ...nonMonthInCategory].slice(0, 3);
       })()
-    : aprilItems.slice(0, 3);
+    : currentMonthItems.slice(0, 3);
   const exhibitionItems = enriched
     .filter((item) => String(item.category).toLowerCase() === "exhibition")
     .map((item) => ({
       item,
       parsed: parseExhibitionDateFromValue(item.date),
     }))
-    .filter(({ parsed }) => parsed?.date && parsed.date.getMonth() >= 4)
+    .filter(
+      ({ parsed }) =>
+        parsed?.date &&
+        parsed.date.getMonth() === nextMonth &&
+        parsed.date.getFullYear() === nextMonthYear
+    )
     .sort((a, b) => {
       const aDate = a.parsed?.date ? a.parsed.date.getTime() : Infinity;
       const bDate = b.parsed?.date ? b.parsed.date.getTime() : Infinity;
@@ -1087,8 +1101,10 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
         return `<li><a class=\"link-primary hover:underline\" href=\"/${categoryBaseSegment}/${entry.segment}/\">${safeLabel}</a></li>`;
       })
       .join("");
-    const latestCategoryPayload = renderLatestListWithPagination(scoped, 12);
-    const latestHubPayload = renderCardGridWithPagination(scoped, 12);
+    const scopedCurrentMonth = scoped.filter(isCurrentMonthFrontMatter);
+    const scopedLatestSource = scopedCurrentMonth.length ? scopedCurrentMonth : scoped;
+    const latestCategoryPayload = renderLatestListWithPagination(scopedLatestSource, 12);
+    const latestHubPayload = renderCardGridWithPagination(scopedLatestSource, 12);
     const categorySidebar = sidebarForCategory(category.key);
     const hubBody = isCategoriesHub
       ? await renderTemplate("categories.html", {

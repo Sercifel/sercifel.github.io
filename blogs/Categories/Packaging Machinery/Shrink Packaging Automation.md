@@ -1,6 +1,6 @@
 ---
 title: "Shrink Packaging Automation: Key Trends and Innovations Transforming High-Speed Production Lines"
-descriotion: Explore the 2026 industrial shift toward shrink packaging automation. Learn how the integration of automatic L sealers, shrink tunnels, and intelligent packing machines solves labor shortages and improves OEE.
+description: Explore the 2026 industrial shift toward shrink packaging automation. Learn how the integration of automatic L sealers, shrink tunnels, and intelligent packing machines solves labor shortages and improves OEE.
 date: 2025-11-05
 ---
 # **Shrink Packaging Automation: Key Trends and Innovations Transforming High-Speed Production Lines**

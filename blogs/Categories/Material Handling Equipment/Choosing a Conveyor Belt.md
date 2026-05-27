@@ -1,7 +1,7 @@
 ---
 title: "Choosing a Conveyor Belt: When Metal Mesh Beats Plastic (2026 Industrial Guide)"
 description: A 2026 industrial guide comparing metal mesh vs plastic conveyor belts. Learn thermal limits, hygiene/CIP advantages, life‑cycle cost, AI‑monitored mesh innovation, and vendor insights for high‑performance lines.
-date: 2026-03-18T11:54:22Z
+date: 2026-03-18
 ---
 # Choosing a Conveyor Belt: When a Metal Mesh Belt Beats Plastic (2026 Industrial Guide)
 

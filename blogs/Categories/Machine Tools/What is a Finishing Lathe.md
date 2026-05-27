@@ -1,6 +1,6 @@
 ---
 title: What is a Finishing Lathe? Features, Uses, and Comparison with Toolroom Lathes
-descriotion: Discover the role of finishing lathes in precision machining. Learn about their key features, applications in secondary operations, and how they differ from high-accuracy toolroom lathes.
+description: Discover the role of finishing lathes in precision machining. Learn about their key features, applications in secondary operations, and how they differ from high-accuracy toolroom lathes.
 date: 2025-11-02
 ---
 # What is a Finishing Lathe? Features, Uses, and How It Compares to Toolroom Lathes

@@ -1,9 +1,8 @@
 ---
 title: "Choosing the Right LSR Vertical Injection Molding Machine for Medical Parts: A Deep Dive into Specifications and Compliance"
 description: Master the complexities of LSR vertical injection molding for medical devices. Learn how specific machine configurations solve flash, contamination, and precision challenges in ISO-certified environments.
-date: 2026-04-23T09:19:52Z
+date: 2026-04-23
 ---
-
 # Choosing the Right LSR Vertical Injection Molding Machine for Medical Parts: A Deep Dive into Specifications and Compliance
 
 The global medical device market is shifting toward minimally invasive tools, wearable health monitors, and biocompatible implants. Central to this evolution is **Liquid Silicone Rubber (LSR)**. Because of its thermal stability, chemical resistance, and superior biocompatibility, LSR has become the gold standard for medical components. However, for manufacturers, the transition from thermoplastic molding to LSR—or from horizontal to vertical molding—presents a steep learning curve.
