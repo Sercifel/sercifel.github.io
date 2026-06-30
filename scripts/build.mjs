@@ -709,7 +709,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
     `;
   };
   const currentMonthItems = enriched.filter(isCurrentMonthFrontMatter);
-  const featured = (currentMonthItems.length ? currentMonthItems : latest).slice(0, 9);
+  const featured = currentMonthItems.slice(0, 9);
   const featuredSlides = Array.from(
     { length: Math.ceil(featured.length / 3) },
     (_, index) => renderFeaturedSlide(featured.slice(index * 3, index * 3 + 3))
@@ -767,9 +767,7 @@ export async function buildSite({ contentDir = "blogs", outDir = "public" } = {}
   const latestCategoryItems = latestCategory
     ? (() => {
         const itemsInCategory = categoryGroups[latestCategory.key] || [];
-        const monthInCategory = itemsInCategory.filter(isCurrentMonthFrontMatter);
-        const source = monthInCategory.length ? monthInCategory : itemsInCategory;
-        return source.slice(0, 3);
+        return itemsInCategory.filter(isCurrentMonthFrontMatter).slice(0, 3);
       })()
     : [];
   const exhibitionItems = enriched

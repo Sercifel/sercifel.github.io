@@ -13,6 +13,9 @@ const walkMarkdown = async (dir) => {
     const resolvedPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
+      if (entry.name === ".obsidian") {
+        continue;
+      }
       files.push(...(await walkMarkdown(resolvedPath)));
       continue;
     }

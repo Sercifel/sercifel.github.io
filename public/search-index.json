@@ -14,6 +14,13 @@
     "path": "/exhibition/americas/npe-2027/"
   },
   {
+    "title": "CIMT 2027: What to Expect from China’s Leading Machine Tool Exhibition",
+    "description": "will be one of the most closely watched manufacturing exhibitions in Asia, bringing together machine tools, metalworking technologies, automation systems, an...",
+    "category": "Exhibition",
+    "subcategory": "Asia",
+    "path": "/exhibition/asia/cimt-2027/"
+  },
+  {
     "title": "TIMTOS: A Practical Machine Tool Exhibition for OEM Buyers and Custom Manufacturing Solutions",
     "description": "Why Global Buyers Look Beyond Flagship Exhibitions Many procurement managers and factory owners already attend global exhibitions like EMO or IMTS. However,...",
     "category": "Exhibition",
@@ -28,11 +35,25 @@
     "path": "/exhibition/middle-east/industrial-transformation-saudi-arabia-2026/"
   },
   {
+    "title": "TMTSME 2026 Preview: Where Taiwan's CNC, Automation, and Industry 4.0 Trends Turn into Real Factory Upgrades",
+    "description": "TMTSME 2026 will bring together major themes shaping Taiwan’s manufacturing sector, including CNC machine tools, smart manufacturing, automation, robotics, p...",
+    "category": "Exhibition",
+    "subcategory": "Asia",
+    "path": "/exhibition/asia/tmtsme-2026-preview/"
+  },
+  {
     "title": "SPS 2026: What to Expect at Nuremberg's Annual Automation Benchmark",
     "description": "Every November, a significant portion of the global industrial automation community converges on Nuremberg. For engineers, engineering managers, procurement...",
     "category": "Exhibition",
     "subcategory": "Europe",
     "path": "/exhibition/europe/sps-2026/"
+  },
+  {
+    "title": "METALEX 2026 at 40: Exploring Infinite Possibilities in ASEAN’s Metalworking Industry",
+    "description": "ASEAN’s metalworking sector is entering a more demanding phase of growth. Production targets are rising, quality expectations are tightening, and technology...",
+    "category": "Exhibition",
+    "subcategory": "Asia",
+    "path": "/exhibition/asia/metalex-2026-at-40/"
   },
   {
     "title": "JIMTOF 2026: Japan's Cutting-Edge Machine Tool Fair Takes Flight in Tokyo",
@@ -54,6 +75,13 @@
     "category": "Exhibition",
     "subcategory": "Europe",
     "path": "/exhibition/europe/euroblech-2026/"
+  },
+  {
+    "title": "BI-MU 2026 (35th BI-MU): Milan’s Machine Tools and Metal Cutting & Forming Exhibition",
+    "description": "Event Overview BI MU 2026, the 35th BI‑MU, will take place 13 16 October 2026 at fieramilano Rho in Milan, Italy, and it is positioned as Italy’s leading mac...",
+    "category": "Exhibition",
+    "subcategory": "Europe",
+    "path": "/exhibition/europe/bi-mu-2026/"
   },
   {
     "title": "Motek 2026: Stuttgart’s Automation Week Hub with Bondexpo and Multi-Show Access",
@@ -98,6 +126,13 @@
     "path": "/exhibition/asia/automation-taipei-2026/"
   },
   {
+    "title": "Why PDMEX 2026 Matters for Machine Tool, Die & Mould, and Metalworking Suppliers",
+    "description": "For companies involved in machine tools, die and mould, and metalworking, industry exhibitions are most useful when they bring together actual technologies,...",
+    "category": "Exhibition",
+    "subcategory": "Asia",
+    "path": "/exhibition/asia/pdmex-2026/"
+  },
+  {
     "title": "Advanced Materials Show 2026: Material Intelligence and Industrial Scaling",
     "description": "The Advanced Materials Show, scheduled for July 8–9, 2026, at the NEC in Birmingham, UK, serves as a focal point for the intersection of laboratory research...",
     "category": "Exhibition",
@@ -110,6 +145,111 @@
     "category": "Exhibition",
     "subcategory": "Asia",
     "path": "/exhibition/asia/mta-vietnam-2026/"
+  },
+  {
+    "title": "How the EU Packaging and Packaging Waste Regulation Is Reshaping Recycling Machinery Requirements",
+    "description": "The European Union’s Packaging and Packaging Waste Regulation, or PPWR, is changing the role of recycling equipment in packaging compliance. Regulation (EU)...",
+    "category": "Categories",
+    "subcategory": "Energy & Environmental Equipment",
+    "path": "/categories/energy-environmental-equipment/eu-ppwr-is-reshaping-recycling-machinery-requirements/"
+  },
+  {
+    "title": "Optical Sorters vs. AI Robotic Pickers for Mixed-Waste Recycling Facilities",
+    "description": "Mixed waste recycling facilities must recover valuable materials from streams that change with season, collection route, consumer behavior, and local packagi...",
+    "category": "Categories",
+    "subcategory": "Energy & Environmental Equipment",
+    "path": "/categories/energy-environmental-equipment/optical-sorters-vs-ai-robotic-pickers-for-mixed-waste-recycling-facilities/"
+  },
+  {
+    "title": "What the EU Machinery Regulation Means for Production Equipment Buyers Before 2027",
+    "description": "Regulation (EU) 2023/1230 on machinery will apply broadly from 20 January 2027, replacing the Machinery Directive 2006/42/EC. Although manufacturers carry mo...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/what-the-eu-machinery-regulation-means-for-equipment-buyers/"
+  },
+  {
+    "title": "Industrial Robotic Arms in Electronics Manufacturing - Applications and Future Development",
+    "description": "The global electronics manufacturing sector is facing a defining turning point. As consumer demand swings toward highly complex, miniaturized devices—such as...",
+    "category": "Categories",
+    "subcategory": "Industrial Automation Systems",
+    "path": "/categories/industrial-automation-systems/industrial-robotic-arms-in-electronics-manufacturing/"
+  },
+  {
+    "title": "How the 2026 Fab Expansion Cycle Is Reshaping Demand for Semiconductor Auxiliary Equipment",
+    "description": "The semiconductor industry’s 2026 expansion cycle is not defined only by purchases of lithography, deposition, etch, and metrology tools. It is also creating...",
+    "category": "Categories",
+    "subcategory": "Semiconductor & Electronics Equipment",
+    "path": "/categories/semiconductor-electronics-equipment/2026-fab-expansion-and-auxiliary-equipment-demand/"
+  },
+  {
+    "title": "Why Advanced Packaging Is Raising Requirements for Vacuum, Cooling, and Contamination-Control Systems",
+    "description": "Advanced packaging is changing how semiconductor devices are assembled and how supporting production systems are designed. Technologies such as 2.5D integrat...",
+    "category": "Categories",
+    "subcategory": "Semiconductor & Electronics Equipment",
+    "path": "/categories/semiconductor-electronics-equipment/why-advanced-packaging-is-raising-requirements-for-vacuum-cooling-and-con-708e6e/"
+  },
+  {
+    "title": "Why Automated Inspection Systems Are Vital for Modern Electronics Manufacturing - A Guide to Quality, ROI, and AI Trends",
+    "description": "The global electronics manufacturing industry is moving at a breakneck pace. As consumer electronics, automotive systems (especially Electric Vehicles), aero...",
+    "category": "Categories",
+    "subcategory": "Semiconductor & Electronics Equipment",
+    "path": "/categories/semiconductor-electronics-equipment/why-automated-inspection-systems-are-vital-for-modern-electronics-manufac-53e1d6/"
+  },
+  {
+    "title": "The EV Revolution and Large-Scale Mold Machining - Why 5-Axis CNC Machining Center is the Future of Global Manufacturing",
+    "description": "The automotive industry is currently undergoing its most significant transformation since the introduction of the assembly line. The shift from Internal Comb...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/why-5-axis-cnc-machining-center-future-of-global-manufacturing/"
+  },
+  {
+    "title": "The Ultimate Guide to Choosing the Best Electric Counterbalance Forklift - A Strategic Manual for Warehouse Managers and Business Owners",
+    "description": "The global shift toward sustainability is no longer a trend—it is a business imperative. In the material handling industry, this transition is most visible i...",
+    "category": "Categories",
+    "subcategory": "Material Handling Equipment",
+    "path": "/categories/material-handling-equipment/choose-best-electric-counterbalance-forklift/"
+  },
+  {
+    "title": "Choosing the Right Plastic Molding Process - Extrusion vs. Injection vs. Stretch Blow Molding",
+    "description": "In the fast paced world of plastic manufacturing, procurement managers and business owners face a recurring challenge: selecting the production method that b...",
+    "category": "Categories",
+    "subcategory": "Plastics Machinery",
+    "path": "/categories/plastics-machinery/extrusion-vs-injection-vs-stretch-blow-molding/"
+  },
+  {
+    "title": "IIoT Sensor Integration in Modern Manufacturing: A Technical Guide to Real-Time Data and Predictive Systems",
+    "description": "The Industrial Internet of Things (IIoT) has moved decisively from pilot projects to production deployment across Asia Pacific manufacturing in 2026. The fal...",
+    "category": "Categories",
+    "subcategory": "Semiconductor & Electronics Equipment",
+    "path": "/categories/semiconductor-electronics-equipment/iiot-sensor-integration-guide/"
+  },
+  {
+    "title": "CNC Workshop Air Quality Compliance: Selecting an Oil Mist Collector to Meet Environmental Standards",
+    "description": "Metalworking fluid aerosols — broadly categorized as oil mist — are an unavoidable byproduct of CNC turning, milling, grinding, and drilling operations that...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/oil-mist-collector-environmental-compliance/"
+  },
+  {
+    "title": "Box Way vs. Linear Way CNC Machining Centers: A Buyer's Selection Guide",
+    "description": "When evaluating a CNC machining center for your production line, one of the most consequential decisions is the choice of guideway system: box way or linear...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/box-way-vs-linear-way-cnc/"
+  },
+  {
+    "title": "Industrial Automation ROI: A Technical Buyer's Guide to Evaluating Automation Investment in Manufacturing",
+    "description": "Capital investment decisions in industrial automation are among the most consequential a manufacturing operation will make. A correctly implemented automatio...",
+    "category": "Categories",
+    "subcategory": "Industrial Automation Systems",
+    "path": "/categories/industrial-automation-systems/industrial-automation-roi-guide/"
+  },
+  {
+    "title": "CNC Cylindrical Grinding Machine Selection Guide: Key Criteria for OEM Buyers in Precision Manufacturing",
+    "description": "For manufacturing engineers and procurement managers responsible for precision component production, selecting a CNC cylindrical grinding machine is among th...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/cnc-cylindrical-grinder-selection-guide/"
   },
   {
     "title": "Automate 2026: Moving from Prototype to Scalable Industrial Integration",
@@ -126,11 +266,32 @@
     "path": "/exhibition/middle-east/dubai-woodshow-2026/"
   },
   {
+    "title": "Radial Arm Saw vs. Miter Saw: Which Is Better for High-Volume Wood Fabrication?",
+    "description": "Summary For most high volume wood fabrication shops, a miter saw is the better everyday choice. It is faster to set up, easier to train, and highly efficient...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/radial-arm-saw-vs-miter-saw/"
+  },
+  {
+    "title": "When Manual Coolant Refill Starts Limiting CNC Performance: Signs It Is Time to Upgrade to Automated Control",
+    "description": "Coolant problems rarely begin as dramatic failures. They usually start with small inconsistencies: refill timing changes from shift to shift, concentration d...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/when-manual-coolant-refill-starts-limiting-cnc-performance/"
+  },
+  {
     "title": "Unlocking Opportunities at Australian Manufacturing Week 2026: A Comprehensive Guide for Machinery Professionals",
     "description": "The manufacturing industry is evolving at an unprecedented pace, and staying competitive requires not just advanced machinery, but also insights into emergin...",
     "category": "Exhibition",
     "subcategory": "Oceania",
     "path": "/exhibition/oceania/australian-manufacturing-week-2026/"
+  },
+  {
+    "title": "Case Study: How Matila's CT-TL3 Co-Extrusion Blown Film Line Elevates Film Strength and Clarity for L’Entreprise d'Emballage de Tunisie",
+    "description": "By transitioning from traditional mono layer extrusion to Matila's ABC 3 layer co extrusion technology, the North African packaging leader unlocked 20% highe...",
+    "category": "Categories",
+    "subcategory": "Plastics Machinery",
+    "path": "/categories/plastics-machinery/case-study-matila-ct-tl3-co-extrusion-blown-film-line/"
   },
   {
     "title": "Furniture Manufacturing Expo 2026: Charlotte Hosts the U.S. Furniture Supply‑Chain Marketplace",
@@ -145,6 +306,20 @@
     "category": "Exhibition",
     "subcategory": "Americas",
     "path": "/exhibition/americas/expomaq-2026/"
+  },
+  {
+    "title": "How to Choose a Hollow Profile Sheet Extrusion Line for Industrial Production",
+    "description": "Introduction Hollow profile sheet extrusion lines are widely used in the production of lightweight plastic sheets for packaging, construction, agriculture, a...",
+    "category": "Categories",
+    "subcategory": "Plastics Machinery",
+    "path": "/categories/plastics-machinery/choose-a-hollow-profile-sheet-extrusion-line-for-industrial-production/"
+  },
+  {
+    "title": "Automatic Capsule Filling Machines: A Practical Guide for Manufacturers",
+    "description": "The growing demand for pharmaceuticals, nutraceuticals, herbal supplements, and health products has increased the need for efficient and reliable capsule pro...",
+    "category": "Categories",
+    "subcategory": "General Industrial Equipment",
+    "path": "/categories/general-industrial-equipment/guide-of-automatic-capsule-filling-machines/"
   },
   {
     "title": "FOOMA JAPAN 2026: Food Processing, Packaging Machinery and Factory Automation in Tokyo",
