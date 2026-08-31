@@ -131,9 +131,12 @@ const extractFirstImage = (content) => {
   if (!content) {
     return "";
   }
-  const markdownMatch = content.match(/!\[[^\]]*\]\(([^)]+)\)/);
-  if (markdownMatch && markdownMatch[1]) {
-    return markdownMatch[1].split(/\s+/)[0].replace(/^<|>$/g, "");
+  const markdownMatch = content.match(
+    /!\[[^\]]*\]\(\s*(?:<([^>]+)>|((?:[^()\s]+|\([^)]*\))+))/
+  );
+  const markdownUrl = markdownMatch?.[1] || markdownMatch?.[2];
+  if (markdownUrl) {
+    return markdownUrl;
   }
   const htmlMatch = content.match(/<img[^>]+src=["']([^"']+)["']/i);
   if (htmlMatch && htmlMatch[1]) {

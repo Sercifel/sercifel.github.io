@@ -74,3 +74,22 @@ test("loadContent sorts deterministically and normalizes dates", async () => {
     await fs.rm(tempRoot, { recursive: true, force: true });
   }
 });
+
+test("loadContent retains image URLs with parentheses", async () => {
+  const tempRoot = await fs.mkdtemp(path.join(os.tmpdir(), "content-image-test-"));
+  const blogRoot = path.join(tempRoot, "categories", "machine-tools");
+  const image = "https://example.com/products/JETER(%E6%96%B0)/JC6F.jpg";
+
+  try {
+    await fs.mkdir(blogRoot, { recursive: true });
+    await fs.writeFile(
+      path.join(blogRoot, "portable-bandsaw.md"),
+      ["# Portable Bandsaw", "", `![](${image})`, ""].join("\n"),
+    );
+
+    const [item] = await loadContent(tempRoot);
+    assert.equal(item.image, image);
+  } finally {
+    await fs.rm(tempRoot, { recursive: true, force: true });
+  }
+});
