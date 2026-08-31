@@ -1,7 +1,7 @@
 ---
 title: "CPHI Europe 2026 in Milan: Global Pharma Supply Chain Returns to Fiera Milano in October"
 description: CPHI Europe 2026 runs October 6–8, 2026 at Fiera Milano, bringing pharmaceutical ingredients, finished dosage, packaging, machinery, and services together alongside conference programming and new zones such as AI & Tech and Labelling.
-date: 2026-07-13T09:31:15Z
+date: 2026-10-06
 ---
 # CPHI Europe 2026 in Milan: Global Pharma Supply Chain Returns to Fiera Milano in October
 

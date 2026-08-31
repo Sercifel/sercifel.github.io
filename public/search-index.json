@@ -84,6 +84,13 @@
     "path": "/exhibition/europe/bi-mu-2026/"
   },
   {
+    "title": "CPHI Europe 2026 in Milan: Global Pharma Supply Chain Returns to Fiera Milano in October",
+    "description": "Event Overview takes place October 6–8, 2026 at Fiera Milano, Italy, and is positioned as a major global meeting point for the pharmaceutical supply chain. T...",
+    "category": "Exhibition",
+    "subcategory": "Europe",
+    "path": "/exhibition/europe/cphi-europe-2026-in-milan/"
+  },
+  {
     "title": "Motek 2026: Stuttgart’s Automation Week Hub with Bondexpo and Multi-Show Access",
     "description": "Event Overview will take place 6 to 8 October 2026 at Messe Stuttgart, and it is positioned as the 43rd edition of the international trade fair for productio...",
     "category": "Exhibition",
@@ -96,6 +103,13 @@
     "category": "Exhibition",
     "subcategory": "Middle East",
     "path": "/exhibition/middle-east/construct-iraq-2026/"
+  },
+  {
+    "title": "TaipeiPLAS 2026: Taiwan's Largest Plastics and Rubber Trade Show Returns to TaiNEX 1",
+    "description": "Event Overview will be held Sept. 15 19, 2026 at Taipei Nangang Exhibition Center, Hall 1 (TaiNEX 1), and it is positioned as Taiwan's largest and only inter...",
+    "category": "Exhibition",
+    "subcategory": "Asia",
+    "path": "/exhibition/asia/taipeiplas-2026/"
   },
   {
     "title": "AMB Stuttgart 2026: The Premier Global Stage for Metalworking Innovation",
@@ -392,13 +406,6 @@
     "path": "/categories/packaging-machinery/l-sealer-vs-sleeve-wrapper/"
   },
   {
-    "title": "CPHI Europe 2026 in Milan: Global Pharma Supply Chain Returns to Fiera Milano in October",
-    "description": "Event Overview takes place October 6–8, 2026 at Fiera Milano, Italy, and is positioned as a major global meeting point for the pharmaceutical supply chain. T...",
-    "category": "Exhibition",
-    "subcategory": "Europe",
-    "path": "/exhibition/europe/cphi-europe-2026-in-milan/"
-  },
-  {
     "title": "How To Choose Laser Cutting Equipment for High-Mix, Low-Volume Metal Fabrication",
     "description": "Choosing laser cutting equipment for high mix, low volume metal fabrication requires a different mindset from choosing a machine for stable, repetitive produ...",
     "category": "Categories",
@@ -460,13 +467,6 @@
     "category": "Categories",
     "subcategory": "General Industrial Equipment",
     "path": "/categories/general-industrial-equipment/when-a-tapping-center-outperforms-a-general-machining-center/"
-  },
-  {
-    "title": "TaipeiPLAS 2026: Taiwan's Largest Plastics and Rubber Trade Show Returns to TaiNEX 1",
-    "description": "Event Overview will be held Sept. 15 19, 2026 at Taipei Nangang Exhibition Center, Hall 1 (TaiNEX 1), and it is positioned as Taiwan's largest and only inter...",
-    "category": "Exhibition",
-    "subcategory": "Asia",
-    "path": "/exhibition/asia/taipeiplas-2026/"
   },
   {
     "title": "Fully Automatic Bandsaw Machines for High-Volume Metal Cutting: Intelligent Feed Systems and Production Efficiency",

@@ -1,7 +1,7 @@
 ---
 title: "TaipeiPLAS 2026: Taiwan's Largest Plastics and Rubber Trade Show Returns to TaiNEX 1"
 description: TaipeiPLAS 2026 runs Sept. 15-19, 2026 at Taipei Nangang Exhibition Center Hall 1 (TaiNEX 1), bringing the full plastics and rubber supply chain together with a strong focus on machinery, smart manufacturing, and materials.
-date: 2026-07-01T09:45:00Z
+date: 2026-09-15
 ---
 # TaipeiPLAS 2026: Taiwan's Largest Plastics and Rubber Trade Show Returns to TaiNEX 1
 
