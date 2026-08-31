@@ -89,6 +89,7 @@ test("loadContent retains image URLs with parentheses", async () => {
 
     const [item] = await loadContent(tempRoot);
     assert.equal(item.image, image);
+    assert.equal(item.description, "");
   } finally {
     await fs.rm(tempRoot, { recursive: true, force: true });
   }
