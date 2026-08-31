@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why Advanced Packaging Is the New AI Chip Equipment Battleground | Machinery Insight</title>
+    <meta name="description" content="Discover why chiplets, HBM, hybrid bonding, 2.5D/3D integration, testing, and thermal challenges are making advanced packaging a critical equipment battleground for AI chips." />
+    <meta name="msvalidate.01" content="A4B0510EB1646757B193F4AC8223858F" />
+    <meta property="og:title" content="Why Advanced Packaging Is the New AI Chip Equipment Battleground | Machinery Insight" />
+    <meta property="og:description" content="Discover why chiplets, HBM, hybrid bonding, 2.5D/3D integration, testing, and thermal challenges are making advanced packaging a critical equipment battleground for AI chips." />
+    <meta property="og:url" content="/categories/semiconductor-electronics-equipment/packaging-becoming-new-equipment-battleground-for-ai-chips/" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/assets/favicon.ed4e230ec4b3.jpg" type="image/jpeg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
+        var dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P2ZB77SQ");
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="/assets/site.357aba1dfbf2.css" />
+  </head>
+  <body class="bg-[var(--color-background)] text-[var(--color-text)]">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P2ZB77SQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:text-slate-900 focus:shadow"
+      href="#main-content"
+    >
+      Skip to main content
+    </a>
+    <div class="reading-progress" aria-hidden="true">
+      <span data-reading-progress></span>
+    </div>
+    <div id="main-content">
+      <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <nav class="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6" aria-label="Primary">
+    <a class="flex items-center" href="/" aria-label="Back to home">
+      <img
+        class="h-9 w-auto"
+        src="/assets/mi-logo-removebg-preview.b2f0858a01ec.png"
+        alt="Machinery Insight"
+        loading="eager"
+      />
+    </a>
+    <div class="flex min-w-0 items-center gap-2 sm:gap-3">
+      <div class="nav-scroll hidden items-center gap-6 whitespace-nowrap pb-1 md:flex">
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/firm-news/">Firm News</a>
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/exhibition/">Exhibitions</a>
+        <a class="text-sm font-semibold text-slate-700 transition-colors duration-200 hover:text-blue-600" href="/categories/">Categories</a>
+      </div>
+      <button
+        class="inline-flex h-11 cursor-pointer items-center gap-2 rounded-full border border-slate-300 px-2 text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 sm:px-4"
+        data-search-open
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="search-modal"
+        aria-label="Open search"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="20" y1="20" x2="16.5" y2="16.5"></line>
+        </svg>
+        <span class="hidden sm:inline">Search</span>
+      </button>
+      <button
+        class="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-slate-300 text-slate-700 transition-colors duration-200 hover:border-blue-600 hover:text-blue-600 md:hidden"
+        type="button"
+        data-nav-toggle
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div class="border-t border-slate-200 bg-white/95 md:hidden" data-nav-menu id="primary-navigation" hidden>
+    <div class="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-2 px-4 py-4 sm:px-6">
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/firm-news/">Firm News</a>
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/exhibition/">Exhibitions</a>
+      <a class="rounded-full border px-3 py-1 text-sm font-medium text-slate-600 hover:border-blue-600 hover:text-blue-600" href="/categories/">Categories</a>
+    </div>
+  </div>
+</header>
+
+
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 text-xs sm:text-sm text-slate-500" aria-label="Breadcrumb">
+      <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 break-words leading-5"><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/">Home</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/categories/">Categories</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><a class="hover:text-blue-600" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a><span class="text-slate-400" aria-hidden="true">/</span></li><li class="flex items-center gap-2"><span class="text-slate-700" aria-current="page">Why Advanced Packaging Is Becoming the New Equipment Battleground for AI Chips</span></li></ol>
+    </nav>
+  
+<main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+  <div class="grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)_220px]">
+    <div class="hidden lg:block">
+    <aside class="lg:sticky lg:top-24 h-fit">
+      <div class="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Categories</h2>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700">
+          <li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/machine-tools/">Machine Tools</a></li><li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/plastics-machinery/">Plastics Machinery</a></li><li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/packaging-machinery/">Packaging Machinery</a></li><li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/food-beverage-processing-machinery/">Food &amp; Beverage Processing Machinery</a></li><li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/material-handling-equipment/">Material Handling Equipment</a></li><li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/energy-environmental-equipment/">Energy &amp; Environmental Equipment</a></li><li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a></li><li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/industrial-automation-systems/">Industrial Automation Systems</a></li><li class="flex items-center justify-between gap-3"><a class="link-primary" href="/categories/general-industrial-equipment/">General Industrial Equipment</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+    <article>
+      <div class="lg:hidden mb-6 rounded border border-slate-200 p-4">
+        <button
+          type="button"
+          class="flex w-full items-center justify-between text-sm font-semibold"
+          data-toc-toggle
+          aria-expanded="false"
+        >
+          <span>On this page</span>
+          <span class="text-slate-500">Toggle</span>
+        </button>
+        <div class="mt-3" data-toc-panel hidden aria-hidden="true">
+          <ul class="space-y-2 text-sm text-slate-600">
+          <li>
+            <a data-toc-link="why-ai-chips-put-more-pressure-on-packaging" class="hover:text-blue-600" href="#why-ai-chips-put-more-pressure-on-packaging">Why AI Chips Put More Pressure on Packaging</a>
+          </li>
+          <li>
+            <a data-toc-link="from-monolithic-chips-to-heterogeneous-systems" class="hover:text-blue-600" href="#from-monolithic-chips-to-heterogeneous-systems">From Monolithic Chips to Heterogeneous Systems</a>
+          </li>
+          <li>
+            <a data-toc-link="where-equipment-competition-is-intensifying" class="hover:text-blue-600" href="#where-equipment-competition-is-intensifying">Where Equipment Competition Is Intensifying</a>
+          </li>
+          <li>
+            <a data-toc-link="why-this-matters-for-the-equipment-market" class="hover:text-blue-600" href="#why-this-matters-for-the-equipment-market">Why This Matters for the Equipment Market</a>
+          </li>
+          <li>
+            <a data-toc-link="faq" class="hover:text-blue-600" href="#faq">FAQ</a>
+          </li>
+          <li>
+            <a data-toc-link="conclusion" class="hover:text-blue-600" href="#conclusion">Conclusion</a>
+          </li>
+          <li>
+            <a data-toc-link="references" class="hover:text-blue-600" href="#references">References</a>
+          </li></ul>
+        </div>
+      </div>
+      <h1 class="text-3xl font-semibold text-slate-900">Why Advanced Packaging Is Becoming the New Equipment Battleground for AI Chips</h1>
+      <p class="mt-2 mb-6 text-sm text-slate-500">Aug 25, 2026</p>
+      <div class="prose prose-slate mt-8 max-w-none"><p><img src="https://i.meee.com.tw/vb2wRJy.png" alt=""></p>
+<p>For decades, semiconductor competition was framed mainly around transistor scaling: smaller process nodes, better lithography, and higher transistor density. AI is changing that emphasis. Leading accelerators now depend not only on logic performance, but also on how compute chiplets, high-bandwidth memory (HBM), interposers, substrates, power-delivery structures, and thermal solutions are assembled into one system.</p>
+<p>That shift is making advanced packaging a strategic manufacturing layer rather than a final assembly step. TSMC positions CoWoS as a foundation for HPC and AI because it can integrate logic with HBM, while Intel is expanding EMIB and Foveros for heterogeneous chiplet integration. SEMI reports that semiconductor packaging and assembly equipment sales reached a record US$6 billion in 2025 and are expected to grow again in 2026. The result is a new equipment battleground spanning bonding, deposition, lithography, inspection, testing, and thermal management.</p>
+<h2 id="why-ai-chips-put-more-pressure-on-packaging">Why AI Chips Put More Pressure on Packaging</h2>
+<p>AI accelerators must move huge volumes of data between compute engines and memory while controlling latency and power. HBM helps by vertically stacking DRAM and placing it close to the processor. Micron notes that its HBM3E uses TSV-based stacking and advanced package integration to provide more than 1.2 TB/s of bandwidth per 8-high cube.</p>
+<p>But proximity creates manufacturing complexity. Larger packages must connect more dies at finer pitches, carry greater current, control warpage, and remove more heat. A defect in one expensive component can also reduce the value of the whole package. Packaging yield, alignment accuracy, interface cleanliness, thermal behavior, and test coverage therefore become system-level performance and cost issues.</p>
+<h2 id="from-monolithic-chips-to-heterogeneous-systems">From Monolithic Chips to Heterogeneous Systems</h2>
+<p>Another driver is the move from monolithic dies toward chiplets. Designers can separate compute, I/O, cache, or other functions and combine them in one package. Intel notes that smaller chiplets can be easier to yield than very large dies and can be manufactured on different process nodes according to each function. Standards such as UCIe are intended to make die-to-die connectivity more interoperable across chiplets from different sources.</p>
+<p>The package therefore becomes an architectural platform that must provide dense, short interconnects while maintaining signal integrity, power integrity, mechanical reliability, and thermal stability.</p>
+<table>
+<thead>
+<tr>
+<th>Packaging approach</th>
+<th>Main role in AI/HPC</th>
+<th>Equipment implications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.5D interposer / bridge</td>
+<td>Connect logic and HBM side by side</td>
+<td>Fine-pitch routing, placement, bonding, inspection</td>
+</tr>
+<tr>
+<td>3D stacking</td>
+<td>Stack active dies vertically</td>
+<td>Surface preparation, wafer/die bonding, metrology</td>
+</tr>
+<tr>
+<td>Fan-out / RDL</td>
+<td>Create dense redistribution layers</td>
+<td>Lithography, deposition, plating, molding</td>
+</tr>
+<tr>
+<td>HBM stacking</td>
+<td>Build vertically connected DRAM</td>
+<td>TSV processing, thinning, bonding, thermal control</td>
+</tr>
+</tbody>
+</table>
+<h2 id="where-equipment-competition-is-intensifying">Where Equipment Competition Is Intensifying</h2>
+<p>Bonding is one of the clearest pressure points. Conventional flip-chip assembly uses solder bumps, but shrinking pitches are increasing interest in thermo-compression and hybrid bonding. Hybrid bonding joins copper interconnects and surrounding dielectric surfaces directly, enabling denser connections than traditional bump-based approaches. Intel’s Foveros Direct 3D uses copper-to-copper hybrid bonding for high-density die-to-die interconnects.</p>
+<p>This raises the value of tools that can deliver highly accurate alignment, clean interfaces, tight process control, and high throughput. A technically excellent bond is not enough if production speed or yield is unstable.</p>
+<p>Redistribution-layer and interposer processing is another battleground. Advanced packages require thin metal lines, vias, dielectric layers, and large-area routing structures, creating demand for packaging-oriented lithography, deposition, etch, cleaning, and electroplating equipment. As package dimensions increase, controlling uniformity and warpage also becomes harder.</p>
+<p>Inspection and metrology are equally important. Advanced packages contain interfaces that may be difficult to inspect after stacking. Misalignment, voids, cracks, or contamination become costly once several high-value dies and HBM stacks have been assembled. Optical inspection, X-ray methods, acoustic inspection, overlay metrology, and process analytics therefore play a larger role.</p>
+<p>Testing adds another layer. Multi-die systems create more opportunities for partial failure, so manufacturers want to identify known-good dies before final assembly and catch marginal defects later. Intel highlights die-sort and system-level testing as important parts of advanced chiplet manufacturing.</p>
+<p>Thermal management is also moving into package design itself. Higher HBM stack counts and denser logic create more difficult heat paths. SK hynix’s 2026 iHBM announcement, which integrates cooling elements into the HBM package, illustrates how thermal engineering can become part of package architecture rather than an external afterthought.</p>
+<h2 id="why-this-matters-for-the-equipment-market">Why This Matters for the Equipment Market</h2>
+<p>The opportunity is broader than any single machine category. AI packaging lines require coordinated advances in bonding, wafer handling, thinning, cleaning, plating, lithography, molding, inspection, test, and automation. Suppliers therefore compete not only on tool specifications but also on throughput, yield learning, process integration, service, and compatibility with changing package designs.</p>
+<p>The market may also be more diverse than leading-edge wafer fabrication. Different customers can use silicon interposers, bridges, RDL interposers, fan-out structures, hybrid bonding, or combinations of 2.5D and 3D integration. That creates room for several equipment approaches, but it also increases qualification complexity.</p>
+<p>Advanced packaging does not replace transistor scaling. Leading AI processors still depend on advanced logic and memory nodes. What is changing is that packaging increasingly determines how effectively those components can be combined at system scale.</p>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q1. What is advanced packaging?</strong>
+A: It refers to techniques that integrate multiple dies, memory stacks, interposers, or other components with denser and more sophisticated interconnects than conventional single-die packages.</p>
+<p><strong>Q2. Why is HBM closely linked to advanced packaging?</strong>
+A: HBM stacks DRAM vertically and is placed close to compute logic. That requires advanced integration, precise bonding, and careful thermal management.</p>
+<p><strong>Q3. What is the difference between 2.5D and 3D packaging?</strong>
+A: In 2.5D designs, dies are generally placed side by side and connected through an interposer or bridge. In 3D designs, active dies are stacked vertically.</p>
+<p><strong>Q4. Why is hybrid bonding important?</strong>
+A: It can create finer-pitch, lower-resistance die-to-die connections by directly bonding copper and dielectric surfaces, making it attractive for high-density 3D integration.</p>
+<p><strong>Q5. Does advanced packaging reduce chip costs?</strong>
+A: Sometimes. Chiplets can improve yield, enable IP reuse, and mix process nodes, but advanced packaging also adds equipment, materials, testing, and yield costs.</p>
+<p><strong>Q6. Which equipment categories are most important?</strong>
+A: Bonding, lithography, deposition and plating, wafer handling and thinning, inspection and metrology, advanced test, and thermal-related process equipment are all strategically relevant.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>AI chips are turning packaging from a supporting step into a major source of performance, power efficiency, yield, and product differentiation. As chiplets and HBM push more functionality into complex packages, the tools used to connect, inspect, test, and cool those components become critical production assets.</p>
+<p>That is why the semiconductor equipment contest is no longer confined to leading-edge wafer fabs. A growing part of competition is moving into advanced packaging lines, where precision bonding, dense interconnect formation, defect control, thermal engineering, and high-volume process integration will help determine which AI architectures can be manufactured efficiently at scale.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p><strong>TSMC — CoWoS Advanced Packaging Technology:</strong> Overview of CoWoS-S, CoWoS-R, and CoWoS-L for HPC and AI applications. <a href="https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/cowos.htm" target="_blank" rel="noopener noreferrer">TSMC CoWoS Technology<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a></p>
+</li>
+<li>
+<p><strong>Intel Foundry — Advanced Packaging Innovations:</strong> Technical overview of EMIB, Foveros, and hybrid-bonding-based packaging approaches. <a href="https://www.intel.com/content/www/us/en/foundry/packaging.html" target="_blank" rel="noopener noreferrer">Intel Advanced Packaging<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a></p>
+</li>
+<li>
+<p><strong>SEMI — SEMICON Taiwan 2026:</strong> Industry data and discussion of growth in advanced packaging and semiconductor packaging equipment. <a href="https://www.semi.org/en/node/173661" target="_blank" rel="noopener noreferrer">SEMI Advanced Packaging and Equipment Outlook<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a></p>
+</li>
+<li>
+<p><strong>Micron — HBM3E:</strong> Technical information on HBM bandwidth, TSV stacking, power efficiency, and AI applications. <a href="https://www.micron.com/products/memory/hbm/hbm3e" target="_blank" rel="noopener noreferrer">Micron HBM3E<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a></p>
+</li>
+<li>
+<p><strong>UCIe Consortium — UCIe 2.0:</strong> Overview of the open die-to-die interconnect standard for chiplet-based systems. <a href="https://www.uciexpress.org/" target="_blank" rel="noopener noreferrer">UCIe Consortium<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a></p>
+</li>
+<li>
+<p><strong>Intel — Advanced Process and Chiplet Packaging:</strong> Discussion of chiplet yield, heterogeneous process-node integration, and advanced packaging architecture. <a href="https://www.intel.com/content/www/us/en/foundry/library/advanced-process-technologies-for-data-center.html" target="_blank" rel="noopener noreferrer">Intel Foundry Data Center Packaging Technologies<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a></p>
+</li>
+<li>
+<p><strong>SK hynix — iHBM Thermal Solution:</strong> Example of thermal management becoming integrated directly into advanced HBM packaging. <a href="https://news.skhynix.com/en/ihbm-solution/" target="_blank" rel="noopener noreferrer">SK hynix iHBM Thermal Solution<svg class="ml-1 inline h-3 w-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M5 7v14h14v-7"></path></svg></a></p>
+</li>
+</ol>
+</div>
+      
+          <section class="mt-12 border-t border-slate-200 pt-6">
+            <h2 class="text-lg font-semibold">You might also be interested in...</h2>
+            <ul class="mt-4 flex flex-wrap gap-3 text-sm">
+              <li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/glass-core-substrates-and-tgv/">Glass Core Substrates and TGV: The Next Equipment Opportunity in Advanced Packaging</a></li><li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/why-panel-level-packaging-could-transform-semiconductor-manufacturing/">From Wafers to Panels: Why Panel-Level Packaging Could Transform Semiconductor Manufacturing</a></li><li><a class="link-primary rounded border border-slate-200 px-3 py-1 hover:border-blue-600" href="/categories/semiconductor-electronics-equipment/why-chip-resistor-manufacturers-are-adopting-automated-dipping-systems/">The Shift to Precision - Why Chip Resistor Manufacturers are Adopting Automated Dipping Systems</a></li>
+            </ul>
+          </section>
+        
+    </article>
+    <aside class="hidden lg:block sticky top-24 h-fit">
+      <p class="text-sm font-semibold">On this page</p>
+      <ul class="mt-2 space-y-2">
+          <li>
+            <a data-toc-link="why-ai-chips-put-more-pressure-on-packaging" class="hover:text-blue-600" href="#why-ai-chips-put-more-pressure-on-packaging">Why AI Chips Put More Pressure on Packaging</a>
+          </li>
+          <li>
+            <a data-toc-link="from-monolithic-chips-to-heterogeneous-systems" class="hover:text-blue-600" href="#from-monolithic-chips-to-heterogeneous-systems">From Monolithic Chips to Heterogeneous Systems</a>
+          </li>
+          <li>
+            <a data-toc-link="where-equipment-competition-is-intensifying" class="hover:text-blue-600" href="#where-equipment-competition-is-intensifying">Where Equipment Competition Is Intensifying</a>
+          </li>
+          <li>
+            <a data-toc-link="why-this-matters-for-the-equipment-market" class="hover:text-blue-600" href="#why-this-matters-for-the-equipment-market">Why This Matters for the Equipment Market</a>
+          </li>
+          <li>
+            <a data-toc-link="faq" class="hover:text-blue-600" href="#faq">FAQ</a>
+          </li>
+          <li>
+            <a data-toc-link="conclusion" class="hover:text-blue-600" href="#conclusion">Conclusion</a>
+          </li>
+          <li>
+            <a data-toc-link="references" class="hover:text-blue-600" href="#references">References</a>
+          </li></ul>
+    </aside>
+  </div>
+</main>
+
+    </div>
+    <div
+      id="search-modal"
+      class="fixed inset-0 z-50 hidden overscroll-contain bg-slate-950/40 backdrop-blur-xl"
+      data-search-modal
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="search-modal-title"
+    >
+      <button
+        class="absolute inset-0 bg-transparent"
+        type="button"
+        data-search-overlay
+        aria-label="Close search"
+      ></button>
+      <div class="relative mx-auto flex min-h-full max-w-3xl items-center justify-center px-6">
+        <div class="search-panel flex max-h-[calc(100vh-6rem)] w-full flex-col rounded-2xl border p-6 shadow-xl">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Search</p>
+              <h2 class="mt-2 text-xl font-semibold" id="search-modal-title">
+                Find a Report or Vendor
+              </h2>
+            </div>
+            <button
+              class="rounded-full border border-slate-300 px-3 py-1 text-xs uppercase tracking-[0.2em] transition-colors duration-200 hover:border-blue-600 hover:text-blue-600"
+              data-search-close
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+          <input
+            class="mt-6 w-full rounded-xl border border-slate-300 px-4 py-3 text-sm"
+            type="search"
+            name="search"
+            autocomplete="off"
+            placeholder="Search by company, category, or keyword… e.g. gearboxes"
+            data-search-input
+            aria-label="Search reports and vendors"
+          />
+          <p
+            class="mt-3 text-xs uppercase tracking-[0.2em] text-slate-400"
+            data-search-count
+            aria-live="polite"
+          ></p>
+          <ul class="mt-6 min-h-0 flex-1 space-y-4 overflow-y-auto pr-2" data-search-results></ul>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="mt-16 border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <div class="grid gap-8 lg:grid-cols-[220px_repeat(3,minmax(0,1fr))]">
+          <div>
+            <a class="inline-flex items-center" href="/" aria-label="Back to home">
+              <img
+                class="h-8 w-auto"
+                src="/assets/mi-logo-removebg-preview.b2f0858a01ec.png"
+                alt="Machinery Insight"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/firm-news/">Firm News</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/">Exhibitions</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/">Categories</a></li>
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/about/">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-slate-700">Exhibitions</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/africa/">Africa</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/americas/">Americas</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/asia/">Asia</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/europe/">Europe</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/middle-east/">Middle East</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/exhibition/oceania/">Oceania</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-semibold text-slate-700">Categories</h2>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/machine-tools/">Machine Tools</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/plastics-machinery/">Plastics Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/packaging-machinery/">Packaging Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/food-beverage-processing-machinery/">Food &amp; Beverage Processing Machinery</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/material-handling-equipment/">Material Handling Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/energy-environmental-equipment/">Energy &amp; Environmental Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/semiconductor-electronics-equipment/">Semiconductor &amp; Electronics Equipment</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/industrial-automation-systems/">Industrial Automation Systems</a></li><li><a class="transition-colors duration-200 hover:text-blue-600" href="/categories/general-industrial-equipment/">General Industrial Equipment</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-slate-200 pt-4 text-xs text-slate-500">
+          <p>Copyright © Machinery Insight All rights reserved.</p>
+          <p>
+            Relative Platform of
+            <a class="ml-2 text-blue-700 hover:text-blue-800" href="https://www.market-prospects.com/" target="_blank" rel="noopener noreferrer">Market Prospects</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  
+    <script type="module" src="/assets/search.d4c0c0ed7159.js" defer></script>
+    <script src="/assets/nav.0887b88d59b4.js" defer></script>
+    <script src="/assets/toc.14ce38f0104c.js" defer></script>
+    <script src="/assets/carousel.b5028d48ec08.js" defer></script>
+    <script src="/assets/load-more.d05f217820d2.js" defer></script>
+  </body>
+</html>
