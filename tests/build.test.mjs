@@ -28,7 +28,12 @@ test("buildSite writes index and article pages", async () => {
       path.join(outDir, "reports", "sample", "sample", "index.html"),
       "utf8"
     );
+    const indexNowKey = await fs.readFile(
+      path.join(outDir, "bcb3d706e9e74cf7b3f296259a9ea82a.txt"),
+      "utf8"
+    );
 
+    assert.equal(indexNowKey, "bcb3d706e9e74cf7b3f296259a9ea82a\n");
     assert.ok(index.includes("Research Reports"));
     assert.ok(reportsHub.includes("Reports"));
     assert.ok(article.includes("Sample Post"));
