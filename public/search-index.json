@@ -1,10 +1,24 @@
 [
   {
+    "title": "MECT 2027 Guide: What to Know Before the Nagoya Machine Tool Exhibition",
+    "description": ", officially known as MECHATRONICS TECHNOLOGY JAPAN 2027 , will take place in Nagoya, Japan, from October 20 to October 23, 2027 . The exhibition covers a br...",
+    "category": "Exhibition",
+    "subcategory": "Asia",
+    "path": "/exhibition/asia/mect-2027/"
+  },
+  {
     "title": "EMO MILANO 2027: Milan Reconnects the Global Metalworking Ecosystem at fieramilano",
     "description": "Event Overview EMO MILANO 2027 will take place from 4 to 8 October 2027 at the fieramilano exhibition centre in Milan, Italy, and it is positioned as the wor...",
     "category": "Exhibition",
     "subcategory": "Europe",
     "path": "/exhibition/europe/emo-milano-2027/"
+  },
+  {
+    "title": "Inside Kaohsiung Industrial Automation Exhibition 2027: Smart Manufacturing, Robotics, and More",
+    "description": "The will take place from May 26 to May 29, 2027 , at the Kaohsiung Exhibition Center in Kaohsiung, Taiwan . Organized by the Economic Daily News, the four da...",
+    "category": "Exhibition",
+    "subcategory": "Asia",
+    "path": "/exhibition/asia/kaohsiung-industrial-automation-exhibition-2027/"
   },
   {
     "title": "NPE 2027: The Plastics Show Returns to Orlando with the \"Next Is Now\" Theme",
@@ -98,6 +112,13 @@
     "path": "/exhibition/europe/motek-2026/"
   },
   {
+    "title": "Inside MAKTEK Eurasia 2026: Machinery and Manufacturing Technologies in Istanbul",
+    "description": "will take place from September 28 to October 3, 2026 , at the Tüyap Fair and Congress Center in Istanbul, Türkiye . Held every two years, the exhibition focu...",
+    "category": "Exhibition",
+    "subcategory": "Asia",
+    "path": "/exhibition/asia/inside-maktek-eurasia-2026/"
+  },
+  {
     "title": "Construct Iraq 2026: Iraq’s Leading Construction, Energy and HVAC‑R Trade Fair Returns to Erbil",
     "description": ", the 8th International Trade Fair for Construction, Energy (Electric Power & Solar) and HVAC‑R Industries, will be held September 22–25, 2026 at the Erbil I...",
     "category": "Exhibition",
@@ -119,6 +140,34 @@
     "path": "/exhibition/europe/amb-stuttgart-2026/"
   },
   {
+    "title": "Thread Whirling on CNC Swiss Lathes - A Better Way to Produce Bone Screws and Precision Fasteners",
+    "description": "Making small parts with long threads is not easy. Bone screws, dental screws, and miniature fasteners are often made from titanium or stainless steel. These...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/thread-whirling-on-cnc-swiss-lathes-a-better-way-to-produce-bone-screws-a-24ea58/"
+  },
+  {
+    "title": "Retrofit or Replace ? When to Upgrade CNC Cylindrical Roll Grinder Machinery",
+    "description": "The decision is not about machine age alone An old roll grinder does not automatically need replacement. Some machines still have a sound mechanical base and...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/when-to-upgrade-cnc-cylindrical-roll-grinder-machinery/"
+  },
+  {
+    "title": "How Multi-Layer Extrusion Blow Molding Supports Modern Packaging",
+    "description": "Packaging has to do more than hold a product. For food, cosmetics, household products, and chemicals, the container may need to protect the formula from air,...",
+    "category": "Categories",
+    "subcategory": "Plastics Machinery",
+    "path": "/categories/plastics-machinery/multi-layer-extrusion-blow-molding-supports-modern-packaging/"
+  },
+  {
+    "title": "Automatic Dipping Machine Selection Guide for Electronics Manufacturing",
+    "description": "Choose the machine around your real product, process window, material behavior, handling method, and required output, not around a headline throughput figure...",
+    "category": "Categories",
+    "subcategory": "Semiconductor & Electronics Equipment",
+    "path": "/categories/semiconductor-electronics-equipment/automatic-dipping-machine-guide-electronics-manufacturing/"
+  },
+  {
     "title": "IMTS: Where Manufacturing Productivity, Automation, and ROI Decisions Come Together",
     "description": "Why Manufacturing Leaders Are Rethinking How They Evaluate New Equipment Across global manufacturing industries, decision makers face a common dilemma. Produ...",
     "category": "Exhibition",
@@ -131,6 +180,20 @@
     "category": "Categories",
     "subcategory": "Machine Tools",
     "path": "/categories/machine-tools/flat-bed-vs-slant-bed-cnc-lathes/"
+  },
+  {
+    "title": "The Ultimate Guide to Selecting Surface Grinding Machines for Aerospace and Automotive Applications",
+    "description": "Surface grinding machines used in aerospace and automotive manufacturing must support the dimensional accuracy, surface quality, and production consistency r...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/select-surface-grinding-machines-aerospace-automotive/"
+  },
+  {
+    "title": "Vertical Knee Mill vs Bed Mill - A Practical Buying Guide for Machine Tool Distributors",
+    "description": "Choosing between a vertical knee mill and a bed mill is not simply a question of machine size. It is a decision that affects part quality, setup time, cycle...",
+    "category": "Categories",
+    "subcategory": "Machine Tools",
+    "path": "/categories/machine-tools/vertical-knee-mill-vs-bed-mill/"
   },
   {
     "title": "Maximizing Your SEMICON TAIWAN 2026 Experience: Insights for Manufacturing Professionals",
